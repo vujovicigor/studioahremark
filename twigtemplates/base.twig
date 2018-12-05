@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="{{_BASE}}">
-  <title>Srpsko udruženje za zemljotresno inženjerstvo</title>
+  {# <base href="{{_BASE}}"> #}
+  <title>Studio Ahremark</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% block description %}{% endblock %}"/>
-  <link rel="icon" href="images/suzi.png">
+  {# <link rel="icon" href="images/suzi.png"> #}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-    <div class="head-responsive">
+    <div class="header d-flex align-items-center">
+        <div class="col-5" id="logo">logo</div>
+        <div class="d-flex col-7">
+            <div class="col-5 d-none d-lg-block">Studio Ahremark</div>
+            <div class="d-flex col-12 col-lg-7">
+                <div class="col-4"><a href="projects">Projects</a></div>
+                <div class="col-4"><a>Profile</a></div>
+                <div class="col-4"><a>Contact</a></div>
+            </div>
+        </div>
+    </div>
+    {# <div class="head-responsive">
         <div class="head-responsive-bar">
             <a style="margin-top: 25px; margin-bottom: 15px;" class="head--logo" href="index"><img class="logo-size" src="images/suzi logo-2.svg" alt="logo"></a>
             <div style="display: flex; flex: 1;" class="responsive-m">
@@ -51,11 +64,11 @@
                 
             </div>
         </div>
-    </div>
+    </div> #}
 
 {% block content %}{% endblock %}
 
-    <div class="footer">
+    {# <div class="footer">
         <div class="footer--1">
             <div class="footer--1--suzi">&copy; 2018 SUZI</div>
             <div class="footer--1--suzi"><a href="sponzori">Donatori SUZI</a></div>
@@ -165,8 +178,19 @@
           }
           lastScrollTop = st;
         });
-   </script>
+   </script> #}
+  
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+     <script>
+    $(window).scroll(function() {
+        var theta = $(window).scrollTop() / 10 % Math.PI;
+        $('#logo').css({ transform: 'rotate(' + theta + 'rad)' });
+    });
+   </script>
 
 </body>
 </html>
