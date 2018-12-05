@@ -1,5 +1,29 @@
 {% extends "base.twig" %}
 {% block content %}
-    <div style="height: 10000px;"> </div>
+{% set Projects = fetch("Projects") %}
+    <div>
+        <div class="owl-carousel owl-theme">
+        {% for item in Projects %}
+            <div class="projects-pic"><img src="img/{{item.Image}}"></div>
+            {# <div class="projects-pic"><img src="images/slika2.jpg"></div>
+            <div class="projects-pic"><img src="images/slika3.jpg"></div>
+            <div class="projects-pic"><img src="images/slika4.jpg"></div> #}
+        {% endfor %}
+        </div>
+        <div class="projects d-flex">
+            <div class="col-6 projects-padding font-weight-normal">Studio Ahremark</div>
+            <div class="col-6 projects-padding font-weight-normal">Studio Ahremark is a design studio based in Sweden, aiming to create sophisticated design solutions with conceptual depth and contemporary visuals.
+            <p>Get in touch. </p></div>
+        </div>
+        <div class="d-flex flex-wrap w-100">
+            {% for item in Projects %}
+                <div class="w-50 bla">
+                    <img class="mw-100" src="img/{{item.Image}}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
 
 {% endblock %} 
