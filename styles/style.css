@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+* button:focus {
+  outline: 0;
+}
 .header {
   min-height: 100px;
   background-color: #ffffff;
@@ -9,6 +12,25 @@
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 1000;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.projects-pic {
+  width: 100%;
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+}
+.projects {
+  height: 400px;
+  font-size: 22px;
+  padding-top: 4em;
+}
+.projects-padding {
+  padding-left: 2em;
+  line-height: 1.35;
 }
 @media screen and (max-width: 720px) {
   .header {
