@@ -1,0 +1,70 @@
+@import 'variables';
+
+.project {
+  min-height: 100vh;
+  width: 100%;
+  &--hero {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    &-image {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &--slogan {
+    height: 100vh;
+    width: 100%;
+    &-left {
+      padding-right: 2.5%;
+      padding-top: 4%;
+      font-size: @midd;
+      font-weight: 500;
+      color: @black;
+      line-height: 1.8em;
+    }
+    &-right {
+      padding-left: 2.5%;
+      padding-top: 4%;
+      color: @black;
+      &--title {
+        // width: 80%;
+        font-size: @midd;
+        line-height: 1.8em;
+        margin-bottom: 20px;
+      }
+      &--words {
+        font-size: @small;
+        line-height: 1.05em;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+      }
+      &--link {
+        margin-bottom: 20px;
+        a{
+          font-size: @small;
+          font-weight: 500;
+          line-height: 1.05em;
+          letter-spacing: 0.5px;
+        }
+      }
+      &--innertitle {
+        font-size: @small;
+        line-height: 1.35em;
+        font-weight: 500;
+        padding-left: 2%;
+        margin-bottom: 20px;
+      }
+      &--innerwords {
+        width: 95%;
+        font-size: @small;
+        line-height: 1.15em;
+        letter-spacing: -0.5px;
+        padding-left: 2%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

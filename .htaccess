@@ -3,7 +3,7 @@ Options +FollowSymLinks
 
 RewriteRule ^index.php$ cms/twig.php?twig_file_name=index [L]
 
-RewriteRule ^img/(.*)$ cms/image.php?id=$1 
+RewriteRule ^img/(.*)$ cms/image.php?id=$1
 
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f

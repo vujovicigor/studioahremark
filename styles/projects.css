@@ -1,0 +1,58 @@
+.projects {
+  min-height: 100vh;
+  width: 100%;
+}
+.projects--container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.projects--slogan {
+  height: 100vh;
+  width: 100%;
+}
+.projects--slogan-left {
+  padding-top: 4%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.8em;
+}
+.projects--slogan-right {
+  padding-top: 4%;
+  color: #000000;
+}
+.projects--slogan-right--title {
+  font-size: 24px;
+  line-height: 1.8em;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.projects--slogan-right--words {
+  font-size: 14px;
+  line-height: 1.05em;
+  letter-spacing: 20;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.projects--slogan-right--link {
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.projects--slogan-right--link a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.05em;
+  letter-spacing: 0.5px;
+}
+.projects--slogan-right--innertitle {
+  padding-left: 2%;
+  font-size: 14px;
+  line-height: 1.05em;
+}
+.projects--slogan-right--innerwords {
+  padding-left: 2%;
+  font-size: 14px;
+  line-height: 1.05em;
+  letter-spacing: -0.5px;
+}

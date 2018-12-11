@@ -1,29 +1,28 @@
 {% extends "base.twig" %}
 {% block content %}
-{% set Projects = fetch("Projects") %}
-    <div>
-        <div class="owl-carousel owl-theme">
-        {% for item in Projects %}
-            <div class="projects-pic"><img src="img/{{item.Image}}"></div>
-            {# <div class="projects-pic"><img src="images/slika2.jpg"></div>
-            <div class="projects-pic"><img src="images/slika3.jpg"></div>
-            <div class="projects-pic"><img src="images/slika4.jpg"></div> #}
-        {% endfor %}
-        </div>
-        <div class="projects d-flex">
-            <div class="col-6 projects-padding font-weight-normal">Studio Ahremark</div>
-            <div class="col-6 projects-padding font-weight-normal">Studio Ahremark is a design studio based in Sweden, aiming to create sophisticated design solutions with conceptual depth and contemporary visuals.
-            <p>Get in touch. </p></div>
-        </div>
-        <div class="d-flex flex-wrap w-100">
-            {% for item in Projects %}
-                <div class="w-50 bla">
-                    <img class="mw-100" src="img/{{item.Image}}">
-                </div>
-            {% endfor %}
-        </div>
+
+<div class="container-fluid p-0 no-gutters projects">
+  <div class="row no-gutters owl-carousel owl-theme projects--container">
+    <div class="col-12 p-0"><img src="./Images/1.jpg" class="projects--container-pic"></div>
+    <div class="col-12 p-0"><img src="./Images/2.jpg" class="projects--container-pic"></div>
+    <div class="col-12 p-0"><img src="./Images/1.jpg" class="projects--container-pic"></div>
+    <div class="col-12 p-0"><img src="./Images/2.jpg" class="projects--container-pic"></div>
+    <div class="col-12 p-0"><img src="./Images/1.jpg" class="projects--container-pic"></div>
+  </div>
+  <div class="container projects--slogan">
+    <div class="col-lg-6 col-md-12 projects--slogan-left">
+        Turning brands into beliefs.
     </div>
+    <div class="col-lg-6 col-md-12 projects--slogan-right">
+        <div class="projects--slogan-right--title">CREDO means "I believe" and that's what we strive to deliver to our client: BELIEF!</div>
+        <div class="projects--slogan-right--words">As a strategic branding & design agency, we craft every brand's belief around the heart of its truth, discovered through research, shaped by strategy and manifested by visual design. These elements, working in sync, inspire belief and, thus, aimed to transform your brand.</div>
+        <div class="projects--slogan-right--link"><a href="#">SEE MORE</a></div>
+    </div>
+  </div>
+</div>
 
 
 
-{% endblock %} 
+
+
+{% endblock %}

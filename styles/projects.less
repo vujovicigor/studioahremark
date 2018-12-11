@@ -1,0 +1,63 @@
+@import 'variables';
+
+.projects {
+  min-height: 100vh;
+  width: 100%;
+  &--container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  &--slogan {
+    height: 100vh;
+    width: 100%;
+    &-left {
+      // padding-right: 2.5%;
+      padding-top: 4%;
+      font-size: @midd;
+      font-weight: 500;
+      color: @black;
+      line-height: 1.8em;
+    }
+    &-right {
+      // padding-left: 2.5%;
+      padding-top: 4%;
+      color: @black;
+      &--title {
+        // width: 80%;
+        font-size: @midd;
+        line-height: 1.8em;
+        padding-left: 2%;
+        margin-bottom: 20px;
+      }
+      &--words {
+        font-size: @small;
+        line-height: 1.05em;
+        letter-spacing: 20;
+        padding-left: 2%;
+        margin-bottom: 20px;
+      }
+      &--link {
+        padding-left: 2%;
+        margin-bottom: 20px;
+        a{
+          font-size: @small;
+          font-weight: 500;
+          line-height: 1.05em;
+          letter-spacing: 0.5px;
+        }
+      }
+      &--innertitle {
+        padding-left: 2%;
+        font-size: @small;
+        line-height: 1.05em;
+      }
+      &--innerwords {
+        padding-left: 2%;
+        font-size: @small;
+        line-height: 1.05em;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+}
