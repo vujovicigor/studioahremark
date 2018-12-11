@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="header d-flex align-items-center">
-        <div class="col-5" id="logo">
+        <div class="col-5 padding-left-8" id="logo">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 108 20" style="enable-background:new 0 0 108 20;" xml:space="preserve">
                 <style type="text/css">
                     .st0{fill:#010101;}
@@ -21,12 +21,12 @@
                 <path id="XMLID_2_" class="st0" d="M39.3,7.7c0-4-3.2-7.3-7.2-7.3h-8.6v19.2h3.8V15h3.9l3.9,4.6h5l-4.6-5.5  C37.8,12.9,39.3,10.5,39.3,7.7z M27.4,4.2h4.8c1.9,0,3.4,1.6,3.4,3.5c0,1.9-1.5,3.5-3.4,3.5h-4.8V4.2z M98.2,0  c-5.4,0-9.8,4.5-9.8,10s4.4,10,9.8,10s9.8-4.5,9.8-10S103.6,0,98.2,0z M98.2,16.2c-3.3,0-6-2.8-6-6.2s2.7-6.2,6-6.2s6,2.8,6,6.2  S101.5,16.2,98.2,16.2z M46.5,0.4H59v3.8h-8.7v3.9h7.6v3.8h-7.6v3.9H59v3.8H46.5V0.4z M3.8,10c0,3.4,2.7,6.2,6,6.2  c2.2,0,4.2-1.2,5.2-3.1l3.3,1.8c-1.7,3.1-5,5.1-8.6,5.1C4.4,20,0,15.5,0,10S4.4,0,9.8,0c3.5,0,6.8,2,8.6,5.1L15,6.9  C14,5,12,3.8,9.8,3.8C6.5,3.8,3.8,6.6,3.8,10z M73.7,0.4h-7.6v19.2h7.6c5.2,0,9.4-4.3,9.4-9.6S78.9,0.4,73.7,0.4z M73.7,15.8h-3.8  V4.2h3.8c3.1,0,5.6,2.6,5.6,5.8S76.8,15.8,73.7,15.8z"/>
             </svg>
         </div>
-        <div class="d-flex col-7">
+        <div class="d-flex col-7 padding-right-8" id="menuitems">
             <div class="col-5 d-none d-lg-block"></div>
-            <div class="d-flex col-12 col-lg-7">
-                <div class="col-4"><a href="projects">Projects</a></div>
-                <div class="col-4"><a>Profile</a></div>
-                <div class="col-4"><a>Contact</a></div>
+            <div class="d-flex col-12 col-lg-7 no-gutters">
+                <div class="col-4 text-right"><a href="projects">Projects</a></div>
+                <div class="col-4 text-right"><a>Profile</a></div>
+                <div class="col-4 text-right"><a>Contact</a></div>
             </div>
         </div>
     </div>
@@ -34,8 +34,8 @@
 {% block content %}{% endblock %}
 
     <footer class="footer d-flex justify-content-center">
-        <div class="container d-flex justify-content-center no-gutters footer--container">
-            <div class="col-4 d-flex flex-column align-items-center justify-content-between footer--container-col">
+        <div class="container-fluid d-flex justify-content-center no-gutters padding-left-8 padding-right-8 footer--container">
+            <div class="col-4 d-flex flex-column align-items-left justify-content-between footer--container-col">
                 <div class="d-flex justify-content-start footer--container-col--top">GET IN TOUCH</div>
                 <div class="d-flex flex-column justify-content-end footer--container-col--bottom">
                     <p class="footer--container-col--bottom-mail">Email: <a href="mailto:info@credo.agency">info@credo.agency</a></p>
@@ -52,7 +52,7 @@
                     <a class="text-center" href="">Instagram</a>
                 </div>
             </div>
-            <div class="col-4 d-flex flex-column align-items-center justify-content-between footer--container-col">
+            <div class="col-4 d-flex flex-column align-items-right justify-content-between footer--container-col">
                 <div class="d-flex justify-content-start footer--container-col--top"></div>
                 <div class="d-flex flex-column justify-content-end text-right footer--container-col--bottom-totop"><a href="#logo">BACK TO TOP</a></div>
             </div>
@@ -154,10 +154,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
      <script>
-    $(window).scroll(function() {
+    {# $(window).scroll(function() {
         var theta = $(window).scrollTop() / 10 % Math.PI;
         $('#logo').css({ transform: 'rotate(' + theta + 'rad)' });
-    });
+    }); #}
    </script>
 
 </body>
