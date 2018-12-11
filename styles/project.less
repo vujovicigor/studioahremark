@@ -1,18 +1,24 @@
 @import 'variables';
 
-.projects {
+.project {
   min-height: 100vh;
   width: 100%;
-  &--container {
+  &--hero {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    &-image {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
   }
   &--slogan {
     height: 100vh;
     width: 100%;
     &-left {
-      // padding-right: 2.5%;
+      padding-right: 2.5%;
       padding-top: 4%;
       font-size: @midd;
       font-weight: 500;
@@ -20,25 +26,22 @@
       line-height: 1.8em;
     }
     &-right {
-      // padding-left: 2.5%;
+      padding-left: 2.5%;
       padding-top: 4%;
       color: @black;
       &--title {
         // width: 80%;
         font-size: @midd;
         line-height: 1.8em;
-        padding-left: 2%;
         margin-bottom: 20px;
       }
       &--words {
         font-size: @small;
         line-height: 1.05em;
-        letter-spacing: 20;
-        padding-left: 2%;
+        letter-spacing: 0.5px;
         margin-bottom: 20px;
       }
       &--link {
-        padding-left: 2%;
         margin-bottom: 20px;
         a{
           font-size: @small;
@@ -48,15 +51,19 @@
         }
       }
       &--innertitle {
-        padding-left: 2%;
         font-size: @small;
-        line-height: 1.05em;
+        line-height: 1.35em;
+        font-weight: 500;
+        padding-left: 2%;
+        margin-bottom: 20px;
       }
       &--innerwords {
-        padding-left: 2%;
+        width: 95%;
         font-size: @small;
-        line-height: 1.05em;
+        line-height: 1.15em;
         letter-spacing: -0.5px;
+        padding-left: 2%;
+        margin-bottom: 20px;
       }
     }
   }

@@ -1,0 +1,67 @@
+.project {
+  min-height: 100vh;
+  width: 100%;
+}
+.project--hero {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.project--hero-image {
+  width: 100%;
+}
+.project--hero-image img {
+  width: 100%;
+}
+.project--slogan {
+  height: 100vh;
+  width: 100%;
+}
+.project--slogan-left {
+  padding-right: 2.5%;
+  padding-top: 4%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.8em;
+}
+.project--slogan-right {
+  padding-left: 2.5%;
+  padding-top: 4%;
+  color: #000000;
+}
+.project--slogan-right--title {
+  font-size: 24px;
+  line-height: 1.8em;
+  margin-bottom: 20px;
+}
+.project--slogan-right--words {
+  font-size: 14px;
+  line-height: 1.05em;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.project--slogan-right--link {
+  margin-bottom: 20px;
+}
+.project--slogan-right--link a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.05em;
+  letter-spacing: 0.5px;
+}
+.project--slogan-right--innertitle {
+  font-size: 14px;
+  line-height: 1.35em;
+  font-weight: 500;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.project--slogan-right--innerwords {
+  width: 95%;
+  font-size: 14px;
+  line-height: 1.15em;
+  letter-spacing: -0.5px;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}

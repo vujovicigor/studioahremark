@@ -16,6 +16,9 @@
   margin: 0;
   padding: 0;
 }
+* button:focus {
+  outline: 0;
+}
 HTML {
   line-height: 1.2;
 }
@@ -69,18 +72,18 @@ a:hover {
   text-decoration: none;
 }
 .padding-left-8 {
-  padding-left: 8%;
+  padding-left: 12%;
 }
 .padding-right-8 {
-  padding-right: 8%;
+  padding-right: 12%;
 }
 .header {
   height: 100px;
-  background-color: #ffffff;
   font-size: 1.187em;
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 .header #logo {
   height: 30px;
@@ -88,10 +91,13 @@ a:hover {
 .header #logo #Layer_1 {
   height: 20px;
 }
-.project {
-  height: 100vh;
-  position: relative;
-  top: 100px;
+.header--opened {
+  top: 0;
+  transition: all 0.8s ease-in-out;
+}
+.header--closed {
+  top: -100px;
+  transition: all 0.8s ease-in-out;
 }
 .footer {
   height: 300px;
@@ -139,6 +145,131 @@ a:hover {
 }
 .footer--container-col--bottom-statement {
   margin-top: 24px;
+}
+.projects {
+  min-height: 100vh;
+  width: 100%;
+}
+.projects--container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.projects--slogan {
+  height: 100vh;
+  width: 100%;
+}
+.projects--slogan-left {
+  padding-top: 4%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.8em;
+}
+.projects--slogan-right {
+  padding-top: 4%;
+  color: #000000;
+}
+.projects--slogan-right--title {
+  font-size: 24px;
+  line-height: 1.8em;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.projects--slogan-right--words {
+  font-size: 14px;
+  line-height: 1.05em;
+  letter-spacing: 20;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.projects--slogan-right--link {
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.projects--slogan-right--link a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.05em;
+  letter-spacing: 0.5px;
+}
+.projects--slogan-right--innertitle {
+  padding-left: 2%;
+  font-size: 14px;
+  line-height: 1.05em;
+}
+.projects--slogan-right--innerwords {
+  padding-left: 2%;
+  font-size: 14px;
+  line-height: 1.05em;
+  letter-spacing: -0.5px;
+}
+.project {
+  min-height: 100vh;
+  width: 100%;
+}
+.project--hero {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.project--hero-image {
+  width: 100%;
+}
+.project--hero-image img {
+  width: 100%;
+}
+.project--slogan {
+  height: 100vh;
+  width: 100%;
+}
+.project--slogan-left {
+  padding-right: 2.5%;
+  padding-top: 4%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.8em;
+}
+.project--slogan-right {
+  padding-left: 2.5%;
+  padding-top: 4%;
+  color: #000000;
+}
+.project--slogan-right--title {
+  font-size: 24px;
+  line-height: 1.8em;
+  margin-bottom: 20px;
+}
+.project--slogan-right--words {
+  font-size: 14px;
+  line-height: 1.05em;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.project--slogan-right--link {
+  margin-bottom: 20px;
+}
+.project--slogan-right--link a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.05em;
+  letter-spacing: 0.5px;
+}
+.project--slogan-right--innertitle {
+  font-size: 14px;
+  line-height: 1.35em;
+  font-weight: 500;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+.project--slogan-right--innerwords {
+  width: 95%;
+  font-size: 14px;
+  line-height: 1.15em;
+  letter-spacing: -0.5px;
+  padding-left: 2%;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 720px) {
   .header {
