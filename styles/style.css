@@ -90,8 +90,12 @@ a:hover {
 .header #logo {
   height: 30px;
 }
-.header #logo #Layer_1 {
+.header #logo .logo {
   height: 20px;
+  width: 110px;
+  background-image: url("../images/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .header--opened {
   top: 0;
@@ -387,7 +391,6 @@ a:hover {
 .home--container3-more {
   height: 6.25em;
   width: 100%;
-  background-color: #F8F8FA;
 }
 .home--container3-more a {
   font-size: 1em;

@@ -5,13 +5,15 @@
 var lastScrollTop = 0;
 $(window).scroll(function(event){
   var st = $(this).scrollTop();
-
-  if (st < 160) {
+  console.log(st);
+  if (st < 100) {
     $( ".header" ).removeClass('header--closed').addClass('header--opened');
     if( st < 100 ){
-      $( ".header" ).css("background-color", "transparent");
+      $( ".logo" ).css("background-image", "url('images/logo.svg')");
+      $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
-      $( ".header" ).css("background-color", "#ffffff");
+      $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
+     
     }
     return; }
   if (st > lastScrollTop){
@@ -21,9 +23,13 @@ $(window).scroll(function(event){
     // upscroll code
     $( ".header" ).removeClass('header--closed').addClass('header--opened');
     if( st < 100 ){
-      $( ".header" ).css("background-color", "transparent");
+      $( ".logo" ).css("background-image", "url('images/logo.svg')");
+      $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
-      $( ".header" ).css("background-color", "#ffffff");
+      $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
+      console.log("hcak");
+      var theta = st / 60 % Math.PI;
+      $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
     }
   }
   lastScrollTop = st;
