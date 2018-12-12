@@ -14,20 +14,29 @@
   width: 100%;
 }
 .project--slogan {
-  height: 100vh;
   width: 100%;
 }
 .project--slogan-left {
   padding-right: 2.5%;
   padding-top: 4%;
+  padding-bottom: 4%;
+}
+.project--slogan-left--top {
   font-size: 24px;
   font-weight: 500;
   color: #000000;
-  line-height: 1.8em;
+}
+.project--slogan-left--bottom {
+  margin-bottom: 3%;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.05em;
 }
 .project--slogan-right {
   padding-left: 2.5%;
   padding-top: 4%;
+  padding-bottom: 4%;
   color: #000000;
 }
 .project--slogan-right--title {
@@ -62,6 +71,30 @@
   font-size: 14px;
   line-height: 1.15em;
   letter-spacing: -0.5px;
+  text-align: justify;
   padding-left: 2%;
   margin-bottom: 20px;
+}
+.project--slogan-right--bottom {
+  padding: 15px 15px;
+}
+.project--slogan-right--bottom .column--title {
+  font-size: 14px;
+  line-height: 1.05em;
+  font-weight: 500;
+}
+.project--slogan-right--bottom .column--text {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.05em;
+  font-weight: 300;
+  text-align: justify;
+}
+.project--images {
+  margin-top: 40px;
+  width: 100%;
+  height: 100vh;
+}
+.project--images-image {
+  width: 100%;
 }
