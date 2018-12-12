@@ -5,7 +5,6 @@
 var lastScrollTop = 0;
 $(window).scroll(function(event){
   var st = $(this).scrollTop();
-  console.log(st);
 
   if (st < 160) {
     $( ".header" ).removeClass('header--closed').addClass('header--opened');
