@@ -1,26 +1,28 @@
 {% extends "base.twig" %}
 {% block content %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <div></div>
-      <div></div>
-    </div>
-    <div class="col-6">
-    <form>
-      <div>
-
+<div class="contact">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-6 contact-left d-flex flex-column justify-content-center">
+        <div class="contact-left-tit">Hello.</div>
+        <div class="contact-left-txt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</div>
       </div>
-      <div>
-        <input type="text"/>
-        <input type="email"/>
-        <input type="text"/>
-        <input type="text"/>
-        <input type="text"/>
-        <button type="submit"></button>
+      <div class="col-6 d-flex flex-column justify-content-center">
+      <form>
+        <div>
+          Enquiry Form
+        </div>
+        <div>
+          <input type="text"/>
+          <input type="email"/>
+          <input type="number"/>
+          <input type="text"/>
+          <input type="text"/>
+          <button type="submit"></button>
+        </div>
+      </form>
       </div>
-    </form>
     </div>
   </div>
 </div>
