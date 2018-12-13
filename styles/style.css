@@ -315,6 +315,110 @@ a:hover {
 .project--images-image {
   width: 100%;
 }
+.profiles--blok1 {
+  height: 37.5em;
+  width: 100%;
+  background-image: url("../images/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profiles--blok1-text {
+  width: 30%;
+  height: 100%;
+  font-size: 3.313em;
+  font-weight: 500;
+  line-height: 1.04;
+  text-align: center;
+  color: #FFFFFF;
+  margin: auto;
+}
+.profiles--blok2 {
+  height: 28.75em;
+  width: 100%;
+  background-color: #000000;
+  padding-top: 3.75em;
+}
+.profiles--blok2-left {
+  width: 50%;
+}
+.profiles--blok2-left-title {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  font-weight: 500;
+  width: 40%;
+  padding-bottom: 1.038em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profiles--blok2-left-text {
+  font-size: 0.875em;
+  color: #FFFFFF;
+  font-weight: 400;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profiles--blok2-right {
+  width: 50%;
+}
+.profiles--blok2-right-text {
+  width: 75%;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: #FFFFFF;
+  padding-left: 2.5em;
+  padding-bottom: 1.25em;
+  text-align: justify;
+}
+.profiles--blok3 {
+  min-height: 112.5em;
+}
+.profiles--blok3-part {
+  height: 37.5em;
+  width: 100%;
+}
+.profiles--blok3-part-img {
+  width: 50%;
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.profiles--blok3-part-img-desc {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+.profiles--blok3-part-text {
+  height: 100%;
+  width: 50%;
+  padding-left: 2.5em;
+}
+.profiles--blok3-part-text-all {
+  min-height: 15.625em;
+  width: 75%;
+}
+.profiles--blok3-part-text-all-num {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #000000;
+  padding-bottom: 0.55em;
+}
+.profiles--blok3-part-text-all-txt {
+  font-size: 0.875em;
+  color: #000000;
+  text-align: justify;
+  padding-bottom: 0.55em;
+}
+.profiles--blok3-part-text2 {
+  height: 100%;
+  width: 50%;
+}
+.profiles--blok3-part-text2-all {
+  min-height: 15.625em;
+  width: 70%;
+}
 .home--container {
   height: 100vh;
   width: 100%;
