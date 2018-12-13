@@ -111,45 +111,50 @@ a:hover {
   background-color: #000000;
 }
 .footer--container {
-  margin: 40px 0px;
+  height: 100%;
+  padding: 40px 0px;
 }
-.footer--container-col {
+.footer--container-row {
+  height: 100%;
+  width: 100%;
+}
+.footer--container-row-col {
   height: 100%;
 }
-.footer--container-col--top {
+.footer--container-row-col--top {
   width: 50%;
   color: #FFFFFF;
   font-size: 0.75em;
   line-height: 1.68;
   font-weight: 500;
 }
-.footer--container-col--bottom {
+.footer--container-row-col--bottom {
   color: #FFFFFF;
   width: 50%;
 }
-.footer--container-col--bottom p {
+.footer--container-row-col--bottom p {
   font-size: 0.75em;
   line-height: 1.68;
   font-weight: 300;
 }
-.footer--container-col--bottom a {
+.footer--container-row-col--bottom a {
   font-size: 0.75em;
   line-height: 1.68;
   font-weight: 300;
 }
-.footer--container-col--bottom-totop a {
+.footer--container-row-col--bottom-totop a {
   color: #FFFFFF;
   font-size: 0.75em;
   line-height: 1.68;
   font-weight: 500;
 }
-.footer--container-col--bottom-totop a:hover {
+.footer--container-row-col--bottom-totop a:hover {
   text-decoration: none;
 }
-.footer--container-col--bottom-mail {
+.footer--container-row-col--bottom-mail {
   margin-bottom: 24px;
 }
-.footer--container-col--bottom-statement {
+.footer--container-row-col--bottom-statement {
   margin-top: 24px;
 }
 .projects {
@@ -395,6 +400,11 @@ a:hover {
 .home--container3-more a {
   font-size: 1em;
   font-weight: 500;
+}
+@media screen and (max-width: 992px) {
+  .footer {
+    height: auto;
+  }
 }
 @media screen and (max-width: 720px) {
   .header {
