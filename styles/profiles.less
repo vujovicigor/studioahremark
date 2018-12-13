@@ -1,0 +1,109 @@
+@import 'variables';
+
+.profiles{
+    &--blok1{
+        height: 37.5em;
+        width: 100%;
+        background-image: url("../images/1.jpg");
+        // background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-text{
+            width: 30%;
+            height: 100%;
+            font-size: 3.313em;
+            font-weight: 500;
+            line-height: 1.04;
+            text-align: center;
+            color: @white;
+            margin: auto;
+        }
+    }
+    &--blok2{
+        height: 28.75em;
+        width: 100%;
+        background-color: @black;
+        padding-top: 3.75em;
+        &-left{
+            width: 50%;
+            &-title{
+                font-size: 1.5em;
+                color: @white;
+                font-weight: 500;
+                width: 40%;
+                padding-bottom: 1.038em;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &-text{
+                font-size: 0.875em;
+                color: @white;
+                font-weight: 400;
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &-right{
+            width: 50%;
+            &-text{
+                width: 75%;
+                font-size: 0.875em;
+                font-weight: 400;
+                color: @white;
+                padding-left: 2.5em;
+                padding-bottom: 1.25em;
+                text-align: justify;
+            }
+        }
+    }
+    &--blok3{
+        min-height: 112.5em;
+        &-part{
+            height: 37.5em;
+            width: 100%;
+            &-img{
+                width: 50%;
+                background-image: url("../images/1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                &-desc{
+                    height: 100%;
+                    width: 100%;
+                    font-size: 1.5em;
+                    color: @white;
+                    font-weight: 500;
+                }
+            }
+            &-text{
+                height: 100%;
+                width: 50%;
+                padding-left: 2.5em;
+                &-all{
+                    min-height: 15.625em;
+                    width: 75%;
+                    &-num{
+                        font-size: 1.5em;
+                        font-weight: 500;
+                        color: @black;
+                        padding-bottom: 0.55em;
+                    }
+                    &-txt{
+                        font-size: 0.875em;
+                        color: @black;
+                        text-align: justify;
+                        padding-bottom: 0.55em;
+                    }
+                }
+            }
+            &-text2{
+                height: 100%;
+                width: 50%;
+                &-all{
+                    min-height: 15.625em;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
