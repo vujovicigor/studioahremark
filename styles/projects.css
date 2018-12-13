@@ -1,58 +1,32 @@
-.projects {
-  min-height: 100vh;
-  width: 100%;
+.projects--blok1 {
+  height: 37.5em;
 }
-.projects--container {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+.projects--blok1-left {
+  width: 50%;
 }
-.projects--slogan {
-  height: 100vh;
-  width: 100%;
-}
-.projects--slogan-left {
-  padding-top: 4%;
-  font-size: 24px;
+.projects--blok1-left-text {
+  width: 14.3em;
+  min-height: 5.5em;
+  font-size: 2.25em;
   font-weight: 500;
+}
+.projects--blok1-right {
+  width: 50%;
+  padding-left: 2.5em;
+}
+.projects--blok1-right-text {
+  min-height: 5.5em;
+}
+.projects--blok1-right-text-1 {
+  font-size: 0.875em;
   color: #000000;
-  line-height: 1.8em;
-}
-.projects--slogan-right {
-  padding-top: 4%;
-  color: #000000;
-}
-.projects--slogan-right--title {
-  font-size: 24px;
-  line-height: 1.8em;
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.projects--slogan-right--words {
-  font-size: 14px;
-  line-height: 1.05em;
-  letter-spacing: 20;
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.projects--slogan-right--link {
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.projects--slogan-right--link a {
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1.05em;
-  letter-spacing: 0.5px;
+  text-align: justify;
+  padding-bottom: 0.9em;
 }
-.projects--slogan-right--innertitle {
-  padding-left: 2%;
-  font-size: 14px;
-  line-height: 1.05em;
-}
-.projects--slogan-right--innerwords {
-  padding-left: 2%;
-  font-size: 14px;
-  line-height: 1.05em;
-  letter-spacing: -0.5px;
+.projects--blok1-right-text-2 {
+  font-size: 0.875em;
+  color: #000000;
+  text-align: justify;
+  letter-spacing: 0.019em;
 }
