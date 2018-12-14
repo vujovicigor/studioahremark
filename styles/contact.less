@@ -1,0 +1,57 @@
+@import 'variables';
+
+.contact{
+    background-color: @black;
+    height: 48.125em;
+    width: 100%;
+    padding-top: 15%;
+    &-border{
+        border-bottom: 1px solid gray;
+    }
+    &-left{
+        margin-bottom: 4.375em;
+        &-tit{
+            color: @white;
+            font-size: 2.25em;
+            font-weight: 500;
+            // padding-bottom: 4.375em;
+            
+        }
+        &-txt{
+            width: 74%;
+            font-weight: 400;
+            color: @white;
+            font-size: 0.875em;
+            text-align: justify;
+            padding-top: 0.6em;
+        }
+    }
+    &-right{
+        &-txt{
+            color: @white;
+            font-size: 1.125em;
+            // padding-bottom: 4.375em;
+            // height: 6.25em;
+        }
+        &-form{
+            height: 3.25em;
+            border: none;
+            background-color: @black;
+            border-bottom: 1px solid gray;
+            color: @white;
+            font-size: 0.75em;
+            &::placeholder{
+                color: @white;
+            }
+        }
+        &-button{
+            width: 3.125em;
+            height: 3.25em;
+            color: @white;
+            background-color: @black;
+            text-align: start;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+    }
+}
