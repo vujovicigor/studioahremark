@@ -397,18 +397,50 @@ a:hover {
   background-color: #000000;
   height: 48.125em;
   width: 100%;
+  padding-top: 15%;
+}
+.contact-border {
+  border-bottom: 1px solid gray;
+}
+.contact-left {
+  margin-bottom: 4.375em;
 }
 .contact-left-tit {
   color: #FFFFFF;
-  font-size: 1.5em;
+  font-size: 2.25em;
   font-weight: 500;
 }
 .contact-left-txt {
-  width: 70%;
+  width: 74%;
   font-weight: 400;
   color: #FFFFFF;
   font-size: 0.875em;
   text-align: justify;
+  padding-top: 0.6em;
+}
+.contact-right-txt {
+  color: #FFFFFF;
+  font-size: 1.125em;
+}
+.contact-right-form {
+  height: 3.25em;
+  border: none;
+  background-color: #000000;
+  border-bottom: 1px solid gray;
+  color: #FFFFFF;
+  font-size: 0.75em;
+}
+.contact-right-form::placeholder {
+  color: #FFFFFF;
+}
+.contact-right-button {
+  width: 3.125em;
+  height: 3.25em;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-align: start;
+  font-size: 0.75em;
+  font-weight: 500;
 }
 .home--container {
   height: 100vh;
