@@ -31,9 +31,9 @@
             <div class="d-flex col-7 p-0" id="menuitems">
                 <div class="col-5 d-none d-lg-block"></div>
                 <div class="d-flex col-12 col-lg-7 no-gutters justify-content-end p-0">
-                    <div class="col-4 d-lg-flex d-none text-right justify-content-end"><a href="projects">Projects</a></div>
-                    <div class="col-4 d-lg-flex d-none text-right justify-content-end"><a href="profiles">Profile</a></div>
-                    <div class="col-4 d-lg-flex d-none text-right justify-content-end"><a href="contact">Contact</a></div>
+                    <div class="col-4 d-lg-flex d-none text-right justify-content-end {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
+                    <div class="col-4 d-lg-flex d-none text-right justify-content-end {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
+                    <div class="col-4 d-lg-flex d-none text-right justify-content-end {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
                     <div class="col-4 d-flex d-lg-none justify-content-end">
                         <style>
                             .black {
@@ -44,7 +44,7 @@
                             }
                         </style>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                            <path d="M3.75 22.5H11.25V20H3.75V22.5ZM3.75 7.5V10H26.25V7.5H3.75ZM3.75 16.25H18.75V13.75H3.75V16.25Z" class="black" />
+                            <path d="M3.75 22.5H11.25V20H3.75V22.5ZM3.75 7.5V10H26.25V7.5H3.75ZM3.75 16.25H18.75V13.75H3.75V16.25Z" class="{% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"  />
                         </svg>
                     </div>
                 </div>
