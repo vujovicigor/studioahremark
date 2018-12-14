@@ -88,7 +88,7 @@ a:hover {
   z-index: 1000;
 }
 .header #logo {
-  height: 30px;
+  height: 24px;
 }
 .header #logo .logo {
   height: 20px;
@@ -96,6 +96,9 @@ a:hover {
   background-image: url("../images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+.header #logo .logo--letter {
+  width: 24px;
 }
 .header--opened {
   top: 0;
@@ -395,22 +398,28 @@ a:hover {
 }
 .contact {
   background-color: #000000;
-  height: 48.125em;
+  height: 100vh;
   width: 100%;
-  padding-top: 15%;
 }
 .contact-border {
   border-bottom: 1px solid gray;
 }
-.contact-left {
-  margin-bottom: 4.375em;
+.contact--container {
+  height: 100%;
 }
-.contact-left-tit {
+.contact--container-row {
+  height: inherit;
+}
+.contact--container-row-left {
+  padding: 10% 0px;
+}
+.contact--container-row-left-tit {
+  height: 50%;
   color: #FFFFFF;
   font-size: 2.25em;
   font-weight: 500;
 }
-.contact-left-txt {
+.contact--container-row-left-txt {
   width: 74%;
   font-weight: 400;
   color: #FFFFFF;
@@ -418,11 +427,15 @@ a:hover {
   text-align: justify;
   padding-top: 0.6em;
 }
-.contact-right-txt {
+.contact--container-row-right {
+  padding: 10% 0px;
+}
+.contact--container-row-right-txt {
+  height: 50%;
   color: #FFFFFF;
   font-size: 1.125em;
 }
-.contact-right-form {
+.contact--container-row-right-form {
   height: 3.25em;
   border: none;
   background-color: #000000;
@@ -430,10 +443,10 @@ a:hover {
   color: #FFFFFF;
   font-size: 0.75em;
 }
-.contact-right-form::placeholder {
+.contact--container-row-right-form::placeholder {
   color: #FFFFFF;
 }
-.contact-right-button {
+.contact--container-row-right-button {
   width: 3.125em;
   height: 3.25em;
   color: #FFFFFF;
