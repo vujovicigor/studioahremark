@@ -88,7 +88,7 @@ a:hover {
   z-index: 1000;
 }
 .header #logo {
-  height: 30px;
+  height: 24px;
 }
 .header #logo .logo {
   height: 20px;
@@ -96,6 +96,9 @@ a:hover {
   background-image: url("../images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+.header #logo .logo--letter {
+  width: 24px;
 }
 .header--opened {
   top: 0;
