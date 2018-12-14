@@ -6,7 +6,7 @@ var lastScrollTop = 0;
 $(document).ready(function(event){
   var url = window.location.pathname.split("/", 3);
   if(url[2] == "contact") {
-    $(".logo").css('background-image', 'url(./Images/logow.svg)');
+    $(".logo").css('background-image', 'url(./images/logow.svg)');
   }
 });
 $(window).scroll(function(event){
@@ -17,7 +17,7 @@ $(window).scroll(function(event){
     if( st < 60 ){
       $( ".logo" ).removeClass("logo--letter");
       if(url[2] == "contact") {
-        $(".logo").css('background-image', 'url(./Images/logow.svg)');
+        $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
       }
@@ -25,7 +25,7 @@ $(window).scroll(function(event){
     } else {
       $( ".logo" ).addClass("logo--letter");
       if(url[2] == "contact") {
-        $(".logo").css('background-image', 'url(./Images/logo-cw.svg)');
+        $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
       }
@@ -42,7 +42,7 @@ $(window).scroll(function(event){
     if( st < 100 ){
       $( ".logo" ).removeClass("logo--letter");
       if(url[2] == "contact") {
-        $(".logo").css('background-image', 'url(./Images/logow.svg)');
+        $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else{
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
       }
@@ -50,7 +50,7 @@ $(window).scroll(function(event){
     } else {
       $( ".logo" ).addClass("logo--letter");
       if(url[2] == "contact") {
-        $(".logo").css('background-image', 'url(./Images/logo-cw.svg)');
+        $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
       }
