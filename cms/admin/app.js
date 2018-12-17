@@ -80,6 +80,53 @@ Ractive.prototype.unset = function(keypath){
     return this.update(keypath);
 }
 
+
+// Drag Drop from https://github.com/andyhall/ractive-drag-events/blob/master/ractive-drag-events.js
+var eventNames = ['dragstart', 'dragenter', 'dragover', 'dragleave', 'drop', 'dragend']
+var niceNames = ['start', 'enter', 'over', 'leave', 'drop', 'end']
+
+function mainHandler(node, fire, event) {
+  if (event.type =='dragstart') {
+    //console.log(node)
+    node.style.background = 'rgba(255,255,255,0)';
+    node.getElementsByClassName('img')[0].style.opacity = 0.4;
+    //node.getElementsByClassName('img')[0].style.transform = "scale(0.3)";
+    setTimeout(function(){
+      node.style.opacity = 1;
+      node.getElementsByClassName('img')[0].style.opacity = 1;  
+    },100)
+          // store a ref. on the dragged elem
+//          dragged = event.target;
+          // make it half transparent
+//          event.target.style.opacity = .1;
+  }
+//  event.target.style.background = "red";
+  var type = niceNames[eventNames.indexOf(event.type)]
+  fire({
+    node: node,
+    type: type,
+    target: this,
+    original: event
+  });
+}
+
+Ractive.events.dragndrop = function (node, fire) {
+  var boundHandler = mainHandler.bind(null, node, fire)
+
+  for (var i = 0; i < eventNames.length; i++) {
+    node.addEventListener(eventNames[i], boundHandler)
+  }
+
+  return {
+    teardown: function () {
+      for (var i = 0; i < eventNames.length; i++) {
+        node.removeEventListener(eventNames[i], boundHandler)
+      }
+    }
+  }
+}
+
+
 Ractive.prototype.fetch2 = window.fetch2;
 
 Ractive.prototype.focusFirstElement = function(self){
