@@ -36,6 +36,7 @@ $(window).scroll(function(event){
     // $( ".header" ).removeClass('header--opened').addClass('header--closed');
     var theta = st / 60 % Math.PI;
     $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
+    // $('.logo').css({ transformOrigin: '1px 0px' });
   } else {
     // upscroll code
     // $( ".header" ).removeClass('header--closed').addClass('header--opened');

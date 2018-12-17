@@ -3,18 +3,22 @@
   font-family: Proxima;
   font-weight: 300;
   src: url('../fonts/FontsFree-Net-proxima_nova_reg-webfont.ttf');
-
+}
+@font-face {
+  font-family: Proxima;
+  font-weight: 400;
+  src: url('../fonts/FontsFree-Net-Proxima-Nova-Sbold.otf');
 }
 @font-face {
   font-family: Proxima;
   font-weight: 500;
   src: url('../fonts/FontsFree-Net-proxima_nova_bold-webfont.ttf');
-
 }
 *{
     font-family: 'Proxima', 'sans-serif';
     font-weight: 300;
     font-size: 16px;
+    line-height: 16px;
     letter-spacing: 0;
     margin: 0;
     padding: 0;
@@ -23,7 +27,7 @@
     }
 }
 HTML {
-    line-height: 1.2;
+    // line-height: 1.2;
 }
 body {
     width: 100%;
@@ -73,6 +77,11 @@ a:hover {
     text-decoration: none;
     opacity: 0.7;
 }
+.owl-theme .owl-dots .owl-dot span {
+    width: 6px;
+    height: 6px;
+    margin-bottom: 2.5em;
+}
 .padding-left-8 {
     padding-left: 12%;
 }
@@ -93,7 +102,7 @@ a:hover {
     right: 0;
     z-index: 1000;
     #logo {
-        height: 24px;
+        height: 22px;
         // #Layer_1 {
         //     height: 20px;
         // }
@@ -104,10 +113,17 @@ a:hover {
             background-position: center;
             background-repeat: no-repeat;
             &--letter {
-                width: 24px;
+                width: 20px;
             }
         }
     }
+    #menuitems {
+        height: 22px;
+        a {
+            font-size: 14px;
+        }
+    }
+
     &--opened {
         top: 0;
         transition: all 0.8s ease-in-out;

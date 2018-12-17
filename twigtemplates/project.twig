@@ -1,45 +1,42 @@
 {% extends "base.twig" %}
 {% block content %}
 <div class="project">
+{% set project = fetch("Project", {"id": _GET['1']})[0] %}
+{% set project_images = fetch("Image", { parent_id: project.id }) %}
   <div class="row no-gutters project--hero">
-    <div class="col-12 project--hero-image"><img src="./images/1.jpg" class=""></div>
+    <div class="col-12 project--hero-image"><img src="img/{{ project_images[0].Image }}" class=""></div>
     <div class="pic_counter project--container-letter">
     </div>
   </div>
   <div class="container d-flex project--slogan">
     <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-between project--slogan-left">
-        <div class="project--slogan-left--top">Turning brands into beliefs.</div>
-        <div class="project--slogan-left--bottom">Branding + Naming</div>
+        <div class="project--slogan-left--top">{{ project.Title }}</div>
+        <div class="project--slogan-left--bottom">{{ project.Category }}</div>
     </div>
     <div class="col-lg-6 col-md-12 project--slogan-right">
       <div class="row no-gutters">
-        <div class="project--slogan-right--innertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
-        <div class="project--slogan-right--innerwords">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</div>
+        <div class="project--slogan-right--innertitle">{{ project.About_title }}</div>
+        <div class="project--slogan-right--innerwords">{{ project.About }}</div>
       </div>
       <div class="row d-flex project--slogan-right--bottom">
         <div class="col-6 column">
           <div class="column--title">Challenge</div>
-          <div class="column--text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</div>
+          <div class="column--text">{{ project.Challenge }}</div>
         </div>
         <div class="col-6 column">
           <div class="column--title">Approach</div>
-          <div class="column--text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</div>
+          <div class="column--text">{{ project.Approach }}</div>
         </div>
       </div>
     </div>
   </div>
+  {% for project_image in project_images %}
+  {% if loop.index != 1 %}
   <div class="row no-gutters project--images">
-    <img src="./images/1.jpg" class="col-12 project--images-image">
+    <img src="img/{{ project_image.Image }}" class="col-12 project--images-image">
   </div>
-  <div class="row no-gutters project--images">
-    <img src="./images/2.jpg" class="col-12 project--images-image">
-  </div>
-  <div class="row no-gutters project--images">
-    <img src="./images/1.jpg" class="col-12 project--images-image">
-  </div>
-  <div class="row no-gutters project--images">
-    <img src="./images/2.jpg" class="col-12 project--images-image">
-  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 
 {% endblock %}
