@@ -43,7 +43,7 @@
                                 fill: #FFFFFF;
                             }
                         </style>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" viewBox="0 0 30 30" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" viewBox="0 0 30 30" fill="none" id="ham">
                             <path d="M3.75 22.5H11.25V20H3.75V22.5ZM3.75 7.5V10H26.25V7.5H3.75ZM3.75 16.25H18.75V13.75H3.75V16.25Z" class="{% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"  />
                         </svg>
                     </div>
@@ -51,122 +51,47 @@
             </div>
         </div>
     </div>
-    {# <div class="mobile_home--closed">
+    <div class="d-flex align-items-center mobile_home mobile_home--closed" id="mobilemenu">
         <div class="container">
-            <div class="col-12"><a href="projects">Projects</a></div>
-            <div class="col-12"><a href="profiles">Profile</a></div>
-            <div class="col-12"><a href="contact">Contact</a></div>
+            <div class="col-12 text-center py-5"><a href="projects">Projects</a></div>
+            <div class="col-12 text-center py-5"><a href="profiles">Profile</a></div>
+            <div class="col-12 text-center py-5"><a href="contact">Contact</a></div>
         </div>
-    </div> #}
+    </div>
 
 {% block content %}{% endblock %}
 
     <footer class="footer d-flex justify-content-center">
         <div class="container no-gutters footer--container">
-        <div class="row justify-content-center align-self-center footer--container-row m-0">
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-between footer--container-row-col">
-                <div class="d-flex justify-content-center justify-content-lg-start footer--container-row-col--top">GET IN TOUCH</div>
-                <div class="d-flex flex-column justify-content-end footer--container-row-col--bottom">
-                    <p class="text-lg-left text-center footer--container-row-col--bottom-mail">Email: <a href="mailto:info@credo.agency">info@credo.agency</a></p>
-                    <p class="text-lg-left text-center">CREDO AGENCY</p>
-                    <p class="text-lg-left text-center">Jaber Al-mubarak St.,</p>
-                    <p class="text-lg-left text-center">T21 Tower, Floor 12, Sharq, Kuwait</p>
-                    <p class="text-lg-left text-center footer--container-row-col--bottom-statement">Turning brands into beliefs.</p>
+            <div class="row justify-content-center align-self-center footer--container-row m-0">
+                <div class="col-lg-6 col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-between footer--container-row-col">
+                    <div class="d-flex justify-content-lg-start justify-content-center footer--container-row-col--top">GET IN TOUCH</div>
+                    <div class="d-flex flex-column justify-content-end footer--container-row-col--bottom">
+                        <p class="text-lg-left text-center footer--container-row-col--bottom-mail">Email: <a href="mailto:info@credo.agency">info@credo.agency</a></p>
+                        <p class="text-lg-left text-center">CREDO AGENCY</p>
+                        <p class="text-lg-left text-center">Jaber Al-mubarak St.,</p>
+                        <p class="text-lg-left text-center">T21 Tower, Floor 12, Sharq, Kuwait</p>
+                        <p class="text-lg-left text-center footer--container-row-col--bottom-statement">Turning brands into beliefs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 footer--container-row-col">
+                    <div class="row h-100 footer--container-row-col--ndrow">
+                        <div class="col-lg-6 col-12 d-flex flex-column align-items-lg-start align-items-center justify-content-between footer--container-row-col--ndrow-left">
+                            <div class="d-flex justify-content-lg-start justify-content-center footer--container-row-col--top">SOCIAL</div>
+                            <div class="d-flex flex-column justify-content-end footer--container-row-col--bottom">
+                                <a class="text-lg-left text-center" href="#">Behance</a>
+                                <a class="text-lg-left text-center" href="#">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                            <div class="d-flex justify-content-start footer--container-row-col--top"></div>
+                            <div class="d-flex flex-column justify-content-end text-lg-right text-center footer--container-row-col--bottom-totop"><a href="#logo">BACK TO TOP</a></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-12 d-flex flex-column align-items-center justify-content-between footer--container-row-col">
-                <div class="d-flex justify-content-center footer--container-row-col--top">SOCIAL</div>
-                <div class="d-flex flex-column justify-content-end footer--container-row-col--bottom">
-                    <a class="text-center" href="">Behance</a>
-                    <a class="text-center" href="">Instagram</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-12 d-flex flex-column align-items-lg-end align-items-center justify-content-between footer--container-row-col">
-                <div class="d-flex justify-content-start footer--container-row-col--top"></div>
-                <div class="d-flex flex-column justify-content-end text-lg-right text-center footer--container-row-col--bottom-totop"><a href="#logo">BACK TO TOP</a></div>
-            </div>
-        </div>
         </div>
     </footer>
-    {#
-
-<script>
-    let meni = document.getElementById('js-meni');
-    let pretraga = document.getElementById('js-pretraga');
-    let navBar = document.getElementById('navbar');
-    let search = document.getElementById('js-search');
-    let head = document.getElementById('head');
-
-    navBar.addEventListener('click', function(){
-        if (meni.classList.contains('active-meni')) {
-            meni.classList.remove('active-meni');
-        }
-        else {
-            meni.classList.add('active-meni');
-            pretraga.classList.remove('active-pretraga');
-            head.classList.add('head-transition');
-        }
-    });
-    search.addEventListener('click', function(){
-        if (pretraga.classList.contains('active-pretraga')) {
-            pretraga.classList.remove('active-pretraga');
-        }
-        else {
-            pretraga.classList.add('active-pretraga');
-            meni.classList.remove('active-meni');
-        }
-        prefetchSearch()
-    });
-
-</script>
-
-   <script src="js/jquery-3.3.1.min.js"></script>
-   <script src="js/typeahead.bundle.min.js"></script>
-   <script>
-        var serachArray = [];
-        var substringMatcher = function() {
-            return function findMatches(q, cb) {
-                q = q.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-                var matches, substringRegex;
-                matches = [];
-                substrRegex = new RegExp(q, 'i');
-                $.each(serachArray, function(i, item) {
-                    if (substrRegex.test(item.Naslov) || substrRegex.test(item.Text)) {
-                        matches.push(item);
-                    }
-                });
-                cb(matches);
-            };
-        };
-        var searchInit=false;
-        function prefetchSearch(){
-            $('#typeahead_m')[0].focus();
-            if (searchInit) return;
-            searchInit=true;
-            $.getJSON("cms/api.php/?query=_search", function(result){
-                serachArray = result
-            });
-        }
-
-        $('#typeahead_m').typeahead({highlight:true}, {
-            name: 'countries',
-            display: 'Naslov',
-            source: substringMatcher(),
-            limit: 10
-        });
-
-        $('#typeahead_m')[0].focus();
-        $('#typeahead_m').bind('typeahead:select', function(ev, suggestion) {
-            document.location = suggestion.href+'/'+suggestion.Slug
-        });
-
-
-
-
-
-   </script> #}
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
