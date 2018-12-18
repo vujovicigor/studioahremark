@@ -1,14 +1,18 @@
 {% extends "base.twig" %}
 {% block content %}
 
+{% set projects = fetch("Project") %}
+
 <div class="container-fluid p-0 no-gutters home">
-  {% set projects = fetch("Project") %}
+  
   <div class="row no-gutters owl-carousel owl-theme home--container">
-    <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div>
-    <div class="col-12 p-0"><img src="./images/2.jpg" class="projects--container-pic"></div>
-    <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div>
-    <div class="col-12 p-0"><img src="./images/2.jpg" class="projects--container-pic"></div>
-    <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div>
+    {% for item in projects %}
+        <div class="col-12 p-0 home--container" ><img src="img/{{ fetch('Image', { parent_id: project.id })[0].Image }}" class="home--container-pic"></div>
+        {# <div class="col-12 p-0"><img src="./images/2.jpg" class="projects--container-pic"></div>
+        <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div>
+        <div class="col-12 p-0"><img src="./images/2.jpg" class="projects--container-pic"></div>
+        <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div> #}
+    {% endfor %}
   </div>
 
   <div class="home--container2 d-flex">
@@ -23,35 +27,39 @@
   </div>
 
   <div class="home--container3 d-flex flex-wrap">
-    <div class="home--container3-project" style="background-image: url('./images/1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    {% for item in projects %}
+    {% if loop.index < '5' %}
+    <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         {# <img src="./images/1.jpg"> #}
+        <div class="home--container3-project-hover d-flex justify-content-between">
+            <div class="home--container3-project-hover-text">{{item.Title}}</div>
+            <div class="home--container3-project-hover-text">{{item.Category}}</div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {# <div class="home--container3-project" style="background-image: url('./images/2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+  
         <div class="home--container3-project-hover d-flex justify-content-between">
             <div class="home--container3-project-hover-text">Makeen Perfumes</div>
             <div class="home--container3-project-hover-text">Branding + Naming</div>
         </div>
     </div>
     <div class="home--container3-project" style="background-image: url('./images/2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        {# <img src="./images/2.jpg"> #}
-        <div class="home--container3-project-hover d-flex justify-content-between">
-            <div class="home--container3-project-hover-text">Makeen Perfumes</div>
-            <div class="home--container3-project-hover-text">Branding + Naming</div>
-        </div>
-    </div>
-    <div class="home--container3-project" style="background-image: url('./images/2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        {# <img src="./images/2.jpg"> #}
+
         <div class="home--container3-project-hover d-flex justify-content-between">
             <div class="home--container3-project-hover-text">Makeen Perfumes</div>
             <div class="home--container3-project-hover-text">Branding + Naming</div>
         </div>
     </div>
     <div class="home--container3-project" style="background-image: url('./images/1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        {# <img src="./images/1.jpg"> #}
+    
         <div class="home--container3-project-hover d-flex justify-content-between">
             <div class="home--container3-project-hover-text">Makeen Perfumes</div>
             <div class="home--container3-project-hover-text">Branding + Naming</div>
         </div>
-    </div>
-    <div class="home--container3-more d-flex justify-content-center align-items-center"><a href="projects">SEE MORE</a></div>
+    </div> #}
+    {# <div class="home--container3-more d-flex justify-content-center align-items-center"><a href="projects">SEE MORE</a></div> #}
   </div>
 
 </div>

@@ -78,9 +78,23 @@ a:hover {
     opacity: 0.7;
 }
 .owl-theme .owl-dots .owl-dot span {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     margin-bottom: 2.5em;
+    border-radius: 50%;
+}
+.owl-dots{
+    max-width: 1140px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.no-js .owl-carousel,.owl-carousel.owl-loaded{
+    display: flex;
+    justify-content: center;
+}
+.owl-item, .owl-stage{
+    height: 100vh;
 }
 .padding-left-8 {
     padding-left: 12%;
