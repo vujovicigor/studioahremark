@@ -30,9 +30,9 @@
             </div>
             <div class="d-flex" id="menuitems">
                 <div class="d-flex justify-content-end">
-                    <div class="d-flex align-items-center item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
-                    <div class="d-flex align-items-center item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
-                    <div class="d-flex align-items-center item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
+                    <div class="d-flex align-items-center margin-x-menu-items item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
+                    <div class="d-flex align-items-center margin-x-menu-items item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
+                    <div class="d-flex align-items-center margin-x-menu-items item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
                     <div class="d-flex align-items-center ham">
                         <style>
                             .black {
@@ -51,21 +51,37 @@
         </div>
     </div>
     <div class="d-flex align-items-center mobile_home mobile_home--closed" id="mobilemenu" style="{% if _GET[0] == 'contact' %}background-color: #000000; {% endif %}">
-        <div class="container d-flex flex-column justify-content-center mobile_home-wrapper">
-            <div class="margin-y-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
-            <div class="margin-y-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
-            <div class="margin-y-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
+        <div class="container d-flex align-items-center justify-content-right mobile_home-top">
+            <p class="padding-x-main font-18 font-bold" id="ex">X</p>
+        </div>
+        <div class="container d-flex flex-direction justify-content-left mobile_home-wrapper">
+            <div class="margin-y-box margin-x-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a class="font-32" href="projects">Projects</a></div>
+            <div class="margin-y-box margin-x-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a class="font-32" href="profiles">Profile</a></div>
+            <div class="margin-y-box margin-x-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a class="font-32" href="contact">Contact</a></div>
+        </div>
+        <div class="container d-flex flex-column align-items-left justify-content-right mobile_home-bottom">
+            <p class="padding-x-main font-14 font-bold margin-y-p {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}">Contact information</p>
+            <p class="padding-x-main font-14 margin-y-p">Email: <a class="font-14 {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}" href="mailto:info@credo.agency">info@credo.agency</a></p>
+            <p class="padding-x-main font-14 padding-y-15 {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}">Credo Agency - Kuwait</p>
+
+            <p class="padding-x-main font-14 font-bold margin-y-p {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}">Social</p>
+            <p class="padding-x-main margin-y-p">
+                <a class="font-14 {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}" href="#">Behance</a>
+            </p>
+            <p class="padding-x-main margin-y-text">
+                <a class="font-14 {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}" href="#">Instagram</a>
+            </p>
         </div>
     </div>
 
 {% block content %}{% endblock %}
 
-    <footer class="footer d-flex justify-content-center">
-        <div class="container footer--container">
-            <div class="row justify-content-center align-self-center footer--container-row m-0">
-                <div class="col-lg-6 col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-between footer--container-row-col">
-                    <div class="d-flex justify-content-lg-start justify-content-center footer--container-row-col--top">GET IN TOUCH</div>
-                    <div class="d-flex flex-column justify-content-end footer--container-row-col--bottom">
+    <footer class="footer d-flex justify-content-center padding-y-40">
+        <div class="container padding-x-main footer--container">
+            <div class="d-flex justify-content-between footer--container-row">
+                <div class="d-flex flex-direction align-items-left justify-content-between footer--container-row-col">
+                    <div class="d-flex justify-content-left footer--container-row-col--top">GET IN TOUCH</div>
+                    <div class="d-flex flex-direction justify-content-end footer--container-row-col--bottom">
                         <p class="text-lg-left text-center footer--container-row-col--bottom-mail">Email: <a href="mailto:info@credo.agency">info@credo.agency</a></p>
                         <p class="text-lg-left text-center">CREDO AGENCY</p>
                         <p class="text-lg-left text-center">Jaber Al-mubarak St.,</p>
@@ -73,20 +89,20 @@
                         <p class="text-lg-left text-center footer--container-row-col--bottom-statement">Turning brands into beliefs.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 footer--container-row-col">
-                    <div class="row h-100 footer--container-row-col--ndrow">
-                        <div class="col-lg-6 col-12 d-flex flex-column align-items-lg-start align-items-center justify-content-between footer--container-row-col--ndrow-left">
-                            <div class="d-flex justify-content-lg-start justify-content-center footer--container-row-col--top">SOCIAL</div>
-                            <div class="d-flex flex-column justify-content-end footer--container-row-col--bottom">
+                <div class="d-flex justify-content-between footer--container-row-col">
+                    {# <div class="d-flex justify-content-between footer--container-row-col--ndrow"> #}
+                        <div class="d-flex flex-direction align-items-start justify-content-between padding-x-right-col footer--container-row-col--ndrow-left">
+                            <div class="d-flex justify-content-start footer--container-row-col--top">SOCIAL</div>
+                            <div class="d-flex flex-direction justify-content-end footer--container-row-col--bottom">
                                 <a class="text-lg-left text-center" href="#">Behance</a>
                                 <a class="text-lg-left text-center" href="#">Instagram</a>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12 d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <div class="d-flex flex-direction align-items-right justify-content-between footer--container-row-col--ndrow-right">
                             <div class="d-flex justify-content-start footer--container-row-col--top"></div>
-                            <div class="d-flex flex-column justify-content-end text-lg-right text-center footer--container-row-col--bottom-totop"><a href="#logo">BACK TO TOP</a></div>
+                            <div class="d-flex flex-direction footer--container-row-col--bottom-totop"><a href="#logo">BACK TO TOP</a></div>
                         </div>
-                    </div>
+                    {# </div> #}
                 </div>
             </div>
         </div>
