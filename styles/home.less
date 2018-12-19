@@ -58,7 +58,7 @@
     &--container3{
         &-project{
             width: 50%;
-            height: 30em;
+            height: 33vw;
             position: relative;
             img{
                 height: 100%;
@@ -97,6 +97,73 @@
             a{
                 font-size: 1em;
                 font-weight: 500;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1240px){
+    .home{
+        &--container2{
+            &-side{
+                &-right1{
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 959px){
+    .home{
+        &--container2{
+            &-side{
+                &-right1{
+                    font-size: 1.4em;
+                    width: 95%;
+                }
+                &-right2{
+                    width: 95%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 719px){
+    .home{
+        &--container{
+            height: auto;
+        }
+        &--container2{
+            flex-direction: column;
+            height: auto;
+            padding-bottom: 3.75em;
+            &-side{
+                width: 100%;
+                padding-left: 2.5em;
+                justify-content: flex-start !important;
+                &-left{
+                    width: 95%;
+                    text-align: left;
+                    font-size: 1em;
+                    font-weight: 400;
+                    opacity: 0.55;
+                    padding-bottom: 1em;
+                }
+                &-right1{
+                    width: 95%;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+                &-right2{
+                    width: 95%;
+                }
+            }
+        }
+        &--container3{
+            &-project{
+                width: 100%;
+                height: 55vw;
             }
         }
     }
