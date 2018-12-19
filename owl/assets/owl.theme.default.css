@@ -30,7 +30,7 @@
 .owl-theme .owl-nav.disabled + .owl-dots {
   /* margin-top: 10px;  */
   position: absolute;
-  right: 60px;
+  /* right: 60px; */
   bottom: 10px;
 }
 
