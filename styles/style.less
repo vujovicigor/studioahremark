@@ -75,7 +75,7 @@ a {
 a:hover {
     color: inherit;
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 .owl-theme .owl-dots .owl-dot span {
     width: 5px;
@@ -114,7 +114,7 @@ a:hover {
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10000;
     #logo {
         height: 22px;
         // #Layer_1 {
@@ -147,9 +147,32 @@ a:hover {
         transition: all 0.8s ease-in-out;
     }
 }
-// .mobile_home {
 
-// }
+.mobile_home {
+    height: calc(~"100vh - 100px");
+    width: 100%;
+    position: fixed;
+    background: @white;
+    top: 99px;
+    left: 0px;
+    z-index: 9900;
+    &--closed {
+        margin-top: calc(~"-100vh - 100px");
+        transition: all 0.8s ease-in-out;
+    }
+    &--opened {
+        margin-top: 0px;
+        transition: all 0.8s ease-in-out;
+    }
+    a {
+        color: @black;
+        font-size: 0.875em;
+    }
+    a:hover {
+        opacity: 0.5;
+    }
+}
+
 .footer {
     height: 300px;
     width: 100%;
@@ -201,6 +224,11 @@ a:hover {
                         margin-top: 24px;
                     }
                 }
+                &--ndrow {
+                    &-left {
+                        padding-left: 2.5em;
+                    }
+                }
             }
         }
     }
@@ -211,10 +239,25 @@ a:hover {
 @import 'contact';
 @import 'home';
 
-@media screen and (max-width: 992px){
+
+@media screen and (max-width: 768px){
+    .header{
+        font-size: 17px;
+    }
     .footer {
         height: auto;
-    }
+        &--container {
+             &-row {
+                &-col {
+                    &--ndrow {
+                        &-left {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+             }
+        }
+  }
 }
 @media screen and (max-width: 719px){
     .header{
