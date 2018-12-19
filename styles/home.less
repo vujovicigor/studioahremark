@@ -121,6 +121,9 @@
                     font-size: 1.4em;
                     width: 95%;
                 }
+                &-right2{
+                    width: 95%;
+                }
             }
         }
     }
@@ -128,10 +131,32 @@
 
 @media screen and (max-width: 719px){
     .home{
+        &--container{
+            height: auto;
+        }
         &--container2{
+            flex-direction: column;
+            height: auto;
+            padding-bottom: 3.75em;
             &-side{
+                width: 100%;
+                padding-left: 2.5em;
+                justify-content: flex-start !important;
+                &-left{
+                    width: 95%;
+                    text-align: left;
+                    font-size: 1em;
+                    font-weight: 400;
+                    opacity: 0.55;
+                    padding-bottom: 1em;
+                }
                 &-right1{
-                    // font-size: 1em;
+                    width: 95%;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+                &-right2{
+                    width: 95%;
                 }
             }
         }
