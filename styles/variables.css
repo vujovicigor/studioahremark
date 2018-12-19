@@ -1,0 +1,33 @@
+.font-12 {
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+}
+.font-14 {
+  font-size: 0.875rem;
+  line-height: 1.05rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+  line-height: 1.35rem;
+}
+.font-24 {
+  font-size: 15rem;
+  line-height: 1.8rem;
+}
+.font-36 {
+  font-size: 2.25rem;
+  line-height: 2.7rem;
+}
+.font-53 {
+  font-size: 3.335rem;
+  line-height: 3.438rem;
+}
+.font-regular {
+  font-weight: 300;
+}
+.font-semibold {
+  font-weight: 400;
+}
+.font-bold {
+  font-weight: 500;
+}
