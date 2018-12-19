@@ -64,21 +64,30 @@ $(window).scroll(function(event){
   lastScrollTop = st;
 });
 $("#ham").click(function() {
+  var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--closed")){
     $(".header").css("background-color", "#FFFFFF");
     $("#mobilemenu").removeClass("mobile_home--closed").addClass("mobile_home--opened");
+    $( ".logo" ).addClass("logo--letter");
+    if(url[2] == "contact") {
+      $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
+    } else {
+      $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
+    }
     disable_scroll();
   }
-  // else {
-  //   $(".header").css("background-color", "transparent");
-  //   $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
-  //   enable_scroll();
-  // }
 });
 $("#ex").click(function() {
+  var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--opened")){
     $(".header").css("background-color", "transparent");
     $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
+    $( ".logo" ).removeClass("logo--letter");
+    if(url[2] == "contact") {
+      $(".logo").css('background-image', 'url(./images/logow.svg)');
+    } else{
+      $( ".logo" ).css("background-image", "url('images/logo.svg')");
+    }
     enable_scroll();
   }
 });

@@ -135,11 +135,17 @@ a:hover {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.padding-y-15 {
+  padding-bottom: 0.94rem;
+}
 .margin-y-title {
   margin-bottom: 4.38rem;
 }
 .margin-y-text {
   margin-bottom: 1.5rem;
+}
+.margin-y-p {
+  margin-bottom: 0.3125rem;
 }
 .margin-y-box {
   margin-bottom: 2.5rem;
@@ -206,12 +212,6 @@ a:hover {
 .owl-item,
 .owl-stage {
   height: 100vh;
-}
-.padding-left-8 {
-  padding-left: 12%;
-}
-.padding-right-8 {
-  padding-right: 12%;
 }
 .black {
   color: #000000;
@@ -285,8 +285,11 @@ a:hover {
   height: 100px;
 }
 .mobile_home-wrapper {
-  height: auto;
+  height: calc(50vh - 100px);
   width: 100%;
+}
+.mobile_home-bottom {
+  height: 50vh;
 }
 .footer {
   height: 300px;
@@ -766,9 +769,6 @@ a:hover {
   }
 }
 @media screen and (max-width: 719px) {
-  .padding-x-right-col {
-    padding-left: 0rem;
-  }
   .header {
     font-size: 17px;
   }
@@ -801,6 +801,9 @@ a:hover {
   .footer--container-row-col--ndrow-right {
     align-items: flex-start;
     width: 100%;
+  }
+  .padding-x-right-col {
+    padding-left: 0rem;
   }
 }
 @media screen and (max-width: 360px) {

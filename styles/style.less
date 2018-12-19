@@ -103,6 +103,9 @@ a:hover {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
+    &-15 {
+        padding-bottom: 0.94rem;
+    }
 }
 .margin {
     &-y {
@@ -111,6 +114,9 @@ a:hover {
         }
         &-text {
             margin-bottom: 1.5rem;
+        }
+        &-p {
+            margin-bottom: 0.3125rem;
         }
         &-box {
             margin-bottom: 2.5rem;
@@ -184,12 +190,6 @@ a:hover {
 .owl-item, .owl-stage{
     height: 100vh;
 }
-.padding-left-8 {
-    padding-left: 12%;
-}
-.padding-right-8 {
-    padding-right: 12%;
-}
 .black {
     color: @black;
 }
@@ -262,8 +262,12 @@ a:hover {
         height: 100px;
     }
     &-wrapper {
-        height: auto;
+        height: calc(~"50vh - 100px");
         width: 100%;
+    }
+    &-bottom {
+        // height: calc(~"50vh - 100px");
+        height: 50vh;
     }
 }
 
@@ -404,7 +408,7 @@ a:hover {
 //     // .owl-dots{
 //     //     max-width: 540px;
 //     // }
-    
+
 // }
 
 @media screen and (max-width: 360px){
