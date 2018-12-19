@@ -244,6 +244,15 @@ a:hover {
   top: -100px;
   transition: all 0.8s ease-in-out;
 }
+.item {
+  width: auto;
+  margin: 0px 15px;
+}
+.ham {
+  display: none;
+  width: auto;
+  margin-left: 0.938em;
+}
 .mobile_home {
   height: calc(100vh - 100px);
   width: 100%;
@@ -262,11 +271,14 @@ a:hover {
   transition: all 0.8s ease-in-out;
 }
 .mobile_home a {
-  color: #000000;
   font-size: 0.875rem;
 }
-.mobile_home a:hover {
-  opacity: 0.5;
+.mobile_home-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.mobile_home-wrapper-item {
+  text-align: center;
 }
 .footer {
   height: 300px;
@@ -732,9 +744,15 @@ a:hover {
     height: 66vw;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 719px) {
   .header {
     font-size: 17px;
+  }
+  .item {
+    display: none;
+  }
+  .ham {
+    display: flex;
   }
   .footer {
     height: auto;

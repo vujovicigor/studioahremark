@@ -16,8 +16,8 @@
 </head>
 <body>
     <div class="header header--opened d-flex align-items-center">
-        <div class="container d-flex align-items-center">
-            <div class="col-5 p-0" id="logo">
+        <div class="container d-flex align-items-center justify-content-between padding-x-main">
+            <div class="d-flex justify-content-left" id="logo">
                 <a href="home">
                     {# <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 108 20" style="enable-background:new 0 0 108 20;" xml:space="preserve">
                         <style type="text/css">
@@ -28,13 +28,12 @@
                     <div class="logo"></div>
                 </a>
             </div>
-            <div class="d-flex col-7 p-0" id="menuitems">
-                <div class="col-5 d-none d-lg-block"></div>
-                <div class="d-flex col-12 col-lg-7 no-gutters justify-content-end p-0">
-                    <div class="col-4 d-lg-flex d-none text-right justify-content-end {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
-                    <div class="col-4 d-lg-flex d-none text-right justify-content-end {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
-                    <div class="col-4 d-lg-flex d-none text-right justify-content-end {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
-                    <div class="col-4 d-flex d-lg-none justify-content-end">
+            <div class="d-flex" id="menuitems">
+                <div class="d-flex justify-content-end">
+                    <div class="d-flex align-items-center item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
+                    <div class="d-flex align-items-center item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
+                    <div class="d-flex align-items-center item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
+                    <div class="d-flex align-items-center ham">
                         <style>
                             .black {
                                 fill: #000000;
@@ -51,18 +50,18 @@
             </div>
         </div>
     </div>
-    <div class="d-flex align-items-center mobile_home mobile_home--closed" id="mobilemenu">
-        <div class="container">
-            <div class="col-12 text-center py-5"><a href="projects">Projects</a></div>
-            <div class="col-12 text-center py-5"><a href="profiles">Profile</a></div>
-            <div class="col-12 text-center py-5"><a href="contact">Contact</a></div>
+    <div class="d-flex align-items-center mobile_home mobile_home--closed" id="mobilemenu" style="{% if _GET[0] == 'contact' %}background-color: #000000; {% endif %}">
+        <div class="container d-flex flex-column justify-content-center mobile_home-wrapper">
+            <div class="margin-y-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="projects">Projects</a></div>
+            <div class="margin-y-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="profiles">Profile</a></div>
+            <div class="margin-y-box mobile_home-wrapper-item {% if _GET[0] == 'contact' %} white {% else %} black {% endif %}"><a href="contact">Contact</a></div>
         </div>
     </div>
 
 {% block content %}{% endblock %}
 
     <footer class="footer d-flex justify-content-center">
-        <div class="container no-gutters footer--container">
+        <div class="container footer--container">
             <div class="row justify-content-center align-self-center footer--container-row m-0">
                 <div class="col-lg-6 col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-between footer--container-row-col">
                     <div class="d-flex justify-content-lg-start justify-content-center footer--container-row-col--top">GET IN TOUCH</div>
