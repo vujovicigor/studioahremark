@@ -336,36 +336,30 @@ a:hover {
   padding-left: 2.5rem;
 }
 .projects--blok1 {
-  height: 37.5em;
+  padding-top: 15%;
+  padding-bottom: 10%;
 }
 .projects--blok1-left {
   width: 50%;
 }
-.projects--blok1-left-text {
-  width: 14.3em;
-  min-height: 5.5em;
-  font-size: 2.25em;
-  font-weight: 500;
-}
 .projects--blok1-right {
   width: 50%;
-  padding-left: 2.5em;
 }
-.projects--blok1-right-text {
-  min-height: 5.5em;
+@media screen and (max-width: 719px) {
+  .flex-direction {
+    flex-direction: column;
+  }
+  .projects--blok1-left {
+    width: 100%;
+  }
+  .projects--blok1-right {
+    width: 100%;
+  }
 }
-.projects--blok1-right-text-1 {
-  font-size: 0.875em;
-  color: #000000;
-  font-weight: 500;
-  text-align: justify;
-  padding-bottom: 0.9em;
-}
-.projects--blok1-right-text-2 {
-  font-size: 0.875em;
-  color: #000000;
-  text-align: justify;
-  letter-spacing: 0.019em;
+@media screen and (max-width: 480px) {
+  .projects--blok1 {
+    padding-top: 30%;
+  }
 }
 .project {
   min-height: 100vh;
@@ -666,7 +660,7 @@ a:hover {
   width: 80%;
 }
 .home--container2-side-r {
-  width: 48%;
+  width: 50%;
 }
 .home--container2-side-r-right1 {
   width: 62%;
@@ -675,7 +669,6 @@ a:hover {
   letter-spacing: 0.018em;
 }
 .home--container2-side-r-right3 {
-  width: 60%;
   letter-spacing: 0.018em;
 }
 .home--container3-project {
@@ -711,6 +704,9 @@ a:hover {
   color: #FFFFFF;
 }
 @media screen and (max-width: 1240px) {
+  .home--container {
+    height: auto;
+  }
   .home--container2-side-r-right1 {
     width: 75%;
   }
@@ -718,13 +714,10 @@ a:hover {
 @media screen and (max-width: 959px) {
   .home--container2-side-r-right1 {
     font-size: 1.4em;
-    width: 95%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 719px) {
-  .home--container {
-    height: auto;
-  }
   .home--container2 {
     flex-direction: column;
     height: auto;
@@ -733,15 +726,24 @@ a:hover {
     width: 100%;
   }
   .home--container2-side-l-left {
-    width: 95%;
+    width: 100%;
     text-align: left;
   }
   .home--container2-side-r {
     width: 100%;
   }
+  .home--container2-side-r-right1 {
+    width: 100%;
+  }
   .home--container3-project {
     width: 100%;
     height: 66vw;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .owl-item,
+  .owl-stage {
+    height: auto;
   }
 }
 @media screen and (max-width: 719px) {
@@ -759,15 +761,6 @@ a:hover {
   }
   .footer--container-row-col--ndrow-left {
     padding-left: 15px;
-  }
-}
-@media screen and (max-width: 719px) {
-  .header {
-    font-size: 17px;
-  }
-  .owl-item,
-  .owl-stage {
-    height: auto;
   }
   .padding-x-right-col {
     padding-left: 0rem;
