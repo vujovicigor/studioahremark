@@ -125,6 +125,12 @@ a:hover {
 .d-flex {
     display: flex;
 }
+.flex-column{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
 .justify-content {
     &-center {
         justify-content: center;
@@ -163,14 +169,11 @@ a:hover {
     border-radius: 50%;
 }
 .owl-dots{
-    max-width: 1140px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    padding-right: 7.6%;
 }
 .no-js .owl-carousel,.owl-carousel.owl-loaded{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .owl-item, .owl-stage{
     height: 100vh;
