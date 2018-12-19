@@ -610,17 +610,6 @@ a:hover {
   font-size: 1em;
   font-weight: 500;
 }
-@media screen and (max-width: 768px) {
-  .header {
-    font-size: 17px;
-  }
-  .footer {
-    height: auto;
-  }
-  .footer--container-row-col--ndrow-left {
-    padding-left: 15px;
-  }
-}
 @media screen and (max-width: 1240px) {
   .home--container2-side-right1 {
     width: 75%;
@@ -670,9 +659,15 @@ a:hover {
     height: 55vw;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 17px;
+  }
   .footer {
     height: auto;
+  }
+  .footer--container-row-col--ndrow-left {
+    padding-left: 15px;
   }
 }
 @media screen and (max-width: 719px) {
