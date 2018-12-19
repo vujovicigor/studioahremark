@@ -68,13 +68,20 @@ $("#ham").click(function() {
     $(".header").css("background-color", "#FFFFFF");
     $("#mobilemenu").removeClass("mobile_home--closed").addClass("mobile_home--opened");
     disable_scroll();
-  } else {
+  }
+  // else {
+  //   $(".header").css("background-color", "transparent");
+  //   $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
+  //   enable_scroll();
+  // }
+});
+$("#ex").click(function() {
+  if( $("#mobilemenu").hasClass("mobile_home--opened")){
     $(".header").css("background-color", "transparent");
     $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
     enable_scroll();
   }
 });
-
 function preventDefault(e) {
   e = e || window.event;
   if (e.preventDefault)

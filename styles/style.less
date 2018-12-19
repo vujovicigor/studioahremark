@@ -120,12 +120,18 @@ a:hover {
         &-box {
             margin-left: 1.25rem;
         }
+        &-menu-items {
+            margin-left: 4.38rem;
+        }
     }
 }
 .d-flex {
     display: flex;
 }
 .flex-column {
+    flex-direction: column;
+}
+.flex-direction {
     flex-direction: column;
 }
 .flex-wrap {
@@ -228,7 +234,6 @@ a:hover {
 }
 .item {
     width: auto;
-    margin: 0px 15px;
 }
 .ham {
     display: none;
@@ -236,32 +241,29 @@ a:hover {
     margin-left: 0.938em;
 }
 .mobile_home {
-    height: calc(~"100vh - 100px");
-    width: 100%;
-    // display: none;
+    height: 100vh;
+    width: 80vw;
+    margin-top: 0px;
+    display: none;
     position: fixed;
     background: @white;
-    top: 99px;
-    left: 0px;
-    z-index: 9900;
+    top: 0px;
+    right: 0px;
+    z-index: 10500;
     &--closed {
-        margin-top: calc(~"-100vh - 100px");
+        right: -80vw;
         transition: all 0.8s ease-in-out;
     }
     &--opened {
-        margin-top: 0px;
+        right: 0px;
         transition: all 0.8s ease-in-out;
     }
-    a {
-        // color: @black;
-        font-size: 0.875rem;
+    &-top {
+        height: 100px;
     }
     &-wrapper {
-        height: 100%;
+        height: auto;
         width: 100%;
-        &-item {
-            text-align: center;
-        }
     }
 }
 
@@ -270,13 +272,14 @@ a:hover {
     width: 100%;
     background-color: @black;
     &--container {
-        // width: 80%;
+        width: 100%;
         height: 100%;
-        padding: 40px 0px;
+        // padding: 40px 0px;
         &-row {
             height: 100%;
             width: 100%;
             &-col {
+                width: 50%;
                 height: 100%;
                 &--top {
                     width: 50%;
@@ -299,6 +302,7 @@ a:hover {
                         font-weight: 300;
                     }
                     &-totop {
+                        justify-content: flex-end;
                         a{
                             color: @white;
                             font-size: 0.75rem;
@@ -310,15 +314,20 @@ a:hover {
                         }
                     }
                     &-mail {
-                        margin-bottom: 24px;
+                        margin-bottom: 1.5rem;
                     }
                     &-statement {
-                        margin-top: 24px;
+                        margin-top: 1.5rem;
                     }
                 }
                 &--ndrow {
+                    height: 100%;
+                    width: 100%;
                     &-left {
-                        padding-left: 2.5rem;
+                        width: 50%;
+                    }
+                    &-right {
+                        width: 50%;
                     }
                 }
             }
@@ -333,8 +342,14 @@ a:hover {
 
 
 @media screen and (max-width: 719px){
+    // .flex-direction {
+    //   flex-direction: row;
+    // }
     .header{
         font-size: 17px;
+    }
+    .mobile_home {
+        display: block;
     }
     .item {
         display: none;
@@ -346,10 +361,23 @@ a:hover {
         height: auto;
         &--container {
              &-row {
+                flex-direction: column;
                 &-col {
+                    width: 100%;
+                    flex-direction: column;
+                    &--bottom {
+                        &-totop {
+                            justify-content: center;
+                        }
+                    }
                     &--ndrow {
                         &-left {
+                            width: 100%;
                             padding-left: 15px;
+                        }
+                        &-right {
+                            align-items: flex-start;
+                            width: 100%;
                         }
                     }
                 }
