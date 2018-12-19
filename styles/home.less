@@ -12,46 +12,51 @@
         }
     }
     &--container2{
-        height: 25em;
+        min-height: 15em;
         // padding-top: 3.75em;
         // padding-left: 12.5em;
         // padding-right: 12.5em;
         &-side{
-            width: 50%;
-            // &:last-child{
-            //     padding-left: 2.5em;
-            // }
-            &-left{
-                width: 80%;
-                // text-align: center;
-                // font-size: 1.5em;
-                // line-height: 1.8em;
-                // font-weight: 500;
+            &-l{
+                width: 50%;
+                // &:last-child{
+                //     padding-left: 2.5em;
+                // }
+                &-left{
+                    width: 80%;
+                    // text-align: center;
+                    // font-size: 1.5em;
+                    // line-height: 1.8em;
+                    // font-weight: 500;
+                }
             }
-            &-right1{
-                width: 62%;
-                // font-size: 1.5em;
-                // line-height: 1.8em;
-                // font-weight: 300;
-                // padding-bottom: 0.338em;
-                // margin-left: 3.125em;
-            }
-            &-right2{
-                // width: 75%;
-                // font-size: 0.875em;
-                // line-height: 16.8px;
-                // font-weight: 300;
-                // text-align: left;
-                letter-spacing: 0.018em;
-                // padding-bottom: 0.938em;
-                // margin-left: 3.125em;
-            }
-            &-right3{
-                width: 60%;
-                // font-size: 0.875em;
-                // font-weight: 500;
-                letter-spacing: 0.018em;
-                // margin-left: 3.125em;
+            &-r{
+                width: 48%;
+                &-right1{
+                    width: 62%;
+                    // font-size: 1.5em;
+                    // line-height: 1.8em;
+                    // font-weight: 300;
+                    // padding-bottom: 0.338em;
+                    // margin-left: 3.125em;
+                }
+                &-right2{
+                    // width: 75%;
+                    // font-size: 0.875em;
+                    // line-height: 16.8px;
+                    // font-weight: 300;
+                    // text-align: left;
+                    letter-spacing: 0.018em;
+                    // padding-bottom: 0.938em;
+                    // margin-left: 3.125em;
+                }
+                &-right3{
+                    width: 60%;
+                    // font-size: 0.875em;
+                    // font-weight: 500;
+                    letter-spacing: 0.018em;
+                    // margin-left: 3.125em;
+                }
             }
         }
     }
@@ -105,8 +110,10 @@
     .home{
         &--container2{
             &-side{
-                &-right1{
-                    width: 75%;
+                &-r{
+                    &-right1{
+                        width: 75%;
+                    }
                 }
             }
         }
@@ -117,12 +124,11 @@
     .home{
         &--container2{
             &-side{
-                &-right1{
-                    font-size: 1.4em;
-                    width: 95%;
-                }
-                &-right2{
-                    width: 95%;
+                &-r{
+                    &-right1{
+                        font-size: 1.4em;
+                        width: 95%;
+                    }
                 }
             }
         }
@@ -137,33 +143,28 @@
         &--container2{
             flex-direction: column;
             height: auto;
-            padding-bottom: 3.75em;
+            // padding-bottom: 3.75em;
             &-side{
-                width: 100%;
-                padding-left: 2.5em;
-                justify-content: flex-start !important;
-                &-left{
-                    width: 95%;
-                    text-align: left;
-                    font-size: 1em;
-                    font-weight: 400;
-                    opacity: 0.55;
-                    padding-bottom: 1em;
+                &-l{
+                    width: 100%;
+                    &-left{
+                        width: 95%;
+                        text-align: left;
+                        // font-size: 1em;
+                        // font-weight: 400;
+                        // opacity: 0.55;
+                        // padding-bottom: 1em;
+                    }
                 }
-                &-right1{
-                    width: 95%;
-                    font-size: 1em;
-                    font-weight: 500;
-                }
-                &-right2{
-                    width: 95%;
+                &-r{
+                    width: 100%;
                 }
             }
         }
         &--container3{
             &-project{
                 width: 100%;
-                height: 55vw;
+                height: 66vw;
             }
         }
     }
