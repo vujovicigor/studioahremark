@@ -1,3 +1,36 @@
+.font-12 {
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+}
+.font-14 {
+  font-size: 0.875rem;
+  line-height: 1.05rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+  line-height: 1.35rem;
+}
+.font-24 {
+  font-size: 15rem;
+  line-height: 1.8rem;
+}
+.font-36 {
+  font-size: 2.25rem;
+  line-height: 2.7rem;
+}
+.font-53 {
+  font-size: 3.335rem;
+  line-height: 3.438rem;
+}
+.font-regular {
+  font-weight: 300;
+}
+.font-semibold {
+  font-weight: 400;
+}
+.font-bold {
+  font-weight: 500;
+}
 @font-face {
   font-family: Proxima;
   font-weight: 300;
@@ -18,9 +51,9 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 16px;
-  letter-spacing: 0;
-  margin: 0;
-  padding: 0;
+  letter-spacing: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 * button:focus {
   outline: 0;
@@ -76,10 +109,74 @@ a:hover {
   text-decoration: none;
   opacity: 0.5;
 }
+.container {
+  width: 100%;
+}
+.padding-x-main {
+  padding-left: 7.6%;
+  padding-right: 7.6%;
+}
+.padding-x-box {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.padding-x-right-col {
+  padding-left: 2.5rem;
+}
+.padding-y-60 {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+.padding-y-40 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.margin-y-title {
+  margin-bottom: 4.38rem;
+}
+.margin-y-text {
+  margin-bottom: 1.5rem;
+}
+.margin-y-box {
+  margin-bottom: 2.5rem;
+}
+.margin-x-box {
+  margin-left: 1.25rem;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-left {
+  justify-content: flex-start;
+}
+.justify-content-right {
+  justify-content: flex-end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-left {
+  align-items: flex-start;
+}
+.align-items-right {
+  align-items: flex-end;
+}
 .owl-theme .owl-dots .owl-dot span {
   width: 5px;
   height: 5px;
-  margin-bottom: 2.5em;
+  margin-bottom: 2.5rem;
   border-radius: 50%;
 }
 .owl-dots {
@@ -111,7 +208,7 @@ a:hover {
 }
 .header {
   height: 100px;
-  font-size: 1.187em;
+  font-size: 1.187rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -163,7 +260,7 @@ a:hover {
 }
 .mobile_home a {
   color: #000000;
-  font-size: 0.875em;
+  font-size: 0.875rem;
 }
 .mobile_home a:hover {
   opacity: 0.5;
@@ -187,7 +284,7 @@ a:hover {
 .footer--container-row-col--top {
   width: 50%;
   color: #FFFFFF;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1.68;
   font-weight: 500;
 }
@@ -196,18 +293,18 @@ a:hover {
   width: 50%;
 }
 .footer--container-row-col--bottom p {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1.68;
   font-weight: 300;
 }
 .footer--container-row-col--bottom a {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1.68;
   font-weight: 300;
 }
 .footer--container-row-col--bottom-totop a {
   color: #FFFFFF;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1.68;
   font-weight: 500;
 }
@@ -221,7 +318,7 @@ a:hover {
   margin-top: 24px;
 }
 .footer--container-row-col--ndrow-left {
-  padding-left: 2.5em;
+  padding-left: 2.5rem;
 }
 .projects--blok1 {
   height: 37.5em;
@@ -279,13 +376,13 @@ a:hover {
   padding-bottom: 4%;
 }
 .project--slogan-left--top {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #000000;
 }
 .project--slogan-left--bottom {
   margin-bottom: 3%;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #000000;
   line-height: 1.05em;
@@ -297,12 +394,12 @@ a:hover {
   color: #000000;
 }
 .project--slogan-right--title {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.8em;
   margin-bottom: 20px;
 }
 .project--slogan-right--words {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.05em;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
@@ -311,13 +408,13 @@ a:hover {
   margin-bottom: 20px;
 }
 .project--slogan-right--link a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.05em;
   letter-spacing: 0.5px;
 }
 .project--slogan-right--innertitle {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.35em;
   font-weight: 500;
   padding-left: 2%;
@@ -325,7 +422,7 @@ a:hover {
 }
 .project--slogan-right--innerwords {
   width: 95%;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.15em;
   letter-spacing: -0.5px;
   text-align: justify;
@@ -336,13 +433,13 @@ a:hover {
   padding: 15px 15px;
 }
 .project--slogan-right--bottom .column--title {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.05em;
   font-weight: 500;
 }
 .project--slogan-right--bottom .column--text {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.05em;
   font-weight: 300;
   text-align: justify;
@@ -379,9 +476,6 @@ a:hover {
   background-color: #000000;
   padding-top: 3.75em;
 }
-.profiles--blok2-left {
-  width: 50%;
-}
 .profiles--blok2-left-title {
   font-size: 1.5em;
   color: #FFFFFF;
@@ -400,14 +494,13 @@ a:hover {
   margin-right: auto;
 }
 .profiles--blok2-right {
-  width: 50%;
+  padding-left: 2.5em;
 }
 .profiles--blok2-right-text {
   width: 75%;
   font-size: 0.875em;
   font-weight: 400;
   color: #FFFFFF;
-  padding-left: 2.5em;
   padding-bottom: 1.25em;
   text-align: justify;
 }
@@ -419,7 +512,6 @@ a:hover {
   width: 100%;
 }
 .profiles--blok3-part-img {
-  width: 50%;
   background-image: url("../images/1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -433,7 +525,6 @@ a:hover {
 }
 .profiles--blok3-part-text {
   height: 100%;
-  width: 50%;
   padding-left: 2.5em;
 }
 .profiles--blok3-part-text-all {
@@ -459,6 +550,28 @@ a:hover {
 .profiles--blok3-part-text2-all {
   min-height: 15.625em;
   width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .profiles--blok2 {
+    height: auto;
+  }
+  .profiles--blok2-left-title {
+    width: 100%;
+  }
+  .profiles--blok2-left-text {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .profiles--blok2-right {
+    padding: 2em 0.94em;
+  }
+  .profiles--blok2-right-title {
+    width: 100%;
+  }
+  .profiles--blok2-right-text {
+    width: 100%;
+  }
 }
 .contact {
   background-color: #000000;
