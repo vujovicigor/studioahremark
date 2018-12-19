@@ -31,7 +31,7 @@
                 }
             }
             &-r{
-                width: 48%;
+                width: 50%;
                 &-right1{
                     width: 62%;
                     // font-size: 1.5em;
@@ -51,7 +51,7 @@
                     // margin-left: 3.125em;
                 }
                 &-right3{
-                    width: 60%;
+                    // width: 60%;
                     // font-size: 0.875em;
                     // font-weight: 500;
                     letter-spacing: 0.018em;
@@ -108,6 +108,9 @@
 }
 @media screen and (max-width: 1240px){
     .home{
+        &--container{
+            height: auto;
+        }
         &--container2{
             &-side{
                 &-r{
@@ -127,7 +130,7 @@
                 &-r{
                     &-right1{
                         font-size: 1.4em;
-                        width: 95%;
+                        width: 90%;
                     }
                 }
             }
@@ -137,9 +140,9 @@
 
 @media screen and (max-width: 719px){
     .home{
-        &--container{
-            height: auto;
-        }
+        // &--container{
+        //     height: auto;
+        // }
         &--container2{
             flex-direction: column;
             height: auto;
@@ -148,7 +151,7 @@
                 &-l{
                     width: 100%;
                     &-left{
-                        width: 95%;
+                        width: 100%;
                         text-align: left;
                         // font-size: 1em;
                         // font-weight: 400;
@@ -158,6 +161,9 @@
                 }
                 &-r{
                     width: 100%;
+                    &-right1{
+                        width: 100%;
+                    }
                 }
             }
         }

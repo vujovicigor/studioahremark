@@ -340,7 +340,11 @@ a:hover {
 @import 'contact';
 @import 'home';
 
-
+@media screen and (max-width: 1240px){
+    .owl-item, .owl-stage{
+        height: auto;
+    }
+}
 @media screen and (max-width: 719px){
     // .flex-direction {
     //   flex-direction: row;
@@ -383,21 +387,29 @@ a:hover {
                 }
              }
         }
-  }
-}
-@media screen and (max-width: 719px){
-    .header{
-        font-size: 17px;
     }
-    .owl-item, .owl-stage{
-        height: auto;
-    }
-    // .owl-dots{
-    //     max-width: 540px;
-    // }
     .padding-x {
         &-right-col {
             padding-left: 0rem;
         }
+    }
+}
+// @media screen and (max-width: 719px){
+//     .header{
+//         font-size: 17px;
+//     }
+//     .owl-item, .owl-stage{
+//         height: auto;
+//     }
+//     // .owl-dots{
+//     //     max-width: 540px;
+//     // }
+    
+// }
+
+@media screen and (max-width: 360px){
+    .owl-dots{
+        bottom: 0px !important;
+        height: 1.875rem;
     }
 }
