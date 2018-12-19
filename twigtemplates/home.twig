@@ -3,26 +3,22 @@
 
 {% set projects = fetch("Project") %}
 
-<div class="container-fluid p-0 no-gutters home">
+<div class="home">
   
   <div class="row no-gutters owl-carousel owl-theme home--container">
     {% for item in projects %}
         <div class="col-12 p-0 home--container" ><img src="img/{{ fetch('Image', { parent_id: project.id })[0].Image }}" class="home--container-pic"></div>
-        {# <div class="col-12 p-0"><img src="./images/2.jpg" class="projects--container-pic"></div>
-        <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div>
-        <div class="col-12 p-0"><img src="./images/2.jpg" class="projects--container-pic"></div>
-        <div class="col-12 p-0"><img src="./images/1.jpg" class="projects--container-pic"></div> #}
     {% endfor %}
   </div>
 
-  <div class="home--container2 d-flex">
-    <div class="home--container2-side d-flex justify-content-center">
-        <div class="home--container2-side-left">Turning brands into beliefs.</div>
+  <div class="home--container2 d-flex padding-y-60 padding-x-main">
+    <div class="home--container2-side-l d-flex">
+        <div class="home--container2-side-l-left font-24 margin-y-title font-bold">Turning brands into beliefs.</div>
     </div>
-    <div class="home--container2-side d-flex flex-column">
-        <div class="home--container2-side-right1">CREDO means "I believe" and that's what we strive to deliver to our client: BELIEF!</div>
-        <div class="home--container2-side-right2">As a strategic branding & design agency, we craft every brand's belief around the heart of its truth, discovered through research, shaped by strategy and manifested by visual design. These elements, working in sync, inspire belief and, thus, aimed to transform your brand.</div>
-        <a class="home--container2-side-right3">SEE MORE</a>
+    <div class="home--container2-side-r d-flex flex-column padding-x-right-col">
+        <div class="home--container2-side-r-right1 font-24 font-regular margin-y-text">CREDO means "I believe" and that's what we strive to deliver to our client: BELIEF!</div>
+        <div class="home--container2-side-r-right2 font-14 font-regular margin-y-text">As a strategic branding & design agency, we craft every brand's belief around the heart of its truth, discovered through research, shaped by strategy and manifested by visual design. These elements, working in sync, inspire belief and, thus, aimed to transform your brand.</div>
+        <a class="home--container2-side-r-right3 font-14 font-bold">SEE MORE</a>
     </div>
   </div>
 
@@ -30,36 +26,13 @@
     {% for item in projects %}
     {% if loop.index < '5' %}
     <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        {# <img src="./images/1.jpg"> #}
-        <div class="home--container3-project-hover d-flex justify-content-between">
-            <div class="home--container3-project-hover-text">{{item.Title}}</div>
-            <div class="home--container3-project-hover-text">{{item.Category}}</div>
+        <div class="home--container3-project-hover padding-y-40 padding-x-box d-flex justify-content-between">
+            <div class="home--container3-project-hover-text font-14 font-regular">{{item.Title}}</div>
+            <div class="home--container3-project-hover-text font-14 font-regular">{{item.Category}}</div>
         </div>
     </div>
     {% endif %}
     {% endfor %}
-    {# <div class="home--container3-project" style="background-image: url('./images/2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-  
-        <div class="home--container3-project-hover d-flex justify-content-between">
-            <div class="home--container3-project-hover-text">Makeen Perfumes</div>
-            <div class="home--container3-project-hover-text">Branding + Naming</div>
-        </div>
-    </div>
-    <div class="home--container3-project" style="background-image: url('./images/2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-
-        <div class="home--container3-project-hover d-flex justify-content-between">
-            <div class="home--container3-project-hover-text">Makeen Perfumes</div>
-            <div class="home--container3-project-hover-text">Branding + Naming</div>
-        </div>
-    </div>
-    <div class="home--container3-project" style="background-image: url('./images/1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-    
-        <div class="home--container3-project-hover d-flex justify-content-between">
-            <div class="home--container3-project-hover-text">Makeen Perfumes</div>
-            <div class="home--container3-project-hover-text">Branding + Naming</div>
-        </div>
-    </div> #}
-    {# <div class="home--container3-more d-flex justify-content-center align-items-center"><a href="projects">SEE MORE</a></div> #}
   </div>
 
 </div>
