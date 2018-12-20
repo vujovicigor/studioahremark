@@ -28,10 +28,12 @@
     {% for item in projects %}
     {% if loop.index < '5' %}
     <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-        <div class="home--container3-project-hover flex-direction padding-y-40 padding-x-box d-flex justify-content-between">
-            <div class="white font-14 font-regular">{{item.Title}}</div>
-            <div class="white font-14 font-regular">{{item.Category}}</div>
-        </div>
+        <a href="project/{{ item.Slug }}">
+            <div class="home--container3-project-hover flex-direction padding-y-40 padding-x-box d-flex justify-content-between">
+                <div class="white font-14 font-regular">{{item.Title}}</div>
+                <div class="white font-14 font-regular">{{item.Category}}</div>
+            </div>
+        </a>
     </div>
     {% endif %}
     {% endfor %}

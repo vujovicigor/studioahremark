@@ -2,66 +2,77 @@
 
 .contact {
     background-color: @black;
-    height: 100vh;
-    width: 100%;
-    // padding-top: 15%;
     &-border {
         border-bottom: 1px solid gray;
     }
-    &--container {
-        height: 100%;
-        &-row {
-            height: inherit;
-            &-left{
-                padding: 10% 0px;
-                // margin-bottom: 4.375em;
-                &-tit{
-                    height: 50%;
+    &-side{   
+        padding-top: 25%;
+        padding-bottom: 15%; 
+        &-left{
+            width: 50%;
+            &-tit{
+                width: 64%;
+            }
+            &-txt{
+                width: 64%;
+            }
+        }
+        &-right{
+            width: 50%;
+            &-txt{
+                height: 50%;
+                line-height: 1.55rem !important;
+            }
+            &-form{
+                height: 3.25rem;
+                border: none;
+                background-color: @black;
+                border-bottom: 1px solid gray;
+                &::placeholder{
                     color: @white;
-                    font-size: 2.25em;
-                    font-weight: 400;
-                    // padding-bottom: 4.375em;
+                }
+            }
+            &-button{
+                width: 3.125rem;
+                height: 3.25rem;
+                text-align: start;
+                background-color: @black;
+            }
+        } 
+    }
+}
+
+@media screen and (max-width: 960px){
+    .contact{
+        &-side{
+            padding-top: 25%;
+        }
+    }
+}
+
+@media screen and (max-width: 719px){
+    .contact{
+        &-side{
+            &-left{
+                width: 100%;
+                &-tit{
+                    width: 100%;
                 }
                 &-txt{
-                    width: 74%;
-                    font-weight: 300;
-                    color: @white;
-                    font-size: 0.875em;
-                    line-height: 16.8px;
-                    text-align: left;
-                    padding-top: 0.6em;
+                    width: 100%;
                 }
             }
             &-right{
-                padding: 10% 0px;
-                &-txt{
-                    height: 50%;
-                    color: @white;
-                    font-size: 1.125em;
-                    // padding-bottom: 4.375em;
-                    // height: 6.25em;
-                }
-                &-form{
-                    height: 3.25em;
-                    border: none;
-                    background-color: @black;
-                    border-bottom: 1px solid gray;
-                    color: @white;
-                    font-size: 0.75em;
-                    &::placeholder{
-                        color: @white;
-                    }
-                }
-                &-button{
-                    width: 3.125em;
-                    height: 3.25em;
-                    color: @white;
-                    background-color: @black;
-                    text-align: start;
-                    font-size: 0.75em;
-                    font-weight: 500;
-                }
+                width: 100%;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 360px){
+    .contact{
+        &-side{
+            padding-top: 35%;
         }
     }
 }
