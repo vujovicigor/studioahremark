@@ -20,9 +20,9 @@
   <div class="home--container3 d-flex flex-wrap">
     {% for project in projects %}
     <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: project.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat;">
-        <a class="home--container3-project-hover padding-y-40 padding-x-box d-flex justify-content-between" href="project/{{ project.Slug }}">
-            <div class="home--container3-project-hover-text">{{ project.Title }}</div>
-            <div class="home--container3-project-hover-text">{{ project.Category }}</div>
+        <a class="home--container3-project-hover flex-direction padding-y-40 padding-x-box d-flex justify-content-between" href="project/{{ project.Slug }}">
+            <div class="white font-14 font-regular">{{ project.Title }}</div>
+            <div class="white font-14 font-regular">{{ project.Category }}</div>
         </a>
     </div>
     {% endfor %}
