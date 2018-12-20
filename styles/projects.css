@@ -14,6 +14,10 @@
   font-size: 1.5rem;
   line-height: 1.8rem;
 }
+.font-32 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
 .font-36 {
   font-size: 2.25rem;
   line-height: 2.7rem;
@@ -31,6 +35,9 @@
 .font-bold {
   font-weight: 500;
 }
+.letter-spacing-0_3 {
+  letter-spacing: 0.019rem;
+}
 .projects--blok1 {
   padding-top: 15%;
   padding-bottom: 10%;
@@ -42,9 +49,6 @@
   width: 50%;
 }
 @media screen and (max-width: 719px) {
-  .flex-direction {
-    flex-direction: column;
-  }
   .projects--blok1-left {
     width: 100%;
   }

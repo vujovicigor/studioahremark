@@ -35,6 +35,12 @@
 .font-bold {
   font-weight: 500;
 }
+.letter-spacing-0_3 {
+  letter-spacing: 0.019rem;
+}
+.letter-spacing--0_3 {
+  letter-spacing: -0.019rem;
+}
 @font-face {
   font-family: Proxima;
   font-weight: 300;
@@ -368,9 +374,6 @@ a:hover {
   width: 50%;
 }
 @media screen and (max-width: 719px) {
-  .flex-direction {
-    flex-direction: column;
-  }
   .projects--blok1-left {
     width: 100%;
   }
@@ -391,97 +394,49 @@ a:hover {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .project--hero-image {
-  width: 100%;
+  width: 12.5%;
+  position: absolute;
 }
-.project--hero-image img {
-  width: 100%;
+.project-left {
+  width: 50%;
 }
-.project--slogan {
-  width: 100%;
+.project-right {
+  width: 50%;
 }
-.project--slogan-left {
-  padding-right: 2.5%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-}
-.project--slogan-left--top {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #000000;
-}
-.project--slogan-left--bottom {
-  margin-bottom: 3%;
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #000000;
-  line-height: 1.05em;
-}
-.project--slogan-right {
-  padding-left: 2.5%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  color: #000000;
-}
-.project--slogan-right--title {
-  font-size: 1.5rem;
-  line-height: 1.8em;
-  margin-bottom: 20px;
-}
-.project--slogan-right--words {
-  font-size: 0.875rem;
-  line-height: 1.05em;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-}
-.project--slogan-right--link {
-  margin-bottom: 20px;
-}
-.project--slogan-right--link a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.05em;
-  letter-spacing: 0.5px;
-}
-.project--slogan-right--innertitle {
-  font-size: 0.875rem;
-  line-height: 1.35em;
-  font-weight: 500;
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.project--slogan-right--innerwords {
-  width: 95%;
-  font-size: 0.875rem;
-  line-height: 1.15em;
-  letter-spacing: -0.5px;
-  text-align: justify;
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.project--slogan-right--bottom {
-  padding: 15px 15px;
-}
-.project--slogan-right--bottom .column--title {
-  font-size: 0.875rem;
-  line-height: 1.05em;
-  font-weight: 500;
-}
-.project--slogan-right--bottom .column--text {
-  margin-top: 20px;
-  font-size: 0.875rem;
-  line-height: 1.05em;
-  font-weight: 300;
-  text-align: justify;
+.project-right-side {
+  width: 48%;
 }
 .project--images {
-  margin-top: 40px;
   width: 100%;
   height: 100vh;
 }
+.project--images:last-child {
+  margin-bottom: 0px;
+}
 .project--images-image {
   width: 100%;
+}
+@media screen and (max-width: 960px) {
+  .project--hero {
+    height: auto;
+  }
+  .project--images {
+    height: auto;
+  }
+}
+@media screen and (max-width: 719px) {
+  .project-left {
+    width: 100%;
+  }
+  .project-right {
+    width: 100%;
+  }
+  .project-right-side {
+    width: 100%;
+  }
 }
 .profiles--blok1 {
   height: 37.5em;
@@ -673,7 +628,7 @@ a:hover {
   height: 100%;
 }
 .home--container2 {
-  min-height: 15em;
+  min-height: 15rem;
 }
 .home--container2-side-l {
   width: 50%;
@@ -688,10 +643,10 @@ a:hover {
   width: 62%;
 }
 .home--container2-side-r-right2 {
-  letter-spacing: 0.018em;
+  letter-spacing: 0.018rem;
 }
 .home--container2-side-r-right3 {
-  letter-spacing: 0.018em;
+  letter-spacing: 0.018rem;
 }
 .home--container3-project {
   width: 50%;
@@ -707,7 +662,6 @@ a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  color: #fff;
   left: 0;
   bottom: 0;
   z-index: 2;
@@ -721,10 +675,6 @@ a:hover {
 .home--container3-project-hover:hover {
   opacity: 1;
 }
-.home--container3-project-hover-text {
-  line-height: 10px;
-  color: #FFFFFF;
-}
 @media screen and (max-width: 1240px) {
   .home--container {
     height: auto;
@@ -735,13 +685,11 @@ a:hover {
 }
 @media screen and (max-width: 959px) {
   .home--container2-side-r-right1 {
-    font-size: 1.4em;
     width: 90%;
   }
 }
 @media screen and (max-width: 719px) {
   .home--container2 {
-    flex-direction: column;
     height: auto;
   }
   .home--container2-side-l {
@@ -749,7 +697,6 @@ a:hover {
   }
   .home--container2-side-l-left {
     width: 100%;
-    text-align: left;
   }
   .home--container2-side-r {
     width: 100%;

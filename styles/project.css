@@ -1,3 +1,46 @@
+.font-12 {
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+}
+.font-14 {
+  font-size: 0.875rem;
+  line-height: 1.05rem;
+}
+.font-18 {
+  font-size: 1.125rem;
+  line-height: 1.35rem;
+}
+.font-24 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.font-32 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
+.font-36 {
+  font-size: 2.25rem;
+  line-height: 2.7rem;
+}
+.font-53 {
+  font-size: 3.335rem;
+  line-height: 3.438rem;
+}
+.font-regular {
+  font-weight: 300;
+}
+.font-semibold {
+  font-weight: 400;
+}
+.font-bold {
+  font-weight: 500;
+}
+.letter-spacing-0_3 {
+  letter-spacing: 0.019rem;
+}
+.letter-spacing--0_3 {
+  letter-spacing: -0.019rem;
+}
 .project {
   min-height: 100vh;
   width: 100%;
@@ -6,95 +49,47 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .project--hero-image {
-  width: 100%;
+  width: 12.5%;
+  position: absolute;
 }
-.project--hero-image img {
-  width: 100%;
+.project-left {
+  width: 50%;
 }
-.project--slogan {
-  width: 100%;
+.project-right {
+  width: 50%;
 }
-.project--slogan-left {
-  padding-right: 2.5%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-}
-.project--slogan-left--top {
-  font-size: 24px;
-  font-weight: 500;
-  color: #000000;
-}
-.project--slogan-left--bottom {
-  margin-bottom: 3%;
-  font-size: 14px;
-  font-weight: 300;
-  color: #000000;
-  line-height: 1.05em;
-}
-.project--slogan-right {
-  padding-left: 2.5%;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  color: #000000;
-}
-.project--slogan-right--title {
-  font-size: 24px;
-  line-height: 1.8em;
-  margin-bottom: 20px;
-}
-.project--slogan-right--words {
-  font-size: 14px;
-  line-height: 1.05em;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-}
-.project--slogan-right--link {
-  margin-bottom: 20px;
-}
-.project--slogan-right--link a {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.05em;
-  letter-spacing: 0.5px;
-}
-.project--slogan-right--innertitle {
-  font-size: 14px;
-  line-height: 1.35em;
-  font-weight: 500;
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.project--slogan-right--innerwords {
-  width: 95%;
-  font-size: 14px;
-  line-height: 1.15em;
-  letter-spacing: -0.5px;
-  text-align: justify;
-  padding-left: 2%;
-  margin-bottom: 20px;
-}
-.project--slogan-right--bottom {
-  padding: 15px 15px;
-}
-.project--slogan-right--bottom .column--title {
-  font-size: 14px;
-  line-height: 1.05em;
-  font-weight: 500;
-}
-.project--slogan-right--bottom .column--text {
-  margin-top: 20px;
-  font-size: 14px;
-  line-height: 1.05em;
-  font-weight: 300;
-  text-align: justify;
+.project-right-side {
+  width: 48%;
 }
 .project--images {
-  margin-top: 40px;
   width: 100%;
   height: 100vh;
 }
+.project--images:last-child {
+  margin-bottom: 0px;
+}
 .project--images-image {
   width: 100%;
+}
+@media screen and (max-width: 960px) {
+  .project--hero {
+    height: auto;
+  }
+  .project--images {
+    height: auto;
+  }
+}
+@media screen and (max-width: 719px) {
+  .project-left {
+    width: 100%;
+  }
+  .project-right {
+    width: 100%;
+  }
+  .project-right-side {
+    width: 100%;
+  }
 }

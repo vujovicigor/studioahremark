@@ -35,3 +35,9 @@
 .font-bold {
   font-weight: 500;
 }
+.letter-spacing-0_3 {
+  letter-spacing: 0.019rem;
+}
+.letter-spacing--0_3 {
+  letter-spacing: -0.019rem;
+}
