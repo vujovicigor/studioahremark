@@ -138,7 +138,7 @@ a:hover {
     flex-direction: column;
 }
 .flex-direction {
-    flex-direction: column;
+    flex-direction: row;
 }
 .flex-wrap {
     flex-wrap: wrap;
@@ -350,9 +350,9 @@ a:hover {
     }
 }
 @media screen and (max-width: 719px){
-    // .flex-direction {
-    //   flex-direction: row;
-    // }
+    .flex-direction {
+      flex-direction: column;
+    }
     .header{
         font-size: 17px;
     }
@@ -369,10 +369,8 @@ a:hover {
         height: auto;
         &--container {
              &-row {
-                flex-direction: column;
                 &-col {
                     width: 100%;
-                    flex-direction: column;
                     &--bottom {
                         &-totop {
                             justify-content: center;
