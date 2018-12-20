@@ -418,13 +418,17 @@ a:hover {
 }
 .project--images-image {
   width: 100%;
+  height: 100%;
 }
-@media screen and (max-width: 960px) {
+.project--images-image:focus {
+  outline: 0 !important;
+}
+@media screen and (max-width: 1240px) {
   .project--hero {
-    height: auto;
+    height: 66vw;
   }
   .project--images {
-    height: auto;
+    height: 66vw;
   }
 }
 @media screen and (max-width: 719px) {
@@ -653,9 +657,8 @@ a:hover {
   height: 33vw;
   position: relative;
 }
-.home--container3-project img {
-  height: 100%;
-  width: 100%;
+.home--container3-project a:hover {
+  opacity: 1;
 }
 .home--container3-project-hover {
   opacity: 0;
