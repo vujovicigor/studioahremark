@@ -359,7 +359,12 @@ a:hover {
 .footer {
   height: 300px;
   width: 100%;
+}
+.footer--background-black {
   background-color: #000000;
+}
+.footer--background-white {
+  background-color: #FFFFFF;
 }
 .footer--container {
   width: 100%;
