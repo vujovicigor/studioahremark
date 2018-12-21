@@ -4,13 +4,13 @@
 {% set project = fetch("Project", {"id": _GET['1']})[0] %}
 {% set project_images = fetch("Image", { parent_id: project.id }) %}
 
-  <div class="project--hero d-flex justify-content-center align-items-center">
-    <img style="position: relative" class="project--hero" src="img/{{ project_images[0].Image }}">
+  <div class="project--hero d-flex justify-content-center align-items-center" style="background-image: url('img/{{ project_images[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    {# <img style="position: relative" class="project--hero" src="img/{{ project_images[0].Image }}"> #}
     <img class="project--hero-image" src="images/logo-c-white.png">
   </div>
 
   <div class="padding-y-60">
-    <div class="d-flex flex-direction padding-x-main">
+    <div class="d-flex flex-direction-2 padding-x-main">
       <div class="d-flex flex-column justify-content-between project-left">
           <div class="black font-24 font-bold">{{ project.Title }}</div>
           <div class="black font-14 margin-y-box">{{ project.Category }}</div>
@@ -39,8 +39,8 @@
 
   {% for project_image in project_images %}
   {% if loop.index != 1 %}
-  <div class="project--images margin-y-box">
-    <img src="img/{{ project_image.Image }}" class="project--images-image">
+  <div class="project--images margin-y-box" style="background-image: url('img/{{ project_image.Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    {# <img src="img/{{ project_image.Image }}" class="project--images-image"> #}
   </div>
   {% endif %}
   {% endfor %}

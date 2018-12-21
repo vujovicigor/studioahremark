@@ -35,6 +35,12 @@
 .font-bold {
   font-weight: 500;
 }
+.letter-spacing-0_3 {
+  letter-spacing: 0.019rem;
+}
+.letter-spacing--0_3 {
+  letter-spacing: -0.019rem;
+}
 .profiles--blok1 {
   height: 37.5em;
   width: 100%;
@@ -68,7 +74,7 @@
   min-height: 112.5em;
 }
 .profiles--blok3-part {
-  height: 37.5em;
+  height: 33vw;
   width: 100%;
 }
 .profiles--blok3-part-img {
