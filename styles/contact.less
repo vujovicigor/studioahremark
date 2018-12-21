@@ -28,6 +28,21 @@
                 border: none;
                 background-color: @black;
                 border-bottom: 1px solid gray;
+                &-msg{
+                    height: 4.25rem;
+                    border: none;
+                    background-color: @black;
+                    border-bottom: 1px solid gray;
+                    &::-webkit-input-placeholder{
+                        color: @white;
+                    }
+                    &:-ms-input-placeholder{
+                        color: @white;
+                    }
+                    &::placeholder{
+                        color: @white;
+                    }
+                }
                 &::-webkit-input-placeholder{
                     color: @white;
                 }

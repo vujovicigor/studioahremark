@@ -52,11 +52,11 @@
 }
 .home--container-txt {
   position: absolute;
-  bottom: 10px;
+  bottom: 0.625rem;
   margin-bottom: 2.3rem;
 }
 .home--container2 {
-  min-height: 15rem;
+  min-height: 18rem;
 }
 .home--container2-side-l {
   width: 50%;
@@ -69,6 +69,9 @@
 }
 .home--container2-side-r-right1 {
   width: 62%;
+}
+.home--container2-side-r-right2 {
+  width: 5.313rem;
 }
 .home--container3-project {
   width: 50%;
@@ -137,6 +140,6 @@
 @media screen and (max-width: 360px) {
   .home--container-txt {
     margin-bottom: 0;
-    bottom: 14px;
+    bottom: 0.875rem;
   }
 }

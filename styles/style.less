@@ -169,6 +169,12 @@ a:hover {
         -ms-flex-direction: row;
             flex-direction: row;
 }
+.flex-direction-3 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
 .flex-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -233,10 +239,11 @@ a:hover {
     }
 }
 .owl-theme .owl-dots .owl-dot span {
-    width: 6px;
-    height: 6px;
+    width: 0.313rem;
+    height: 0.313rem;
     margin-bottom: 2.5rem;
     border-radius: 50%;
+    margin: 0.313rem 0.438rem;
 }
 .owl-dots{
     padding-right: 13.195%;
@@ -384,6 +391,12 @@ a:hover {
 @import 'contact';
 @import 'home';
 
+@media screen and (min-width: 3000px){
+    *{
+        font-size: 42.66667px;
+        line-height: 42.66667px;
+    }
+}
 @media screen and (max-width: 1240px){
     .owl-item, .owl-stage{
         height: auto;
@@ -398,6 +411,14 @@ a:hover {
     }
     .owl-dots{
         padding-right: 7.195%;
+    }
+}
+@media screen and (max-width: 960px){
+    .flex-direction-3{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 @media screen and (max-width: 849px){
