@@ -117,7 +117,7 @@
 }
 @media screen and (max-width: 960px) {
   .profiles--blok3-part {
-    height: 99vw;
+    height: auto;
   }
   .profiles--blok3-part:nth-child(2) {
     flex-direction: column-reverse;
@@ -143,8 +143,9 @@
   .profiles--blok3-part-text2-all {
     align-items: flex-start;
     justify-content: space-between;
-    padding-left: 13.195%;
-    padding-right: 13.195%;
+  }
+  .grid-width {
+    padding-left: 7.195%;
   }
 }
 @media screen and (max-width: 719px) {
