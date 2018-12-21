@@ -98,7 +98,7 @@
 }
 @media screen and (max-width: 1240px) {
   .home--container {
-    height: auto;
+    height: 66vw;
   }
   .home--container2-side-r-right1 {
     width: 75%;
