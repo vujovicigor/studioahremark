@@ -335,6 +335,8 @@ a:hover {
   top: 0px;
   right: 0px;
   z-index: 10500;
+  overflow: scroll;
+  background-color: #FFFFFF;
 }
 .mobile_home--closed {
   right: -80vw;
@@ -350,14 +352,10 @@ a:hover {
   height: 100px;
 }
 .mobile_home-wrapper {
-  height: calc(50vh - 100px);
   width: 100%;
 }
-.mobile_home-bottom {
-  height: 50vh;
-}
 .footer {
-  height: 300px;
+  height: 13.75rem;
   width: 100%;
 }
 .footer--background-black {

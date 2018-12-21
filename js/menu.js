@@ -66,7 +66,7 @@ $(window).scroll(function(event){
 $("#ham").click(function() {
   var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--closed")){
-    $(".header").css("background-color", "#FFFFFF");
+    // $(".header").css("background-color", "#FFFFFF");
     $("#mobilemenu").removeClass("mobile_home--closed").addClass("mobile_home--opened");
     $( ".logo" ).addClass("logo--letter");
     if(url[2] == "contact") {
@@ -80,7 +80,7 @@ $("#ham").click(function() {
 $("#ex").click(function() {
   var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--opened")){
-    $(".header").css("background-color", "transparent");
+    // $(".header").css("background-color", "transparent");
     $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
     $( ".logo" ).removeClass("logo--letter");
     if(url[2] == "contact") {
@@ -132,7 +132,9 @@ function enable_scroll() {
 }
 
 function disable_scroll_mobile(){
+  var menu = document.getElementById("mobilemenu");
   window.addEventListener('touchmove', move , {passive: false});
+  menu.removeEventListener('touchmove', move, {passive: false});
 }
 function enable_scroll_mobile(){
   window.removeEventListener('touchmove', move, {passive: false});
