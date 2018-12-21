@@ -195,6 +195,12 @@ a:hover {
   -ms-flex-direction: row;
   flex-direction: row;
 }
+.flex-direction-3 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
 .flex-wrap {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -253,10 +259,11 @@ a:hover {
   text-align: right;
 }
 .owl-theme .owl-dots .owl-dot span {
-  width: 6px;
-  height: 6px;
+  width: 0.313rem;
+  height: 0.313rem;
   margin-bottom: 2.5rem;
   border-radius: 50%;
+  margin: 0.313rem 0.438rem;
 }
 .owl-dots {
   padding-right: 13.195%;
@@ -549,6 +556,38 @@ a:hover {
     width: 79.055555%;
   }
 }
+@media screen and (max-width: 960px) {
+  .profiles--blok3-part {
+    height: 99vw;
+  }
+  .profiles--blok3-part:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .profiles--blok3-part-img {
+    height: 66vw;
+    width: 100%;
+  }
+  .profiles--blok3-part-img2 {
+    height: 66vw;
+    width: 100%;
+  }
+  .profiles--blok3-part-text {
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .profiles--blok3-part-text2 {
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .profiles--blok3-part-text2-all {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 13.195%;
+    padding-right: 13.195%;
+  }
+}
 @media screen and (max-width: 719px) {
   .grid-width {
     width: 100%;
@@ -593,28 +632,9 @@ a:hover {
     padding-left: 13.195%;
     padding-right: 13.195%;
   }
-  .profiles--blok3-part-text2 {
-    width: 100%;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-  }
-  .profiles--blok3-part-text2-all {
-    padding-left: 13.195%;
-    padding-right: 13.195%;
-  }
   .profiles--blok3-part-img {
     width: 100%;
     height: 33vh;
-  }
-  .profiles--blok3-part-img2 {
-    width: 100%;
-    height: 33vh;
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
   }
 }
 .contact {
@@ -648,6 +668,21 @@ a:hover {
   border: none;
   background-color: #000000;
   border-bottom: 1px solid gray;
+}
+.contact-side-right-form-msg {
+  height: 4.25rem;
+  border: none;
+  background-color: #000000;
+  border-bottom: 1px solid gray;
+}
+.contact-side-right-form-msg::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+.contact-side-right-form-msg:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+.contact-side-right-form-msg::placeholder {
+  color: #FFFFFF;
 }
 .contact-side-right-form::-webkit-input-placeholder {
   color: #FFFFFF;
@@ -703,11 +738,11 @@ a:hover {
 }
 .home--container-txt {
   position: absolute;
-  bottom: 10px;
+  bottom: 0.625rem;
   margin-bottom: 2.3rem;
 }
 .home--container2 {
-  min-height: 15rem;
+  min-height: 18rem;
 }
 .home--container2-side-l {
   width: 50%;
@@ -720,6 +755,9 @@ a:hover {
 }
 .home--container2-side-r-right1 {
   width: 62%;
+}
+.home--container2-side-r-right2 {
+  width: 5.313rem;
 }
 .home--container3-project {
   width: 50%;
@@ -788,7 +826,13 @@ a:hover {
 @media screen and (max-width: 360px) {
   .home--container-txt {
     margin-bottom: 0;
-    bottom: 14px;
+    bottom: 0.875rem;
+  }
+}
+@media screen and (min-width: 3000px) {
+  * {
+    font-size: 42.66667px;
+    line-height: 42.66667px;
   }
 }
 @media screen and (max-width: 1240px) {
@@ -804,6 +848,14 @@ a:hover {
   }
   .owl-dots {
     padding-right: 7.195%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .flex-direction-3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 849px) {
