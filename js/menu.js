@@ -7,9 +7,17 @@ var keys = [32,33,34,35,36,37,38,39,40];
 
 var lastScrollTop = 0;
 $(document).ready(function(event){
+  var st = window.scrollY;
   var url = window.location.pathname.split("/", 3);
-  if(url[2] == "contact") {
+  if(url[2] == "contact" && screen.width > 719 && st<=60) {
     $(".logo").css('background-image', 'url(./images/logow.svg)');
+  }
+  if(st > 60) {
+    $( ".logo" ).addClass("logo--letter");
+    $(".logo").css('background-image', 'url(./images/logo-c.svg)');
+  } else if (url[2] == "contact" && st > 60) {
+    $( ".logo" ).addClass("logo--letter");
+    $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
   }
 });
 $(window).scroll(function(event){
@@ -19,7 +27,7 @@ $(window).scroll(function(event){
     // $( ".header" ).removeClass('header--closed').addClass('header--opened');
     if( st < 60 ){
       $( ".logo" ).removeClass("logo--letter");
-      if(url[2] == "contact") {
+      if(url[2] == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
@@ -27,7 +35,7 @@ $(window).scroll(function(event){
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
       $( ".logo" ).addClass("logo--letter");
-      if(url[2] == "contact") {
+      if(url[2] == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
@@ -36,15 +44,13 @@ $(window).scroll(function(event){
     return; }
   if (st > lastScrollTop){
     // downscroll code
-    // $( ".header" ).removeClass('header--opened').addClass('header--closed');
     var theta = st / 60 % Math.PI;
     $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
   } else {
     // upscroll code
-    // $( ".header" ).removeClass('header--closed').addClass('header--opened');
     if( st < 100 ){
       $( ".logo" ).removeClass("logo--letter");
-      if(url[2] == "contact") {
+      if(url[2] == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else{
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
@@ -52,7 +58,7 @@ $(window).scroll(function(event){
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
       $( ".logo" ).addClass("logo--letter");
-      if(url[2] == "contact") {
+      if(url[2] == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
@@ -66,27 +72,31 @@ $(window).scroll(function(event){
 $("#ham").click(function() {
   var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--closed")){
-    $(".header").css("background-color", "#FFFFFF");
     $("#mobilemenu").removeClass("mobile_home--closed").addClass("mobile_home--opened");
     $( ".logo" ).addClass("logo--letter");
-    if(url[2] == "contact") {
-      $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
-    } else {
-      $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
-    }
+    $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
     disable_scroll();
   }
 });
 $("#ex").click(function() {
+  var st = window.scrollY;
   var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--opened")){
-    $(".header").css("background-color", "transparent");
     $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
-    $( ".logo" ).removeClass("logo--letter");
-    if(url[2] == "contact") {
-      $(".logo").css('background-image', 'url(./images/logow.svg)');
-    } else{
-      $( ".logo" ).css("background-image", "url('images/logo.svg')");
+    if(url[2] == "contact" && screen.width > 719) {
+      if(st > 60) {
+        $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
+      } else {
+        $(".logo").css('background-image', 'url(./images/logow.svg)');
+        $( ".logo" ).removeClass("logo--letter");
+      }
+    } else {
+      if(st > 60) {
+        $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
+      } else {
+        $( ".logo" ).css("background-image", "url('images/logo.svg')");
+        $( ".logo" ).removeClass("logo--letter");
+      }
     }
     enable_scroll();
   }
@@ -132,7 +142,9 @@ function enable_scroll() {
 }
 
 function disable_scroll_mobile(){
+  var menu = document.getElementById("mobilemenu");
   window.addEventListener('touchmove', move , {passive: false});
+  menu.removeEventListener('touchmove', move, {passive: false});
 }
 function enable_scroll_mobile(){
   window.removeEventListener('touchmove', move, {passive: false});
