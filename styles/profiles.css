@@ -157,6 +157,8 @@
     width: 100%;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
   .profiles--blok3-part-text2-all {
@@ -170,6 +172,8 @@
   .profiles--blok3-part-img2 {
     width: 100%;
     height: 33vh;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
 }
