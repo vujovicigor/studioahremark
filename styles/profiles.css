@@ -70,9 +70,6 @@
 .profiles--blok2-right {
   width: 50%;
 }
-.profiles--blok3 {
-  min-height: 112.5em;
-}
 .profiles--blok3-part {
   height: 33vw;
   width: 100%;
@@ -113,9 +110,18 @@
 .profiles--blok3-part-text2-all {
   min-height: 15.625em;
 }
+@media screen and (max-width: 1024px) {
+  .grid-width {
+    width: 79.055555%;
+  }
+}
 @media screen and (max-width: 719px) {
   .grid-width {
     width: 100%;
+  }
+  .profiles {
+    position: relative;
+    top: 100px;
   }
   .profiles--blok2 {
     height: auto;
