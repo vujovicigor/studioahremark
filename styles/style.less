@@ -233,8 +233,8 @@ a:hover {
     }
 }
 .owl-theme .owl-dots .owl-dot span {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     margin-bottom: 2.5rem;
     border-radius: 50%;
 }
@@ -389,6 +389,17 @@ a:hover {
         height: auto;
     }
 }
+@media screen and (max-width: 1024px){
+    .padding-x {
+        &-main {
+            padding-left: 7.195%;
+            padding-right: 7.195%;
+        }
+    }
+    .owl-dots{
+        padding-right: 7.195%;
+    }
+}
 @media screen and (max-width: 849px){
     .flex-direction-2{
         -webkit-box-orient: vertical;
@@ -404,14 +415,9 @@ a:hover {
           -ms-flex-direction: column;
               flex-direction: column;
     }
-    .padding-x {
-        &-main {
-            padding-left: 7.195%;
-            padding-right: 7.195%;
-        }
-    }
     .header{
         font-size: 17px;
+        background-color: @white;
     }
     .mobile_home {
         display: block;
@@ -426,12 +432,15 @@ a:hover {
     }
     .footer {
         height: auto;
+        position: relative;
+        top: 100px;
         &--container {
              &-row {
                 &-col {
                     width: 100%;
                     &--bottom {
                         width: 100%;
+                        margin-bottom: 1.5rem;
                         &-totop {
                             -webkit-box-pack: center;
                                 -ms-flex-pack: center;
