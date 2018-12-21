@@ -3,18 +3,15 @@
 
 {% set projects = fetch("Project") %}
 
-<div class="home">
+<div class="home" id="top">
 
   <div class="owl-carousel owl-theme home--container">
-    {% for item in projects %}
-
-        {% if item.Show_on_slider %}
+    {% for item in projects if item.Show_on_slider == 'true' %}
         <div class="home--container" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-            <div class="home--container-txt black font-14 padding-x-main">
-                <a href="project/{{ item.Slug }}">View Project +</a>
+            <div class="home--container-txt padding-x-main">
+                <a class="black font-14" href="project/{{ item.Slug }}">View Project +</a>
             </div>
         </div>
-        {% endif %}
     {% endfor %}
   </div>
 

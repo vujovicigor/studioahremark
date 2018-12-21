@@ -137,3 +137,9 @@ function disable_scroll_mobile(){
 function enable_scroll_mobile(){
   window.removeEventListener('touchmove', move, {passive: false});
 }
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}

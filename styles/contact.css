@@ -73,6 +73,12 @@
   background-color: #000000;
   border-bottom: 1px solid gray;
 }
+.contact-side-right-form::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+.contact-side-right-form:-ms-input-placeholder {
+  color: #FFFFFF;
+}
 .contact-side-right-form::placeholder {
   color: #FFFFFF;
 }
