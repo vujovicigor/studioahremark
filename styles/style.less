@@ -63,6 +63,10 @@ input:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-color: none;
+    background-color: @black;
+}
+button:hover {
+    opacity: 0.5;
 }
 p {
     -webkit-margin-before: 0px;
@@ -97,10 +101,6 @@ a:hover {
         padding-left: 13.195%;
         padding-right: 13.195%;
     }
-    // &-grid {
-    //     padding-left: 26.39%;
-    //     padding-right: 26.39%;
-    // }
     &-box {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
@@ -266,7 +266,7 @@ a:hover {
     color: @white;
 }
 .header{
-    height: 100px;
+    height: 6.25rem;
     font-size: 1.187rem;
     position: fixed;
     left: 0;
@@ -314,12 +314,12 @@ a:hover {
     margin-top: 0px;
     display: none;
     position: fixed;
-    background: @white;
+    background: @black;
     top: 0px;
     right: 0px;
     z-index: 10500;
     overflow: scroll;
-    background-color: @white;
+    background-color: @black;
     &--closed {
         right: -80vw;
         -webkit-transition: all 0.8s ease-in-out;
@@ -331,14 +331,15 @@ a:hover {
         transition: all 0.8s ease-in-out;
     }
     &-top {
-        height: 6.25rem;
+        height: 4.375rem;
     }
     &-wrapper {
-        // height: calc(~"50vh - 100px");
         width: 100%;
     }
 }
-
+#ex {
+    padding-right: 11.622%;
+}
 .footer {
     height: 13.75rem;
     width: 100%;
@@ -431,7 +432,7 @@ a:hover {
               flex-direction: column;
     }
     .header{
-        font-size: 17px;
+        height: 4.375rem;
         background-color: @white;
     }
     .mobile_home {
@@ -453,7 +454,7 @@ a:hover {
     .footer {
         height: auto;
         position: relative;
-        top: 100px;
+        top: 6.25rem;
         &--container {
              &-row {
                 &-col {

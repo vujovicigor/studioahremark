@@ -154,7 +154,7 @@
   }
   .profiles {
     position: relative;
-    top: 100px;
+    top: 4.375rem;
   }
   .profiles--blok2 {
     height: auto;
@@ -189,8 +189,11 @@
     padding-bottom: 2.5rem;
   }
   .profiles--blok3-part-text-all {
-    padding-left: 13.195%;
-    padding-right: 13.195%;
+    padding-left: 7.195%;
+    padding-right: 7.195%;
+  }
+  .profiles--blok3-part-text2 {
+    width: 86%;
   }
   .profiles--blok3-part-img {
     width: 100%;

@@ -101,7 +101,7 @@
 }
 @media screen and (max-width: 1240px) {
   .home--container {
-    height: 66vw;
+    height: 37.5em;
   }
   .home--container2-side-r-right1 {
     width: 75%;
@@ -115,7 +115,7 @@
 @media screen and (max-width: 719px) {
   .home {
     position: relative;
-    top: 100px;
+    top: 4.375rem;
   }
   .home--container2 {
     height: auto;
