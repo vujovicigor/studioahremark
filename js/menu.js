@@ -31,6 +31,7 @@ $(window).scroll(function(event){
         $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
+
       }
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
