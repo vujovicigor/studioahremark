@@ -14,16 +14,17 @@
         <div class="white font-18 margin-y-title contact-side-right-txt">
             Enquiry Form
         </div>
-        <form >
+        <form id="contactform">
           <div class="d-flex flex-column">
-            <input class="contact-side-right-form font-12 white" type="text" placeholder="Name"/>
-            <input class="contact-side-right-form font-12 white" type="email" placeholder="Email"/>
-            <input class="contact-side-right-form font-12 white" type="tel" placeholder="Phone"/>
-            <input class="contact-side-right-form font-12 white" type="text" placeholder="Subject"/>
-            <input class="contact-side-right-form-msg font-12 white" type="text" placeholder="Message"/>
-            <button class="contact-side-right-button font-12 font-bold white" type="submit">Submit</button>
+            <input class="contact-side-right-form font-12 white" id="name" type="text" placeholder="Name"/>
+            <input class="contact-side-right-form font-12 white" id="email" type="email" placeholder="Email"/>
+            <input class="contact-side-right-form font-12 white" id="phone" type="tel" placeholder="Phone"/>
+            <input class="contact-side-right-form font-12 white" id="subject" type="text" placeholder="Subject"/>
+            <input class="contact-side-right-form-msg font-12 white" id="message" type="text" placeholder="Message"/>
+            <button class="contact-side-right-button button-disabled font-12 font-bold white" type="submit">Submit</button>
           </div>
         </form>
+        <div class="contact-side-right-error" id="errormail"></div>
       </div>
 
     </div>

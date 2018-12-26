@@ -91,7 +91,7 @@
 @media screen and (max-width: 719px) {
   .project {
     position: relative;
-    top: 100px;
+    top: 4.375rem;
   }
   .project-right-side {
     width: 100%;

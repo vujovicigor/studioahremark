@@ -53,13 +53,19 @@
                     color: @white;
                 }
             }
-            &-button{
+            &-button {
                 width: 3.125rem;
                 height: 3.25rem;
                 text-align: start;
                 background-color: @black;
             }
         }
+    }
+}
+.button {
+    &-disabled {
+        opacity: 0.5;
+        pointer-events: none;
     }
 }
 
@@ -74,7 +80,7 @@
 @media screen and (max-width: 719px){
     .contact{
         position: relative;
-        top: 100px;
+        top: 4.375rem;
         &-side{
             &-left{
                 width: 100%;
