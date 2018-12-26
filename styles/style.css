@@ -480,7 +480,7 @@ a:hover {
   }
 }
 .profiles--blok1 {
-  height: 37.5em;
+  height: 100vh;
   width: 100%;
   background-image: url("../images/1.jpg");
   background-repeat: no-repeat;
@@ -547,6 +547,11 @@ a:hover {
 }
 .profiles--blok3-part-text2-all {
   min-height: 15.625em;
+}
+@media screen and (max-width: 1240px) {
+  .profiles--blok1 {
+    height: 86vw;
+  }
 }
 @media screen and (max-width: 1024px) {
   .grid-width {
@@ -785,7 +790,7 @@ a:hover {
 }
 @media screen and (max-width: 1240px) {
   .home--container {
-    height: 66vw;
+    height: 86vw;
   }
   .home--container2-side-r-right1 {
     width: 75%;
