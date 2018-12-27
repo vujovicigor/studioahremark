@@ -16,7 +16,7 @@
     &--blok2{
         height: 28.75em;
         width: 100%;
-        background-color: @black;
+        background-color: @white;
         &-left{
             width: 50%;
             &-title{
@@ -71,6 +71,67 @@
                     min-height: 15.625em;
                 }
             }
+        }
+    }
+    &--container{
+        width: 50%;
+        height: 33vw;
+        position: relative;
+        &-team1{
+            // opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            box-sizing: border-box;
+            background-image: url("../images/profile-team.jpg");
+            // background-image: url('images/profile-team.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            transition: background-image 0.3s ease-in-out;
+            .hover{
+                font-size: 20px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            &:hover{
+                // opacity: 1;
+                background-image: url("../images/profile-team-hover.jpg");
+                .hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &-team2{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            box-sizing: border-box;
+            background-image: url("../images/profile-team.jpg"); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            transition: background-image 0.3s ease-in-out;
+            .hover{
+                font-size: 20px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            &:hover{
+                background-image: url("../images/profile-team-hover.jpg");
+                .hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &-line{
+            background-color: @white;
+            height: 0.063rem;
+            width: 2.5rem;
         }
     }
 }

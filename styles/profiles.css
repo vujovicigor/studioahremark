@@ -56,7 +56,7 @@
 .profiles--blok2 {
   height: 28.75em;
   width: 100%;
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 .profiles--blok2-left {
   width: 50%;
@@ -109,6 +109,64 @@
 }
 .profiles--blok3-part-text2-all {
   min-height: 15.625em;
+}
+.profiles--container {
+  width: 50%;
+  height: 33vw;
+  position: relative;
+}
+.profiles--container-team1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  background-image: url("../images/profile-team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+.profiles--container-team1 .hover {
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.profiles--container-team1:hover {
+  background-image: url("../images/profile-team-hover.jpg");
+}
+.profiles--container-team1:hover .hover {
+  opacity: 1;
+}
+.profiles--container-team2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  background-image: url("../images/profile-team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+.profiles--container-team2 .hover {
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.profiles--container-team2:hover {
+  background-image: url("../images/profile-team-hover.jpg");
+}
+.profiles--container-team2:hover .hover {
+  opacity: 1;
+}
+.profiles--container-line {
+  background-color: #FFFFFF;
+  height: 0.063rem;
+  width: 2.5rem;
 }
 @media screen and (max-width: 1240px) {
   .profiles--blok1 {
