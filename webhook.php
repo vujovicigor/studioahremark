@@ -7,4 +7,4 @@ if ( $_POST['payload'] ) {
   echo shell_exec( 'git status' );
   //print_r($_POST);
 }
-?>hi..
+?>hi...
