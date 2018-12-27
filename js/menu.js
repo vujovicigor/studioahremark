@@ -45,7 +45,7 @@ $(window).scroll(function(event){
     return; }
   if (st > lastScrollTop){
     // downscroll code
-    var theta = st / 60 % Math.PI;
+    var theta = st / 60 % 360;
     $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
   } else {
     // upscroll code
@@ -64,7 +64,7 @@ $(window).scroll(function(event){
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
       }
-      var theta = st / 60 % Math.PI;
+      var theta = st / 60 % 360;
       $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
     }
   }
