@@ -402,12 +402,15 @@ a:active{
         }
     }
 }
+.prev-next{
+    display: none;
+}
 .line{
     height: 0.975rem;
-    width: 0.093rem;
+    width: 0.063rem;
     background-color: @black;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 @import 'projects';
 @import 'project';
@@ -513,6 +516,14 @@ a:active{
                 }
              }
         }
+    }
+    .next-prev{
+        display: none;
+    }
+    .prev-next{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.25rem;
     }
     .padding-x {
         &-right-col {

@@ -415,12 +415,15 @@ a:active {
 .footer--container-row-col--ndrow-right {
   width: 50%;
 }
+.prev-next {
+  display: none;
+}
 .line {
   height: 0.975rem;
-  width: 0.093rem;
+  width: 0.063rem;
   background-color: #000000;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .projects--blok1 {
   padding-top: 15%;
@@ -1067,6 +1070,14 @@ a:active {
     -ms-flex-align: start;
     align-items: flex-start;
     width: 100%;
+  }
+  .next-prev {
+    display: none;
+  }
+  .prev-next {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
   }
   .padding-x-right-col {
     padding-left: 0rem;
