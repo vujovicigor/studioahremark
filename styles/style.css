@@ -415,6 +415,13 @@ a:active {
 .footer--container-row-col--ndrow-right {
   width: 50%;
 }
+.line {
+  height: 0.975rem;
+  width: 0.093rem;
+  background-color: #000000;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
 .projects--blok1 {
   padding-top: 15%;
   padding-bottom: 10%;
