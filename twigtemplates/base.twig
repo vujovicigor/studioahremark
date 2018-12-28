@@ -11,7 +11,7 @@
   {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> #}
   <link rel="stylesheet" href="owl/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="owl/assets/owl.theme.default.css" />
-
+  <link href="fontawesome-free-5.6.3-web/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
@@ -79,7 +79,7 @@
     <footer class="footer d-flex justify-content-center padding-y-40 {% if (_GET[0] != 'contact' and  _GET[0] != 'profiles') %} footer--background-white {% else %} footer--background-black {% endif %}">
         <div class="container padding-x-main footer--container">
         <div class="prev-next">
-            {% if _GET[0] == 'project' %}
+        {% if _GET[0] == 'project' %}
             {% set prev_project = fetch ("prev_project", {Slug:_GET[1]}) %}
             {% set next_project = fetch ("next_project", {Slug:_GET[1]}) %}
                 <a class="black font-bold font-14" href="project/{{prev_project.Slug}}">&lt; PREV </a>

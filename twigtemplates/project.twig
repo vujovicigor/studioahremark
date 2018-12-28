@@ -9,11 +9,37 @@
     <img class="project--hero-image" src="images/logo-c-white.png">
   </div>
 
+  
+
   <div class="padding-y-60">
     <div class="d-flex flex-direction-2 padding-x-main">
       <div class="d-flex flex-column justify-content-between project-left">
           <div class="black font-24 font-bold select-y">{{ project.Title }}</div>
-          <div class="black font-14 margin-y-box select-y">{{ project.Category }}</div>
+          <div class="margin-y-box">
+            <div class="black font-14 select-y margin-y-text">{{ project.Category }}</div>
+            <div class="d-flex">
+              <div class="social">
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+              <div class="social">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+              <div class="social">
+                <a href="https://twitter.com/share?text={{project.Slug | url_encode}}&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {# <div style="width: 10px; height: 10px;">
+            <a href="https://twitter.com/share?text={{project.Slug | url_encode}}&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div> #}
       </div>
 
       <div class="project-right padding-x-right-col d-flex flex-column">

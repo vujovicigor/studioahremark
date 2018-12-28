@@ -71,6 +71,11 @@
 .project--images:last-child {
   margin-bottom: 0px;
 }
+.social {
+  height: 0.75rem;
+  width: 0.75rem;
+  margin-right: 0.75rem;
+}
 @media screen and (max-width: 1240px) {
   .project--hero {
     height: 66vw;
