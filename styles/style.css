@@ -136,6 +136,9 @@ a:focus {
 a:active {
   background-color: transparent;
 }
+.select-y::selection {
+  background-color: #fff200;
+}
 .container {
   width: 100%;
 }
@@ -152,6 +155,9 @@ a:active {
 }
 .padding-x-right-col {
   padding-left: 2.5rem;
+}
+.padding-x-right {
+  padding-right: 26.093%;
 }
 .padding-y-60 {
   padding-top: 3.75rem;
@@ -335,6 +341,10 @@ a:active {
   width: auto;
   margin-left: 0.938em;
 }
+.menu:hover {
+  color: #fff200;
+  opacity: 1;
+}
 .mobile_home {
   height: 100vh;
   width: 80vw;
@@ -501,7 +511,8 @@ a:active {
   height: 100%;
 }
 .profiles--blok2 {
-  height: 28.75em;
+  min-height: 22.5em;
+  height: auto;
   width: 100%;
   background-color: #FFFFFF;
 }
@@ -565,7 +576,7 @@ a:active {
 .profiles--container-team1 {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100.5%;
   left: 0;
   bottom: 0;
   z-index: 2;
@@ -580,16 +591,10 @@ a:active {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-.profiles--container-team1:hover {
-  background-image: url("../images/profile-team-hover.jpg");
-}
-.profiles--container-team1:hover .hover {
-  opacity: 1;
-}
 .profiles--container-team2 {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100.5%;
   left: 0;
   bottom: 0;
   z-index: 2;
@@ -604,25 +609,54 @@ a:active {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-.profiles--container-team2:hover {
-  background-image: url("../images/profile-team-hover.jpg");
-}
-.profiles--container-team2:hover .hover {
-  opacity: 1;
-}
 .profiles--container-line {
   background-color: #FFFFFF;
   height: 0.063rem;
   width: 2.5rem;
+}
+.profiles--text {
+  display: none;
+}
+@media screen and (min-width: 641px) {
+  .profiles--container-team1 .hover {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .profiles--container-team1:hover {
+    background-image: url("../images/profile-team-hover.jpg");
+  }
+  .profiles--container-team1:hover .hover {
+    opacity: 1;
+  }
+  .profiles--container-team2 .hover {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .profiles--container-team2:hover {
+    background-image: url("../images/profile-team-hover.jpg");
+  }
+  .profiles--container-team2:hover .hover {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1240px) {
   .profiles--blok1 {
     height: 86vw;
   }
 }
+@media screen and (max-width: 1120px) {
+  .profiles--container-plus {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .grid-width {
     width: 79.055555%;
+  }
+  .profiles--container-line {
+    display: none;
   }
 }
 @media screen and (max-width: 960px) {
@@ -653,6 +687,24 @@ a:active {
   .profiles--blok3-part-text2-all {
     align-items: flex-start;
     justify-content: space-between;
+  }
+  .profiles--container {
+    width: 100%;
+    height: 66vw;
+  }
+  .profiles--container-team1 {
+    padding-left: 7.195%;
+    padding-right: 14.044445%;
+  }
+  .profiles--container-team2 {
+    padding-left: 7.195%;
+    padding-right: 14.044445%;
+  }
+  .profiles--container-plus {
+    display: block;
+  }
+  .profiles--container-line {
+    display: block;
   }
   .grid-width {
     padding-left: 7.195%;
@@ -707,7 +759,18 @@ a:active {
   }
   .profiles--blok3-part-img {
     width: 100%;
-    height: 33vh;
+  }
+  .profiles--container-team1 {
+    padding-left: 7.195% !important;
+  }
+  .profiles--container-team2 {
+    padding-left: 7.195% !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .profiles--text {
+    display: flex;
+    flex-direction: column;
   }
 }
 .contact {

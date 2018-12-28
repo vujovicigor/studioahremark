@@ -95,6 +95,11 @@ a:focus{
 a:active{
     background-color: transparent;
 }
+.select-y{
+    &::selection{
+        background-color: #fff200;
+    }
+}
 .container {
     width: 100%;
 }
@@ -112,6 +117,9 @@ a:active{
     }
     &-right-col {
         padding-left: 2.5rem;
+    }
+    &-right {
+        padding-right: 26.093%;
     }
 }
 .padding-y {
@@ -315,6 +323,12 @@ a:active{
     display: none;
     width: auto;
     margin-left: 0.938em;
+}
+.menu{
+    &:hover{
+        color: #fff200;
+        opacity: 1;
+    }
 }
 .mobile_home {
     height: 100vh;
