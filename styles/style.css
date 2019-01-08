@@ -342,8 +342,7 @@ a:active {
   margin-left: 0.938em;
 }
 .menu:hover {
-  color: #fff200;
-  opacity: 1;
+  opacity: 0.5;
 }
 .mobile_home {
   height: 100vh;
@@ -786,6 +785,7 @@ a:active {
   .profiles--text {
     display: flex;
     flex-direction: column;
+    background-color: #000000;
   }
 }
 .contact {
@@ -1033,7 +1033,11 @@ a:active {
     background-color: #FFFFFF;
   }
   .mobile_home {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-2 {
+    flex: 2;
   }
   .item {
     display: none;
