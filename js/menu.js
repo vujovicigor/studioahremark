@@ -1,8 +1,3 @@
-// $(window).scroll(function() {
-//     var theta = $(window).scrollTop() / 60 % Math.PI;
-//     $('#logo').css({ transform: 'rotate(' + theta + 'rad)' });
-// });
-
 var keys = [32,33,34,35,36,37,38,39,40];
 
 var lastScrollTop = 0;
@@ -11,7 +6,10 @@ $(document).ready(function(event){
   var url = window.location.pathname.split("/", 3);
   if(url[2] == "contact" && screen.width > 719 && st<=60) {
     $(".logo").css('background-image', 'url(./images/logow.svg)');
+  } else {
+    $(".logo").css('background-image', 'url(./images/logo.svg)');
   }
+
   if(st > 60) {
     $( ".logo" ).addClass("logo--letter");
     $(".logo").css('background-image', 'url(./images/logo-c.svg)');
@@ -24,7 +22,6 @@ $(window).scroll(function(event){
   var st = $(this).scrollTop();
   var url = window.location.pathname.split("/", 3);
   if (st < 100) {
-    // $( ".header" ).removeClass('header--closed').addClass('header--opened');
     if( st < 60 ){
       $( ".logo" ).removeClass("logo--letter");
       if(url[2] == "contact" && screen.width > 719) {
