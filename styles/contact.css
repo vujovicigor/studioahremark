@@ -116,6 +116,7 @@
   .contact {
     position: relative;
     top: 4.375rem;
+    margin-bottom: -2rem;
   }
   .contact-side-left {
     width: 100%;
