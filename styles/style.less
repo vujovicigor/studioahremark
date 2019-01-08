@@ -326,8 +326,7 @@ a:active{
 }
 .menu{
     &:hover{
-        color: #fff200;
-        opacity: 1;
+        opacity: 0.5;
     }
 }
 .mobile_home {
@@ -468,7 +467,11 @@ a:active{
         background-color: @white;
     }
     .mobile_home {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-2{
+        flex: 2;
     }
     .item {
         display: none;
