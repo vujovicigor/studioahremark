@@ -10,12 +10,12 @@ $(document).ready(function(event){
     $(".logo").css('background-image', 'url(./images/logo.svg)');
   }
 
-  if(st > 60) {
-    $( ".logo" ).addClass("logo--letter");
-    $(".logo").css('background-image', 'url(./images/logo-c.svg)');
-  } else if (url[2] == "contact" && st > 60) {
+  if (url[2] == "contact" && st > 60 && screen.width > 719) {
     $( ".logo" ).addClass("logo--letter");
     $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
+  } else if(st > 60) {
+    $( ".logo" ).addClass("logo--letter");
+    $(".logo").css('background-image', 'url(./images/logo-c.svg)');
   }
 });
 $(window).scroll(function(event){
