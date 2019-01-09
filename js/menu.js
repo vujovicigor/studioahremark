@@ -3,41 +3,49 @@ var keys = [32,33,34,35,36,37,38,39,40];
 var lastScrollTop = 0;
 $(document).ready(function(event){
   var st = window.scrollY;
-  if(page == "contact" && screen.width > 719 && st<=60) {
-    $(".logo").css('background-image', 'url(./images/logow.svg)');
-  } else {
-    $(".logo").css('background-image', 'url(./images/logo.svg)');
-  }
+  // if(page == "contact" && screen.width > 719 && st<=60) {
+  //   $(".logo").css('background-image', 'url(./images/logow.svg)');
+  // } else {
+  //   $(".logo").css('background-image', 'url(./images/logo.svg)');
+  // }
 
-  if (page == "contact" && st > 60 && screen.width > 719) {
-    $( ".logo" ).addClass("logo--letter");
+  // if (page == "contact" && st > 60 && screen.width > 719) {
+  //   $( ".logo" ).addClass("logo--letter");
+  //   $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
+  // } else if(st > 60) {
+  //   $( ".logo" ).addClass("logo--letter");
+  //   $(".logo").css('background-image', 'url(./images/logo-c.svg)');
+  // }
+
+  if(page === "contact") {
     $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
-  } else if(st > 60) {
-    $( ".logo" ).addClass("logo--letter");
+  } else {
     $(".logo").css('background-image', 'url(./images/logo-c.svg)');
   }
+  $(".logo_rest").css('background-image', 'url(./images/redo-logo.svg)');
 });
 $(window).scroll(function(event){
   var st = $(this).scrollTop();
   if (st < 100) {
     if( st < 60 ){
-      $( ".logo" ).removeClass("logo--letter");
-      if(page == "contact" && screen.width > 719) {
-        $(".logo").css('background-image', 'url(./images/logow.svg)');
-      } else {
-        $( ".logo" ).css("background-image", "url('images/logo.svg')");
+      // $( ".logo" ).removeClass("logo--letter");
+      // if(page == "contact" && screen.width > 719) {
+      //   $(".logo").css('background-image', 'url(./images/logow.svg)');
+      // } else {
+      //   $( ".logo" ).css("background-image", "url('images/logo.svg')");
 
-      }
+      // }
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
-      $( ".logo" ).addClass("logo--letter");
-      if(page == "contact" && screen.width > 719) {
-        $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
-      } else {
-        $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
-      }
+      // $( ".logo" ).addClass("logo--letter");
+      // if(page == "contact" && screen.width > 719) {
+      //   $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
+      // } else {
+      //   $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
+      // }
     }
-    return; }
+    return;
+  }
   if (st > lastScrollTop){
     // downscroll code
     var theta = (st - 100) / 60 % 360;
@@ -45,7 +53,7 @@ $(window).scroll(function(event){
   } else {
     // upscroll code
     if( st < 100 ){
-      $( ".logo" ).removeClass("logo--letter");
+      // $( ".logo" ).removeClass("logo--letter");
       if(page == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else{
@@ -53,7 +61,7 @@ $(window).scroll(function(event){
       }
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
-      $( ".logo" ).addClass("logo--letter");
+      // $( ".logo" ).addClass("logo--letter");
       if(page == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
