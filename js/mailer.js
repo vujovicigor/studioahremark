@@ -28,8 +28,6 @@ $("#contactform").submit(function(event){
   var subject = $('#subject').val();
   var message = $('#message').val();
     document.getElementById('errormail').classList.remove('kontakt--inner-button--message-show');
-    // document.getElementById('contactform').submit();
-    // var xmlhttp = new XMLHttpRequest();
 
     var data = {"name": name, "email": email, "phone": phone, "subject": subject, "message": message};
     $("#contactform").prop("disabled", true);
