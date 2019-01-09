@@ -3,14 +3,13 @@ var keys = [32,33,34,35,36,37,38,39,40];
 var lastScrollTop = 0;
 $(document).ready(function(event){
   var st = window.scrollY;
-  var url = window.location.pathname.split("/", 3);
-  if(url[2] == "contact" && screen.width > 719 && st<=60) {
+  if(page == "contact" && screen.width > 719 && st<=60) {
     $(".logo").css('background-image', 'url(./images/logow.svg)');
   } else {
     $(".logo").css('background-image', 'url(./images/logo.svg)');
   }
 
-  if (url[2] == "contact" && st > 60 && screen.width > 719) {
+  if (page == "contact" && st > 60 && screen.width > 719) {
     $( ".logo" ).addClass("logo--letter");
     $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
   } else if(st > 60) {
@@ -20,11 +19,10 @@ $(document).ready(function(event){
 });
 $(window).scroll(function(event){
   var st = $(this).scrollTop();
-  var url = window.location.pathname.split("/", 3);
   if (st < 100) {
     if( st < 60 ){
       $( ".logo" ).removeClass("logo--letter");
-      if(url[2] == "contact" && screen.width > 719) {
+      if(page == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
@@ -33,7 +31,7 @@ $(window).scroll(function(event){
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
       $( ".logo" ).addClass("logo--letter");
-      if(url[2] == "contact" && screen.width > 719) {
+      if(page == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
@@ -48,7 +46,7 @@ $(window).scroll(function(event){
     // upscroll code
     if( st < 100 ){
       $( ".logo" ).removeClass("logo--letter");
-      if(url[2] == "contact" && screen.width > 719) {
+      if(page == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logow.svg)');
       } else{
         $( ".logo" ).css("background-image", "url('images/logo.svg')");
@@ -56,7 +54,7 @@ $(window).scroll(function(event){
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
       $( ".logo" ).addClass("logo--letter");
-      if(url[2] == "contact" && screen.width > 719) {
+      if(page == "contact" && screen.width > 719) {
         $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
         $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
@@ -68,7 +66,6 @@ $(window).scroll(function(event){
   lastScrollTop = st;
 });
 $("#ham").click(function() {
-  var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--closed")){
     $("#mobilemenu").removeClass("mobile_home--closed").addClass("mobile_home--opened");
     $( ".logo" ).addClass("logo--letter");
@@ -78,10 +75,9 @@ $("#ham").click(function() {
 });
 $("#ex").click(function() {
   var st = window.scrollY;
-  var url = window.location.pathname.split("/", 3);
   if( $("#mobilemenu").hasClass("mobile_home--opened")){
     $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
-    if(url[2] == "contact" && screen.width > 719) {
+    if(page == "contact" && screen.width > 719) {
       if(st > 60) {
         $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
       } else {
