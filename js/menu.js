@@ -13,9 +13,12 @@ $(document).ready(function(event){
     $(".logo_rest").css('background-image', 'url(./images/redo-logo.svg)');
   }
 
-  if(st <= 60 ){
+  if(st <= 60 && wwidth > 719){
     $(".logo_rest").removeClass("hidden");
     $(".logo_rest").addClass("shown");
+  } else if(st <= 60 && wwidth < 719) {
+    $(".logo_rest").removeClass("hidden");
+    $(".logo_rest").addClass("shown_mobile");
   } else {
     $(".logo_rest").removeClass("shown");
     $(".logo_rest").addClass("hidden");
@@ -23,7 +26,7 @@ $(document).ready(function(event){
 });
 $(window).scroll(function(event){
   var st = $(this).scrollTop();
-  if ( st < 100 ) {
+
     if( st < 60 ){
       $(".logo_rest").removeClass("hidden");
       $(".logo_rest").addClass("shown");
@@ -31,29 +34,21 @@ $(window).scroll(function(event){
     } else {
       $(".logo_rest").removeClass("shown");
       $(".logo_rest").addClass("hidden");
+      var theta = (st - 60) / 60 % 360;
+      $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
+      lastScrollTop = st;
     }
-    return;
-  }
-  if ( st > lastScrollTop ){
+
+  if ( st > lastScrollTop && st > 60 ){
     // downscroll code
-    var theta = (st - 100) / 60 % 360;
+    var theta = (st - 60) / 60 % 360;
     $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
   } else {
     // upscroll code
-    if( st < 100 ){
-      if(page == "contact" && screen.width > 719) {
-        $(".logo").css('background-image', 'url(./images/logow.svg)');
-      } else{
-        $( ".logo" ).css("background-image", "url('images/logo.svg')");
-      }
+    if( st < 60 ){
       $('.logo').css({ transform: 'rotate(0rad)' });
     } else {
-      if(page == "contact" && screen.width > 719) {
-        $(".logo").css('background-image', 'url(./images/logo-cw.svg)');
-      } else {
-        $( ".logo" ).css("background-image", "url('images/logo-c.svg')");
-      }
-      var theta = (st - 100) / 60 % 360;
+      var theta = (st - 60) / 60 % 360;
       $('.logo').css({ transform: 'rotate(' + theta + 'rad)' });
     }
   }
@@ -62,24 +57,25 @@ $(window).scroll(function(event){
 $("#ham").click(function() {
   if( $("#mobilemenu").hasClass("mobile_home--closed")){
     $("#mobilemenu").removeClass("mobile_home--closed").addClass("mobile_home--opened");
-    $(".logo_rest").removeClass("shown");
+    $(".logo_rest").removeClass("shown_mobile");
     $(".logo_rest").addClass("hidden");
     disable_scroll();
   }
 });
 $("#ex").click(function() {
   var st = window.scrollY;
+
   if( $("#mobilemenu").hasClass("mobile_home--opened")){
     $("#mobilemenu").removeClass("mobile_home--opened").addClass("mobile_home--closed");
     if(page == "contact" && screen.width > 719) {
       if(st < 60) {
         $(".logo_rest").removeClass("hidden");
-        $(".logo_rest").addClass("shown");
+        $(".logo_rest").addClass("shown_mobile");
       }
     } else {
       if(st < 60) {
         $(".logo_rest").removeClass("hidden");
-        $(".logo_rest").addClass("shown");
+        $(".logo_rest").addClass("shown_mobile");
       }
     }
     enable_scroll();
