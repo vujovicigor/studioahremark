@@ -955,7 +955,7 @@ a:active {
 }
 @media screen and (max-width: 1240px) {
   .home--container {
-    height: 37.5em;
+    height: calc(100vh - 4.375rem);
   }
   .home--container2-side-r-right1 {
     width: 75%;
