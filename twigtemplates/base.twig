@@ -135,8 +135,10 @@
     <script src="./js/mailer.js"></script>
      <script>
 
+    var IstaknutiProjekti = {{ fetch("IstaknutiProjekti")|json_encode() |raw }};
 
         var owl = $('.owl-carousel');
+        var viewPro = document.getElementById('viewPro');
         owl.owlCarousel({
             items:1,
             loop:true,
@@ -147,6 +149,13 @@
             dots:true,
             animateOut: 'fadeOut'
         });
+        owl.on('changed.owl.carousel', function(event) {
+            console.log(IstaknutiProjekti[event.page.index].Slug);
+            viewPro.href = 'project/' + IstaknutiProjekti[event.page.index].Slug;
+
+        })
+         // if (document.getElementById('viewPro')) document.getElementById('viewPro').href = 'project/' + IstaknutiProjekti[0].Slug;
+
    </script>
 
 </body>

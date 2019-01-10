@@ -1,19 +1,21 @@
 {% extends "base.twig" %}
 {% block content %}
 
-{% set projects = fetch("Project") %}
+{% set IstaknutiProjekti = fetch("IstaknutiProjekti") %}
 
 <div class="home" id="top">
-
-  <div class="owl-carousel owl-theme home--container">
-    {% for item in projects if item.Show_on_slider == 'true' %}
-        <div class="home--container" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-            <div class="home--container-txt padding-x-main">
-                <a class="black font-14" href="project/{{ item.Slug }}">View Project +</a>
-            </div>
+    <div style="position: relative;">
+        <div class="owl-carousel owl-theme home--container">
+            {% for item in IstaknutiProjekti %}
+                <div class="home--container" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-  </div>
+        <div class="home--container-txt padding-x-main">
+            <a id="viewPro" class="black font-14" >View Project +</a>
+        </div>
+    </div>
+  
 
   <div class="home--container2 padding-y-60">
     <div class="flex-direction padding-x-main  d-flex">
@@ -29,6 +31,8 @@
   </div>
 
   <div class="home--container3 d-flex flex-wrap">
+  {% set projects = fetch("Project") %}
+
     {% for item in projects %}
     {% if loop.index < '5' %}
     <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">

@@ -57,6 +57,6 @@
         font-size: 0/875rem;
         color: #000000;
       }
-    /* .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #000000; 
-    } */
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      opacity: 0.3;
+    }
