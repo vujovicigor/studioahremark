@@ -18,7 +18,7 @@
     <div class="header header--opened d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between padding-x-main">
             <div class="d-flex justify-content-left" id="logo">
-                <a class="d-flex justify-content-left align-items-center" href="home">
+                <a class="d-flex justify-content-left align-items-center" href="index">
                     {# <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 108 20" style="enable-background:new 0 0 108 20;" xml:space="preserve">
                         <style type="text/css">
                             .st0{fill:#010101;}
@@ -150,7 +150,7 @@
             animateOut: 'fadeOut'
         });
         owl.on('changed.owl.carousel', function(event) {
-            console.log(IstaknutiProjekti[event.page.index].Slug);
+            //console.log(IstaknutiProjekti[event.page.index].Slug);
             viewPro.href = 'project/' + IstaknutiProjekti[event.page.index].Slug;
 
         })
