@@ -295,6 +295,16 @@ a:active{
             background-position: center;
             background-repeat: no-repeat;
         }
+        .shown {
+            opacity: 1;
+            // width: 5.5rem;
+            transition: all 0.5s cubic-bezier(0,.17,.61,.82);
+        }
+        .hidden {
+            opacity: 0;
+            // width: 0.1111rem;
+            transition: all 0.5s cubic-bezier(.61,.82,0,.17);
+        }
     }
     #menuitems {
         height: 1.375rem;
