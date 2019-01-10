@@ -54,6 +54,7 @@
   position: absolute;
   bottom: 0.625rem;
   margin-bottom: 2.3rem;
+  z-index: 2;
 }
 .home--container2 {
   min-height: 18rem;
