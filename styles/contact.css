@@ -72,6 +72,7 @@
   border: none;
   background-color: #000000;
   border-bottom: 1px solid gray;
+  border-radius: 0;
 }
 .contact-side-right-form-msg {
   height: 4.25rem;
