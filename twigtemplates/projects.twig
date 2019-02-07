@@ -6,12 +6,12 @@
   <div class="projects--blok1">
     <div class="flex-direction padding-x-main d-flex">
       <div class="projects--blok1-left">
-        <div class="projects--blok1-left margin-y-title black font-36 font-bold">Hello.</div>
+        <div class="projects--blok1-left margin-y-title black font-36 font-bold select-y">Hello.</div>
       </div>
       <div class="projects--blok1-right d-flex flex-column">
         <div>
-          <div class="black font-14 font-bold margin-y-text padding-x-right-col">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
-          <div class="black font-14 margin-y-text padding-x-right-col">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</div>
+          <div class="black font-14 font-bold margin-y-text padding-x-right-col select-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</div>
+          <div class="black font-14 margin-y-text padding-x-right-col select-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio.</div>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
   {% set projects = fetch("Project") %}
   <div class="home--container3 d-flex flex-wrap">
     {% for project in projects %}
-    <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: project.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat;">
+    <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: project.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <a class="home--container3-project-hover flex-direction padding-y-40 padding-x-box d-flex justify-content-between" href="project/{{ project.Slug }}">
             <div class="white font-14 font-regular">{{ project.Title }}</div>
             <div class="white font-14 font-regular">{{ project.Category }}</div>

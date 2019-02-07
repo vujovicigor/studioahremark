@@ -17,7 +17,6 @@
 *{
     font-family: 'Proxima', 'sans-serif';
     font-weight: 300;
-    // font-size: 42.66667px;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 0px;
@@ -63,6 +62,10 @@ input:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-color: none;
+    background-color: @black;
+}
+button:hover {
+    opacity: 0.5;
 }
 p {
     -webkit-margin-before: 0px;
@@ -85,7 +88,17 @@ a:hover {
     text-decoration: none;
     opacity: 0.5;
 }
-
+a:focus{
+    background-color: transparent;
+}
+a:active{
+    background-color: transparent;
+}
+.select-y{
+    &::selection{
+        background-color: #fff200;
+    }
+}
 .container {
     width: 100%;
 }
@@ -97,16 +110,15 @@ a:hover {
         padding-left: 13.195%;
         padding-right: 13.195%;
     }
-    // &-grid {
-    //     padding-left: 26.39%;
-    //     padding-right: 26.39%;
-    // }
     &-box {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
     &-right-col {
         padding-left: 2.5rem;
+    }
+    &-right {
+        padding-right: 26.093%;
     }
 }
 .padding-y {
@@ -150,6 +162,9 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+.flex-1{
+    flex: 1;
 }
 .flex-column {
     -webkit-box-orient: vertical;
@@ -238,13 +253,6 @@ a:hover {
         text-align: right;
     }
 }
-.owl-theme .owl-dots .owl-dot span {
-    width: 0.313rem;
-    height: 0.313rem;
-    margin-bottom: 2.5rem;
-    border-radius: 50%;
-    margin: 0.313rem 0.438rem;
-}
 .owl-dots{
     padding-right: 13.195%;
 }
@@ -266,7 +274,7 @@ a:hover {
     color: @white;
 }
 .header{
-    height: 100px;
+    height: 6.25rem;
     font-size: 1.187rem;
     position: fixed;
     left: 0;
@@ -274,15 +282,18 @@ a:hover {
     z-index: 10000;
     #logo {
         height: 1.375rem;
+        width: 6.813rem;
         .logo{
             height: 1.25rem;
-            width: 6.875rem;
-            background-image: url("../images/logo.svg");
+            width: 1.313rem;
             background-position: center;
             background-repeat: no-repeat;
-            &--letter {
-                width: 1.25rem;
-            }
+        }
+        .logo_rest {
+            height: 1.25rem;
+            width: 5.5rem;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     }
     #menuitems {
@@ -300,6 +311,19 @@ a:hover {
         transition: all 0.8s ease-in-out;
     }
 }
+.shown {
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(.61,.82,0,.17);
+}
+.shown_mobile {
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0,.17,.61,.82);
+    // transition: all 0.8s cubic-bezier(0,.17,.61,.82) 0.3s;
+}
+.hidden {
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0,.17,.61,.82);
+}
 .item {
     width: auto;
 }
@@ -308,18 +332,23 @@ a:hover {
     width: auto;
     margin-left: 0.938em;
 }
+.menu{
+    &:hover{
+        opacity: 0.5;
+    }
+}
 .mobile_home {
     height: 100vh;
     width: 80vw;
     margin-top: 0px;
     display: none;
     position: fixed;
-    background: @white;
+    background: @black;
     top: 0px;
     right: 0px;
     z-index: 10500;
     overflow: scroll;
-    background-color: @white;
+    background-color: @black;
     &--closed {
         right: -80vw;
         -webkit-transition: all 0.8s ease-in-out;
@@ -331,14 +360,15 @@ a:hover {
         transition: all 0.8s ease-in-out;
     }
     &-top {
-        height: 6.25rem;
+        height: 4.375rem;
     }
     &-wrapper {
-        // height: calc(~"50vh - 100px");
         width: 100%;
     }
 }
-
+#ex {
+    padding-right: 11.622%;
+}
 .footer {
     height: 13.75rem;
     width: 100%;
@@ -379,11 +409,21 @@ a:hover {
         }
     }
 }
+.prev-next{
+    display: none;
+}
+.line{
+    height: 0.975rem;
+    width: 0.063rem;
+    background-color: @black;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 @import 'projects';
 @import 'project';
 @import 'profiles';
 @import 'contact';
-@import 'home';
+@import 'index';
 
 @media screen and (min-width: 3000px){
     *{
@@ -431,11 +471,15 @@ a:hover {
               flex-direction: column;
     }
     .header{
-        font-size: 17px;
+        height: 4.375rem;
         background-color: @white;
     }
     .mobile_home {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-2{
+        flex: 2;
     }
     .item {
         display: none;
@@ -453,7 +497,7 @@ a:hover {
     .footer {
         height: auto;
         position: relative;
-        top: 100px;
+        top: 6.25rem;
         &--container {
              &-row {
                 &-col {
@@ -484,6 +528,14 @@ a:hover {
              }
         }
     }
+    .next-prev{
+        display: none;
+    }
+    .prev-next{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+    }
     .padding-x {
         &-right-col {
             padding-left: 0rem;
@@ -493,7 +545,7 @@ a:hover {
 
 @media screen and (max-width: 360px){
     .owl-dots{
-        bottom: 0px !important;
+        bottom: 5px !important;
         height: 1.875rem;
     }
 }

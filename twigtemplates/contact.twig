@@ -6,24 +6,25 @@
     <div class="d-flex flex-direction contact-side contact-border">
 
       <div class="contact-side-left d-flex flex-column">
-        <div class="white font-36 font-bold margin-y-title contact-side-left-tit">Hello.</div>
-        <div class="white font-14 contact-side-left-txt margin-y-title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</div>
+        <div class="white font-36 font-bold margin-y-title contact-side-left-tit select-y">Hello.</div>
+        <div class="white font-14 contact-side-left-txt margin-y-title select-y">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</div>
       </div>
 
       <div class="contact-side-right d-flex flex-column">
         <div class="white font-18 margin-y-title contact-side-right-txt">
             Enquiry Form
         </div>
-        <form >
+        <form id="contactform">
           <div class="d-flex flex-column">
-            <input class="contact-side-right-form font-12 white" type="text" placeholder="Name"/>
-            <input class="contact-side-right-form font-12 white" type="email" placeholder="Email"/>
-            <input class="contact-side-right-form font-12 white" type="tel" placeholder="Phone"/>
-            <input class="contact-side-right-form font-12 white" type="text" placeholder="Subject"/>
-            <input class="contact-side-right-form-msg font-12 white" type="text" placeholder="Message"/>
-            <button class="contact-side-right-button font-12 font-bold white" type="submit">Submit</button>
+            <input class="contact-side-right-form font-12 white" id="name" type="text" placeholder="Name"/>
+            <input class="contact-side-right-form font-12 white" id="email" type="email" placeholder="Email"/>
+            <input class="contact-side-right-form font-12 white" id="phone" type="tel" placeholder="Phone"/>
+            <input class="contact-side-right-form font-12 white" id="subject" type="text" placeholder="Subject"/>
+            <input class="contact-side-right-form-msg font-12 white" id="message" type="text" placeholder="Message"/>
+            <button class="contact-side-right-button button-disabled font-12 font-bold white" type="submit">Submit</button>
           </div>
         </form>
+        <div class="contact-side-right-error" id="errormail"></div>
       </div>
 
     </div>

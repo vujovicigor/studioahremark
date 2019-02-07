@@ -27,12 +27,14 @@
                 height: 3.25rem;
                 border: none;
                 background-color: @black;
-                border-bottom: 1px solid gray;
+                border-bottom: 1px solid @white;
+                border-radius: 0;
                 &-msg{
                     height: 4.25rem;
                     border: none;
                     background-color: @black;
-                    border-bottom: 1px solid gray;
+                    border-bottom: 1px solid @white;
+                    border-radius: 0;
                     &::-webkit-input-placeholder{
                         color: @white;
                     }
@@ -53,13 +55,19 @@
                     color: @white;
                 }
             }
-            &-button{
+            &-button {
                 width: 3.125rem;
                 height: 3.25rem;
                 text-align: start;
                 background-color: @black;
             }
         }
+    }
+}
+.button {
+    &-disabled {
+        opacity: 0.5;
+        pointer-events: none;
     }
 }
 
@@ -74,7 +82,8 @@
 @media screen and (max-width: 719px){
     .contact{
         position: relative;
-        top: 100px;
+        top: 4.375rem;
+        margin-bottom: -2rem;
         &-side{
             &-left{
                 width: 100%;

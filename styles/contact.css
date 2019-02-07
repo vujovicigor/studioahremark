@@ -71,13 +71,15 @@
   height: 3.25rem;
   border: none;
   background-color: #000000;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #FFFFFF;
+  border-radius: 0;
 }
 .contact-side-right-form-msg {
   height: 4.25rem;
   border: none;
   background-color: #000000;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #FFFFFF;
+  border-radius: 0;
 }
 .contact-side-right-form-msg::-webkit-input-placeholder {
   color: #FFFFFF;
@@ -103,6 +105,10 @@
   text-align: start;
   background-color: #000000;
 }
+.button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 @media screen and (max-width: 960px) {
   .contact-side {
     padding-top: 25%;
@@ -111,7 +117,8 @@
 @media screen and (max-width: 719px) {
   .contact {
     position: relative;
-    top: 100px;
+    top: 4.375rem;
+    margin-bottom: -2rem;
   }
   .contact-side-left {
     width: 100%;

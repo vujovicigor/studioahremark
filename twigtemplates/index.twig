@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+{% block content %}
+
+{% set IstaknutiProjekti = fetch("IstaknutiProjekti") %}
+
+<div class="home" id="top">
+    <div style="position: relative;">
+        <div class="owl-carousel owl-theme home--container">
+            {% for item in IstaknutiProjekti %}
+                <div class="home--container" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                </div>
+            {% endfor %}
+        </div>
+        <div class="home--container-txt padding-x-main">
+            <a id="viewPro" class="black font-14" >View Project +</a>
+        </div>
+    </div>
+  
+
+  <div class="home--container2 padding-y-60">
+    <div class="flex-direction padding-x-main  d-flex">
+        <div class="home--container2-side-l d-flex">
+            <div class="home--container2-side-l-left font-24 margin-y-title font-bold select-y">Turning brands into beliefs.</div>
+        </div>
+        <div class="home--container2-side-r d-flex flex-column">
+            <div class="home--container2-side-r-right1 padding-x-right-col font-24 font-regular margin-y-text select-y">CREDO means "I believe" and that's what we strive to deliver to our client: BELIEF!</div>
+            <div class="letter-spacing-0_3 padding-x-right-col font-14 font-regular margin-y-text select-y">As a strategic branding & design agency, we craft every brand's belief around the heart of its truth, discovered through research, shaped by strategy and manifested by visual design. These elements, working in sync, inspire belief and, thus, aimed to transform your brand.</div>
+            <a style="cursor: pointer;" class="home--container2-side-r-right2 letter-spacing-0_3 padding-x-right-col font-14 font-bold margin-y-text" href="profiles">SEE MORE</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="home--container3 d-flex flex-wrap">
+  {% set projects = fetch("Project") %}
+
+    {% for item in projects %}
+    {% if loop.index < '5' %}
+    <div class="home--container3-project" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <a href="project/{{ item.Slug }}">
+            <div class="home--container3-project-hover flex-direction padding-y-40 padding-x-box d-flex justify-content-between">
+                <div class="white font-14 font-regular">{{item.Title}}</div>
+                <div class="white font-14 font-regular">{{item.Category}}</div>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock %}

@@ -42,7 +42,7 @@
   letter-spacing: -0.019rem;
 }
 .profiles--blok1 {
-  height: 37.5em;
+  height: 100vh;
   width: 100%;
   background-image: url("../images/1.jpg");
   background-repeat: no-repeat;
@@ -54,9 +54,10 @@
   height: 100%;
 }
 .profiles--blok2 {
-  height: 28.75em;
+  min-height: 22.5em;
+  height: auto;
   width: 100%;
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 .profiles--blok2-left {
   width: 50%;
@@ -110,9 +111,95 @@
 .profiles--blok3-part-text2-all {
   min-height: 15.625em;
 }
+.profiles--container {
+  width: 50%;
+  height: 33vw;
+  position: relative;
+}
+.profiles--container-team1 {
+  position: absolute;
+  width: 100%;
+  height: 100.5%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  background-image: url("../images/profile-team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+.profiles--container-team1 .hover {
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.profiles--container-team2 {
+  position: absolute;
+  width: 100%;
+  height: 100.5%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  background-image: url("../images/profile-team.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+.profiles--container-team2 .hover {
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.profiles--container-line {
+  background-color: #FFFFFF;
+  height: 0.063rem;
+  width: 2.5rem;
+}
+.profiles--text {
+  display: none;
+}
+@media screen and (min-width: 641px) {
+  .profiles--container-team1 .hover {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .profiles--container-team1:hover {
+    background-image: url("../images/profile-team-hover.jpg");
+  }
+  .profiles--container-team1:hover .hover {
+    opacity: 1;
+  }
+  .profiles--container-team2 .hover {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .profiles--container-team2:hover {
+    background-image: url("../images/profile-team-hover.jpg");
+  }
+  .profiles--container-team2:hover .hover {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .profiles--blok1 {
+    height: 86vw;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .profiles--container-plus {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .grid-width {
     width: 79.055555%;
+  }
+  .profiles--container-line {
+    display: none;
   }
 }
 @media screen and (max-width: 960px) {
@@ -144,6 +231,24 @@
     align-items: flex-start;
     justify-content: space-between;
   }
+  .profiles--container {
+    width: 100%;
+    height: 66vw;
+  }
+  .profiles--container-team1 {
+    padding-left: 7.195%;
+    padding-right: 14.044445%;
+  }
+  .profiles--container-team2 {
+    padding-left: 7.195%;
+    padding-right: 14.044445%;
+  }
+  .profiles--container-plus {
+    display: block;
+  }
+  .profiles--container-line {
+    display: block;
+  }
   .grid-width {
     padding-left: 7.195%;
   }
@@ -154,7 +259,7 @@
   }
   .profiles {
     position: relative;
-    top: 100px;
+    top: 4.375rem;
   }
   .profiles--blok2 {
     height: auto;
@@ -189,11 +294,26 @@
     padding-bottom: 2.5rem;
   }
   .profiles--blok3-part-text-all {
-    padding-left: 13.195%;
-    padding-right: 13.195%;
+    padding-left: 7.195%;
+    padding-right: 7.195%;
+  }
+  .profiles--blok3-part-text2 {
+    width: 86%;
   }
   .profiles--blok3-part-img {
     width: 100%;
-    height: 33vh;
+  }
+  .profiles--container-team1 {
+    padding-left: 7.195% !important;
+  }
+  .profiles--container-team2 {
+    padding-left: 7.195% !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .profiles--text {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
   }
 }
