@@ -49,6 +49,7 @@
         </div>
 
         <div class="d-flex flex-direction justify-content-between">
+        {% if project.Challenge | length > 0 %}
           <div class="project-right-side">
             <div class="black font-14 font-bold margin-y-text select-y">Challenge</div>
             <div class="black font-14 margin-y-box select-y">{{ project.Challenge }}</div>
@@ -57,6 +58,13 @@
             <div class="black font-14 font-bold margin-y-text select-y">Approach</div>
             <div class="black font-14 margin-y-box select-y">{{ project.Approach }}</div>
           </div>
+        {% else %}
+          <div style="width: 100%">
+            <div class="black font-14 font-bold margin-y-text select-y">Approach</div>
+            <div class="black font-14 margin-y-box select-y">{{ project.Approach }}</div>
+          </div>
+        {% endif %}
+          
         </div>
 
       </div>
