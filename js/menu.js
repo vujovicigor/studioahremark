@@ -136,4 +136,14 @@ function scrollToTop() {
   });
 }
 
+function hideChallenge(){
+  var challenge = document.getElementById("challenge");
+  var approach = document.getElementById("approach");
+  var challenge_text = document.getElementById("challenge_text");
 
+  if (challenge_text.length < 0){
+    challenge.style.display = none;
+    approach.style.width = '100%';
+  }
+
+}
