@@ -182,6 +182,9 @@ a:active {
 .margin-y-box {
   margin-bottom: 2.5rem;
 }
+.margin-y-sub {
+  margin-bottom: 0.8rem;
+}
 .margin-x-box {
   margin-left: 1.25rem;
 }
@@ -481,13 +484,13 @@ a:active {
   position: absolute;
 }
 .project-left {
-  width: 35%;
+  width: 50%;
 }
 .project-right {
-  width: 65%;
+  width: 50%;
 }
 .project-right-side {
-  width: 48%;
+  width: 100%;
 }
 .project--images {
   width: 100%;
