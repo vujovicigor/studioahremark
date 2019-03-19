@@ -41,6 +41,9 @@
 .letter-spacing--0_3 {
   letter-spacing: -0.019rem;
 }
+.text-transform--upper {
+  text-transform: uppercase;
+}
 .project {
   min-height: 100vh;
   width: 100%;
@@ -73,7 +76,7 @@
 }
 .social {
   height: 0.75rem;
-  width: 0.75rem;
+  width: 3rem;
   margin-right: 0.75rem;
 }
 @media screen and (max-width: 1240px) {
