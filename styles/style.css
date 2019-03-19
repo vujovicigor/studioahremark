@@ -506,8 +506,7 @@ a:active {
   margin-bottom: 0px;
 }
 .social {
-  height: 0.75rem;
-  width: 3rem;
+  width: auto;
   margin-right: 0.75rem;
 }
 @media screen and (max-width: 1240px) {
