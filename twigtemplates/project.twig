@@ -9,12 +9,17 @@
     {# <img class="project--hero-image" src="images/logo-c-white.png"> #}
   </div>
 
-  
+
 
   <div class="padding-y-60">
     <div class="d-flex flex-direction-2 padding-x-main">
       <div class="d-flex flex-column justify-content-between project-left">
-          <div class="black font-24 font-bold select-y">{{ project.Title }}</div>
+
+          <div class="d-flex flex-column margin-y-box">
+          <div class="black font-24 font-bold margin-y-sub select-y">{{ project.Title }}</div>
+            <div class="font-bold font-14 black margin-y-text select-y">{{ project.About_title }}</div>
+            <div class="font-14 black letter-spacing--0_3 select-y">{{ project.About }}</div>
+          </div>
           <div class="margin-y-box">
             <div class="black font-14 select-y margin-y-text">{{ project.Category }}</div>
             <div class="d-flex">
@@ -43,19 +48,19 @@
       </div>
 
       <div class="project-right padding-x-right-col d-flex flex-column">
-        <div class="d-flex flex-column margin-y-box">
+        {# <div class="d-flex flex-column margin-y-box">
           <div class="font-bold font-14 black margin-y-text select-y">{{ project.About_title }}</div>
           <div class="font-14 black letter-spacing--0_3 select-y">{{ project.About }}</div>
-        </div>
+        </div> #}
 
-        <div class="d-flex flex-direction justify-content-between">
+        <div class="d-flex flex-column justify-content-between">
         {% if project.Challenge | length > 0 %}
           <div class="project-right-side">
-            <div class="black font-14 font-bold margin-y-text select-y">Challenge</div>
+            <div class="black font-14 font-bold margin-y-text select-y text-transform--upper">Challenge</div>
             <div class="black font-14 margin-y-box select-y">{{ project.Challenge }}</div>
           </div>
           <div class="project-right-side">
-            <div class="black font-14 font-bold margin-y-text select-y">Approach</div>
+            <div class="black font-14 font-bold margin-y-text select-y text-transform--upper">Approach</div>
             <div class="black font-14 margin-y-box select-y">{{ project.Approach }}</div>
           </div>
         {% else %}
@@ -64,7 +69,7 @@
             <div class="black font-14 margin-y-box select-y">{{ project.Approach }}</div>
           </div>
         {% endif %}
-          
+
         </div>
 
       </div>

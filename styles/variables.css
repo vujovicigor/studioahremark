@@ -41,3 +41,6 @@
 .letter-spacing--0_3 {
   letter-spacing: -0.019rem;
 }
+.text-transform--upper {
+  text-transform: uppercase;
+}

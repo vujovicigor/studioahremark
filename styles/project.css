@@ -56,13 +56,13 @@
   position: absolute;
 }
 .project-left {
-  width: 35%;
+  width: 50%;
 }
 .project-right {
-  width: 65%;
+  width: 50%;
 }
 .project-right-side {
-  width: 48%;
+  width: 100%;
 }
 .project--images {
   width: 100%;
