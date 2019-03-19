@@ -188,6 +188,9 @@ a:active {
 .margin-y-sub {
   margin-bottom: 0.8rem;
 }
+.margin-y-push {
+  margin-top: 2.5rem;
+}
 .margin-x-box {
   margin-left: 1.25rem;
 }
@@ -504,7 +507,7 @@ a:active {
 }
 .social {
   height: 0.75rem;
-  width: 0.75rem;
+  width: 3rem;
   margin-right: 0.75rem;
 }
 @media screen and (max-width: 1240px) {
@@ -1039,6 +1042,9 @@ a:active {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+  .margin-y--m-box {
+    margin-bottom: 2.5rem;
   }
 }
 @media screen and (max-width: 849px) {
