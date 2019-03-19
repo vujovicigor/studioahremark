@@ -164,6 +164,11 @@ a:active{
         }
     }
 }
+.display {
+    &-none {
+        display: none;
+    }
+}
 .d-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -469,6 +474,23 @@ a:active{
             }
         }
     }
+    .display {
+        &--m {
+            &-none {
+                display: none;
+            }
+
+        }
+    }
+    .d-flex {
+        &--m {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+        }
+    }
+
 }
 @media screen and (max-width: 849px){
     .flex-direction-2{

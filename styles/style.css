@@ -44,6 +44,9 @@
 .text-transform--upper {
   text-transform: uppercase;
 }
+.text-prewrap {
+  white-space: pre-wrap;
+}
 @font-face {
   font-family: Proxima;
   font-weight: 300;
@@ -196,6 +199,9 @@ a:active {
 }
 .margin-x-menu-items {
   margin-left: 4.38rem;
+}
+.display-none {
+  display: none;
 }
 .d-flex {
   display: -webkit-box;
@@ -538,7 +544,7 @@ a:active {
 .profiles--blok1 {
   height: 100vh;
   width: 100%;
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/credo-agency-cover-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -571,7 +577,7 @@ a:active {
 }
 .profiles--blok3-part-img {
   width: 50%;
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/credo-agency-brand-strategy-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -582,12 +588,23 @@ a:active {
 }
 .profiles--blok3-part-img2 {
   width: 50%;
-  background-image: url("../images/1.jpg");
+  background-image: url("../images/credo-agency-visual-identity-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .profiles--blok3-part-img2-desc {
+  height: 100%;
+  width: 100%;
+}
+.profiles--blok3-part-img3 {
+  width: 50%;
+  background-image: url("../images/credo-agency-brand-health-report-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.profiles--blok3-part-img3-desc {
   height: 100%;
   width: 100%;
 }
@@ -1044,6 +1061,14 @@ a:active {
   }
   .margin-y--m-box {
     margin-bottom: 2.5rem;
+  }
+  .display--m-none {
+    display: none;
+  }
+  .d-flex--m {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media screen and (max-width: 849px) {
