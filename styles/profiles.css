@@ -160,6 +160,9 @@
 .profiles--text {
   display: none;
 }
+.profiles span::before {
+  content: "";
+}
 @media screen and (min-width: 641px) {
   .profiles--container-team1 .hover {
     font-size: 20px;

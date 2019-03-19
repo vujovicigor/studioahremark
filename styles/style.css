@@ -41,6 +41,9 @@
 .letter-spacing--0_3 {
   letter-spacing: -0.019rem;
 }
+.text-transform--upper {
+  text-transform: uppercase;
+}
 @font-face {
   font-family: Proxima;
   font-weight: 300;
@@ -648,6 +651,9 @@ a:active {
 }
 .profiles--text {
   display: none;
+}
+.profiles span::before {
+  content: "";
 }
 @media screen and (min-width: 641px) {
   .profiles--container-team1 .hover {
