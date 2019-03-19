@@ -54,13 +54,14 @@
         {% endif %}
           <div class="d-flex margin-y-p margin-y-push">
             <div class="social">
-              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}&amp;title={{project.About_title | url_encode}}&amp;source={{_BASE | url_encode}}" target="_blank" class="font-14 black">
+              {# <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}&amp;title={{project.About_title | url_encode}}&amp;sumarry={{project.About  | url_encode}}&amp;source={{_BASE | url_encode}}" target="_blank" class="font-14 black">               #}
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{_BASE }}project%2F{{project.Slug}}&amp;title={{project.About_title}}&amp;sumarry={{project.About}}&amp;source={{_BASE }}" target="_blank" class="font-14 black">
                 LinkedIn
               </a>
             </div>
 
             <div class="social">
-              <a href="https://twitter.com/share?url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}&amp;text={{project.About_title | url_encode}}" target="_blank" class="font-14 black">
+              <a href="https://twitter.com/share?url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}&amp;text={{project.About_title}}" target="_blank" class="font-14 black">
                 Twitter
               </a>
             </div>
