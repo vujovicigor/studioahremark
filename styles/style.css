@@ -506,10 +506,15 @@ a:active {
 }
 .project--images {
   width: 100%;
-  height: 100vh;
 }
 .project--images:last-child {
   margin-bottom: 0px;
+}
+.project--images-image {
+  width: 100%;
+}
+.project--images-image:focus {
+  outline: 0 !important;
 }
 .social {
   width: auto;
@@ -520,7 +525,7 @@ a:active {
     height: 66vw;
   }
   .project--images {
-    height: 66vw;
+    height: auto;
   }
 }
 @media screen and (max-width: 849px) {
@@ -728,6 +733,10 @@ a:active {
     width: 100%;
   }
   .profiles--blok3-part-img2 {
+    height: 66vw;
+    width: 100%;
+  }
+  .profiles--blok3-part-img3 {
     height: 66vw;
     width: 100%;
   }

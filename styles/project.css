@@ -44,6 +44,9 @@
 .text-transform--upper {
   text-transform: uppercase;
 }
+.text-prewrap {
+  white-space: pre-wrap;
+}
 .project {
   min-height: 100vh;
   width: 100%;
@@ -69,10 +72,15 @@
 }
 .project--images {
   width: 100%;
-  height: 100vh;
 }
 .project--images:last-child {
   margin-bottom: 0px;
+}
+.project--images-image {
+  width: 100%;
+}
+.project--images-image:focus {
+  outline: 0 !important;
 }
 .social {
   width: auto;
@@ -83,7 +91,7 @@
     height: 66vw;
   }
   .project--images {
-    height: 66vw;
+    height: auto;
   }
 }
 @media screen and (max-width: 849px) {
