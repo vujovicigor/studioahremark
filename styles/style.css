@@ -65,8 +65,8 @@
 * {
   font-family: 'Proxima', 'sans-serif';
   font-weight: 300;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 22px;
+  line-height: 22px;
   letter-spacing: 0px;
   margin: 0px;
   padding: 0px;
@@ -1033,8 +1033,14 @@ a:active {
 }
 @media screen and (min-width: 3000px) {
   * {
-    font-size: 42.66667px;
-    line-height: 42.66667px;
+    font-size: 58.66667px;
+    line-height: 58.66667px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  * {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 @media screen and (max-width: 1240px) {
