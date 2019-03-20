@@ -74,8 +74,11 @@
 
   {% for project_image in project_images %}
   {% if loop.index != 1 %}
-  <div class="project--images margin-y-box" style="background-image: url('img/{{ project_image.Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+  {# <div class="project--images margin-y-box" style="background-image: url('img/{{ project_image.Image }}'); background-size: 100% auto; background-repeat: no-repeat; background-position: center;"> #}
     {# <img src="img/{{ project_image.Image }}" class="project--images-image"> #}
+  {# </div> #}
+  <div class="project--images margin-y-box">
+    <img src="img/{{ project_image.Image }}" class="project--images-image">
   </div>
   {% endif %}
   {% endfor %}
