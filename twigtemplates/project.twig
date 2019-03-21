@@ -55,9 +55,9 @@
         {% endif %}
           <div class="black font-14 select-y margin-y-push display-none d-flex--m">{{ project.Category }}</div>
           <div class="d-flex margin-y-push">
-          <div class="social">
+          {# <div class="social">
               <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}&amp;title={{project.About_title | url_encode}}&amp;sumarry={{project.About  | url_encode}}&amp;source={{_BASE | url_encode}}" target="_blank" class="font-14 black">LinkedIn 1</a>
-          </div>
+          </div> #}
             <div class="social">
               <a href="http://www.linkedin.com/shareArticle?mini=true&url={{_BASE }}project/{{ogslug}}&title={{project.About_title}}&sumarry={{project.About}}&source={{_BASE }}" target="_blank" class="font-14 black">
 
@@ -82,8 +82,8 @@
   {# <div class="project--images margin-y-box" style="background-image: url('img/{{ project_image.Image }}'); background-size: 100% auto; background-repeat: no-repeat; background-position: center;"> #}
     {# <img src="img/{{ project_image.Image }}" class="project--images-image"> #}
   {# </div> #}
-  <div class="project--images margin-y-box">
-    <img src="img/{{ project_image.Image }}" class="project--images-image">
+  <div class="project--images">
+    <img src="img/{{ project_image.Image }}" class="project--images-image"/>
   </div>
   {% endif %}
   {% endfor %}
