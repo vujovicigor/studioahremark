@@ -966,7 +966,7 @@ a:active {
   width: 50%;
 }
 .home--container2-side-r-right1 {
-  width: 62%;
+  width: 90%;
 }
 .home--container2-side-r-right2 {
   width: 5.313rem;
@@ -1002,7 +1002,7 @@ a:active {
     height: calc(100vh - 8.75rem);
   }
   .home--container2-side-r-right1 {
-    width: 75%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 959px) {
