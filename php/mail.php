@@ -1,6 +1,7 @@
 <?php
     header('Content-Type: application/json');
-    $to = "info@credo.agency";
+    // $to = "info@credo.agency";
+    $to = "marko.ilic@buildcon.org";
     $from = $_POST["email"];
     $imeprezime = $_POST["name"];
     $phone = $_POST["phone"];

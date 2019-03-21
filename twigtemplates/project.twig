@@ -55,12 +55,8 @@
         {% endif %}
           <div class="black font-14 select-y margin-y-push display-none d-flex--m">{{ project.Category }}</div>
           <div class="d-flex margin-y-push">
-          {# <div class="social">
-              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{_BASE | url_encode}}project%2F{{project.Slug | url_encode}}&amp;title={{project.About_title | url_encode}}&amp;sumarry={{project.About  | url_encode}}&amp;source={{_BASE | url_encode}}" target="_blank" class="font-14 black">LinkedIn 1</a>
-          </div> #}
             <div class="social">
-              <a href="http://www.linkedin.com/shareArticle?mini=true&url={{_BASE }}project/{{ogslug}}&title={{project.About_title}}&sumarry={{project.About}}&source={{_BASE }}" target="_blank" class="font-14 black">
-
+              <a href="http://www.linkedin.com/shareArticle?mini=true&url={{_BASE }}project/{{project.Slug}}&title={{project.About_title}}&sumarry={{project.About}}&source={{_BASE }}" target="_blank" class="font-14 black">
                 LinkedIn
               </a>
             </div>
@@ -93,9 +89,18 @@
 {% endblock %}
 {% block ogurl %}
 {% set project = fetch("Project", {"id": _GET['1']})[0] %}
-  {{_BASE }}project/{{project.Slug}}?title={{project.About_title}} Another project by @credo_branding
+{{_BASE }}project/{{project.Slug}}?title={{project.About_title}} Another project by @credo_branding?user_from=linkedin
 {% endblock %}
 {% block ogdesc %}
 {% set project = fetch("Project", {"id": _GET['1']})[0] %}
-  {{project.About}}
+{{project.About}}
+{% endblock %}
+{% block ogimage %}
+{% set project = fetch("Project", {"id": _GET['1']})[0] %}
+{% set project_images = fetch("Image", { parent_id: project.id }) %}
+{{_BASE}}img/{{ project_images[0].Image }}
+{% endblock %}
+{% block ogtitle %}
+{% set project = fetch("Project", {"id": _GET['1']})[0] %}
+{{project.About_title}}
 {% endblock %}
