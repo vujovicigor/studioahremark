@@ -10,6 +10,7 @@
   {% if _GET[0] == 'project'%}
   <meta property="og:title" content="CREDO AGENCY" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="{% block ogimage %}{% endblock %}"/>
   <meta property="og:description" content="{% block ogdesc %}{% endblock %}"/>
   <meta property="og:url" content="{% block ogurl %}{% endblock %}" />
   {% endif %}
