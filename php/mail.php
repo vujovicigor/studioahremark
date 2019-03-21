@@ -1,4 +1,5 @@
 <?php
+    require("./lib/SendGrid.php");
     header('Content-Type: application/json');
     // $to = "info@credo.agency";
     $to = "marko.ilic@buildcon.org";
@@ -8,11 +9,29 @@
     $subject = $_POST["subject"];
     $message = $_POST["message"];
     $message = "Poruka od:" .$imeprezime. "\r\n" .$message;
-    $headers = "From: $imeprezime <$to>"."\r\n"."Reply-to: $from"."\r\n"."X-Mailer: PHP/".phpversion();
+    // $headers = "From: $imeprezime <$to>"."\r\n"."Reply-to: $from"."\r\n"."X-Mailer: PHP/".phpversion();
 
-    if(mail($to, $subject, $message, $headers)) {
-      echo json_encode(array("Message" => "Message succesfuly sent, we'll get back to you soon.", "status" => true ));
-    } else {
-      echo json_encode(array("Message" => "Error sending message, please try later.", "status" => false ));
+    // if(mail($to, $subject, $message, $headers)) {
+    //   echo json_encode(array("Message" => "Message succesfuly sent, we'll get back to you soon.", "status" => true ));
+    // } else {
+    //   echo json_encode(array("Message" => "Error sending message, please try later.", "status" => false ));
+    // }
+
+    $email = new \SendGrid\Mail\Mail();
+    $email->setFrom($from, $imeprezime);
+    $email->setSubject($subject);
+    $email->addTo($to, "Credo agency");
+    $email->addContent("text/plain", $subject);
+    $email->addContent(
+      "text/html", $message
+    );
+    $sendgrid = new \SendGrid(getenv('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'));
+    try {
+      $response = $sendgrid->send($email);
+      print $response->statusCode() . "\n";
+      print_r($response->headers());
+      print $response->body() . "\n";
+    } catch (Exception $e) {
+        echo 'Caught exception: '. $e->getMessage() ."\n";
     }
   ?>
