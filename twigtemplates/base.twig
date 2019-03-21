@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% block description %}{% endblock %}"/>
   <link rel="icon" href="images/credo-favicon.png">
-  {% if _GET[0] == 'project'%}
-  <meta property="og:title" content="CREDO AGENCY" />
+  {# {% if _GET[0] == 'project'%} #}
+  <meta property="og:title" content="{% if _GET[0] == 'project'%}{% block ogtitle %}{% endblock %}{% else %}CREDO AGENCY{% endif %}"/>
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{% block ogimage %}{% endblock %}"/>
-  <meta property="og:description" content="{% block ogdesc %}{% endblock %}"/>
-  <meta property="og:url" content="{% block ogurl %}{% endblock %}" />
-  {% endif %}
+  <meta property="og:image" content="{% if _GET[0] == 'project'%}{% block ogimage %}{% endblock %}{% else %}images/logo-c.svg{% endif %}"/>
+  <meta property="og:description" content="{% if _GET[0] == 'project'%}{% block ogdesc %}{% endblock %}{% else %}CREDO{% endif %}"/>
+  <meta property="og:url" content="{% if _GET[0] == 'project'%}{% block ogurl %}{% endblock %}{% else %}{{_BASE}}{% endif %}" />
+  {# {% endif %} #}
   {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> #}
   <link rel="stylesheet" href="owl/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="owl/assets/owl.theme.default.css" />

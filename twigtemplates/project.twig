@@ -89,14 +89,18 @@
 {% endblock %}
 {% block ogurl %}
 {% set project = fetch("Project", {"id": _GET['1']})[0] %}
-  {{_BASE }}project/{{project.Slug}}?title={{project.About_title}} Another project by @credo_branding?user_from=linkedin
+{{_BASE }}project/{{project.Slug}}?title={{project.About_title}} Another project by @credo_branding?user_from=linkedin
 {% endblock %}
 {% block ogdesc %}
 {% set project = fetch("Project", {"id": _GET['1']})[0] %}
-  {{project.About}}
+{{project.About}}
 {% endblock %}
 {% block ogimage %}
 {% set project = fetch("Project", {"id": _GET['1']})[0] %}
 {% set project_images = fetch("Image", { parent_id: project.id }) %}
-  {{_BASE}}img/{{ project_images[0].Image }}
+{{_BASE}}img/{{ project_images[0].Image }}
+{% endblock %}
+{% block ogtitle %}
+{% set project = fetch("Project", {"id": _GET['1']})[0] %}
+{{project.About_title}}
 {% endblock %}
