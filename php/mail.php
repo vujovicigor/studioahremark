@@ -8,7 +8,7 @@
     $subject = $_POST["subject"];
     $message = $_POST["message"];
     $message = "Poruka od:" .$imeprezime. "\r\n" .$message;
-    $headers = "From: $imeprezime <$from>"."\r\n"."Reply-to: $from"."\r\n"."X-Mailer: PHP/".phpversion();
+    $headers = "From: $imeprezime <$to>"."\r\n"."Reply-to: $from"."\r\n"."X-Mailer: PHP/".phpversion();
 
     if(mail($to, $subject, $message, $headers)) {
       echo json_encode(array("Message" => "Message succesfuly sent, we'll get back to you soon.", "status" => true ));
