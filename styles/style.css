@@ -506,6 +506,7 @@ a:active {
 }
 .project--images {
   width: 100%;
+  line-height: 0px;
 }
 .project--images:last-child {
   margin-bottom: 0px;
