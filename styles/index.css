@@ -41,6 +41,12 @@
 .letter-spacing--0_3 {
   letter-spacing: -0.019rem;
 }
+.text-transform--upper {
+  text-transform: uppercase;
+}
+.text-prewrap {
+  white-space: pre-wrap;
+}
 .home--container {
   height: 100vh;
   width: 100%;
@@ -69,7 +75,7 @@
   width: 50%;
 }
 .home--container2-side-r-right1 {
-  width: 62%;
+  width: 90%;
 }
 .home--container2-side-r-right2 {
   width: 5.313rem;
@@ -105,7 +111,7 @@
     height: calc(100vh - 8.75rem);
   }
   .home--container2-side-r-right1 {
-    width: 75%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 959px) {
