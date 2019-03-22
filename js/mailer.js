@@ -39,9 +39,6 @@ $("#contactform").submit(function(event){
     });
     request.done(function (response, textStatus, jqXHR) {
       var jsonobj = response;
-      console.log(jsonobj.Message);
-
-      // $("#errormail").text("");
       $("#errormail").text(jsonobj.Message);
       if(jsonobj.status) {
         document.getElementById("contactform").reset();
