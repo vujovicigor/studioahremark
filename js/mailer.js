@@ -38,17 +38,14 @@ $("#contactform").submit(function(event){
       data: data
     });
     request.done(function (response, textStatus, jqXHR) {
-      console.log(response);
       var jsonobj = response;
-      $("#errormail").replace(JSON.parse(jsonobj.message));
-    //   xmlhttp.onreadystatechange = function() {
-    //   if (this.readyState == 4 && this.status == 200) {
-    //     var myObj = JSON.parse(this.responseText);
-    //     document.getElementById("errormail").innerHTML = myObj.name;
-    //   }
-    // };
-    // xmlhttp.open("GET", "./php/mail.php", true);
-    // xmlhttp.send();
+      console.log(jsonobj.Message);
+
+      // $("#errormail").text("");
+      $("#errormail").text(jsonobj.Message);
+      if(jsonobj.status) {
+        document.getElementById("contactform").reset();
+      }
     })
     request.fail(function (jqXHR, textStatus, errorThrown){
     // Log the error to the console

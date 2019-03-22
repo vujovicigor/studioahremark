@@ -10,6 +10,10 @@
   font-size: 1.125rem;
   line-height: 1.35rem;
 }
+.font-21 {
+  font-size: 1.3rem;
+  line-height: 1.56rem;
+}
 .font-24 {
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -114,6 +118,14 @@ input:focus {
 }
 button:hover {
   opacity: 0.5;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+  box-shadow: 0 0 0px 1000px #000000 inset;
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 p {
   -webkit-margin-before: 0px;
@@ -1051,6 +1063,11 @@ a:active {
   * {
     font-size: 16px;
     line-height: 16px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .font--l-21 {
+    font-size: 1.285rem;
   }
 }
 @media screen and (max-width: 1240px) {
