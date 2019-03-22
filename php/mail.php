@@ -1,7 +1,6 @@
 <?php
     header('Content-Type: application/json');
-    // $to = "info@credo.agency";
-    $to = "marko.ilic@buildcon.org";
+    $to = "info@credo.agency";
     $from = $_POST["email"];
     $imeprezime = $_POST["name"];
     $phone = $_POST["phone"];
@@ -15,7 +14,7 @@
     $url = 'https://api.sendgrid.com/';
     $user = 'agency';
     $pass = 'kuwait2019';
-    
+
     $params = array(
         'api_user'  => 'credo'.$user,
         'api_key'   => 'credo'.$pass,
@@ -25,9 +24,9 @@
         'text'      => $message,
         'from'      => 'info@credo.agency',
       );
-    
+
     $request =  $url.'api/mail.send.json';
-    
+
     // Generate curl request
     $session = curl_init($request);
     // Tell curl to use HTTP POST
@@ -38,19 +37,19 @@
     curl_setopt($session, CURLOPT_HEADER, false);
     // Tell PHP not to use SSLv3 (instead opting for TLS)
     //curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-    
+
     //Turn off SSL
     curl_setopt($session, CURLOPT_SSL_VERIFYPEER, false);//New line
     curl_setopt($session, CURLOPT_SSL_VERIFYHOST, false);//New line
-    
+
     curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-    
+
     // obtain response
     $response = curl_exec($session);
-    
+
     // print everything out
     //var_dump($response,curl_error($session),curl_getinfo($session));
-    
+
     curl_close($session);
 
     echo json_encode(array("Message" => "Message succesfuly sent, we'll get back to you soon.", "status" => true ));
