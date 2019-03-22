@@ -6,7 +6,7 @@
     $phone = $_POST["phone"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
-    $message = "Name:" .$imeprezime. "\r\n Email:" .$from. "\r\n Phone:" .$phone. "\r\n Subject:" .$subject. "\r\n"  .$message ;
+    $message = "Name: " .$imeprezime. "\r\n". "Email:" .$from. "\r\n". "Phone:" .$phone. "\r\n". "Subject:" .$subject. "\r\n". "\r\n" .$message ;
     //$headers = "From: $imeprezime <$to>"."\r\n"."Reply-to: $from"."\r\n"."X-Mailer: PHP/".phpversion();
 
 
