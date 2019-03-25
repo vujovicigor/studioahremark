@@ -63,15 +63,7 @@
     $from = "info@credo.agency";
     $imeprezime = $_POST["name"];
     $subject = 'Credo'; // PItaj Iliju koji subject oce
-    $message = <<<TEXT
-Dear $imeprezime,
-
-Thank you for showing interest for our services. We will get back to you as soon as possible.
-
-Best regards,
-
-CREDO
-TEXT;
+    $message = "Dear " .$imeprezime. ",". "\r\n". "\r\n". "Thank you for showing interest for our services. We will get back to you as soon as possible.". "\r\n". "\r\n". "Best regards,". "\r\n". "CREDO";
 
     $url = 'https://api.sendgrid.com/';
     $user = 'agency';
