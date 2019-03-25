@@ -69,7 +69,6 @@ Dear $imeprezime,
 Thank you for showing interest for our services. We will get back to you as soon as possible.
 
 Best regards,
-
 CREDO
 TEXT;
 
