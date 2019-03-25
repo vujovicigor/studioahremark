@@ -54,6 +54,11 @@ $f = new Twig_SimpleFunction('fetch', function ($name, $params=array()) {
 });
 $twig->addFunction($f);
 
+$h = new Twig_SimpleFunction('header', function ($header, $replace = TRUE) {
+    return header ( $header, $replace ); // add $http_response_code param if needed
+});
+$twig->addFunction($h);
+
 /* transform /filename/param1/param2/... to ['filename', 'param1', 'param2'] and assign it to $_GET */
 //print_r($_SERVER);
 $p = parse_url($_SERVER['REQUEST_URI']);
