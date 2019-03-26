@@ -3,7 +3,8 @@
 
 
     // MEJL VLASNIKU
-    $to = "info@credo.agency";
+    // $to = "info@credo.agency";
+    $to = "marko.ilic@buildcon.org";
     $from = $_POST["email"];
     $imeprezime = $_POST["name"];
     $phone = $_POST["phone"];
@@ -56,23 +57,23 @@
     curl_close($session);
 
 
-    
 
-    // MEJL KLIJENTU 
+
+    // MEJL KLIJENTU
     $to = $_POST["email"];
     $from = "info@credo.agency";
     $imeprezime = $_POST["name"];
     $subject = 'Credo'; // PItaj Iliju koji subject oce
-    $message = <<<TEXT
-Dear $imeprezime,
+//     $message = <<<TEXT
+// Dear $imeprezime,
 
-Thank you for showing interest for our services. We will get back to you as soon as possible.
+// Thank you for showing interest for our services. We will get back to you as soon as possible.
 
-Best regards,
+// Best regards,
 
-CREDO
-TEXT;
-
+// CREDO
+// TEXT;
+    $fullname = $imeprezime;
     $url = 'https://api.sendgrid.com/';
     $user = 'agency';
     $pass = 'kuwait2019';
@@ -83,8 +84,19 @@ TEXT;
         'to'        => $to,
         'subject'   => $subject,
         //'html'      => 'html body',
-        'text'      => $message,
+        // 'text'      => $message,
+        'sub': {
+          '-name-' => $fullname,
+        },
         'from'      => $from,
+        "filters": {
+          "templates": {
+            "settings": {
+              "enable": 1,
+              "template_id": "d-31a12f86963d407f8f312692607f7a9b"
+            }
+          }
+        }
       );
 
     $request =  $url.'api/mail.send.json';
