@@ -56,37 +56,34 @@
     curl_close($session);
 
 
-    
 
-    // MEJL KLIJENTU 
+
+    // MEJL KLIJENTU
     $to = $_POST["email"];
     $from = "info@credo.agency";
     $imeprezime = $_POST["name"];
     $subject = 'Credo'; // PItaj Iliju koji subject oce
-    $message = <<<TEXT
-Dear $imeprezime,
-
-Thank you for showing interest for our services. We will get back to you as soon as possible.
-
-Best regards,
-
-CREDO
-TEXT;
-
+$message ="
+<div>Dear $imeprezime,</div>
+&nbsp;
+<div>Thank you for showing interest for our services. We will get back to you as soon as possible.</div>
+&nbsp;
+<div>Best regards,<br>
+CREDO</div>";
+    $fullname = $imeprezime;
     $url = 'https://api.sendgrid.com/';
     $user = 'agency';
     $pass = 'kuwait2019';
 
-    $params = array(
-        'api_user'  => 'credo'.$user,
-        'api_key'   => 'credo'.$pass,
-        'to'        => $to,
-        'subject'   => $subject,
-        //'html'      => 'html body',
-        'text'      => $message,
-        'from'      => $from,
-      );
+  $params = array(
+    'api_user'  => 'credo'.$user,
+    'api_key'   => 'credo'.$pass,
+    'to'        => $to,
+    'subject'   => $subject,
+    'from'      => $from,
+    'html' => $message,
 
+  );
     $request =  $url.'api/mail.send.json';
 
     // Generate curl request
