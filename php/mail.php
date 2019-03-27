@@ -3,8 +3,7 @@
 
 
     // MEJL VLASNIKU
-    // $to = "info@credo.agency";
-    $to = "ilija@buildcon.org";
+    $to = "info@credo.agency";
 
     $from = $_POST["email"];
     $imeprezime = $_POST["name"];
