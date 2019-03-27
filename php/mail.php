@@ -4,12 +4,13 @@
 
     // MEJL VLASNIKU
     $to = "info@credo.agency";
+
     $from = $_POST["email"];
     $imeprezime = $_POST["name"];
     $phone = $_POST["phone"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
-    $message = "Name: " .$imeprezime. "\r\n". "Email: " .$from. "\r\n". "Phone: " .$phone. "\r\n". "Subject: " .$subject. "\r\n". "\r\n" .$message ;
+    $message = "<div style='color: #000000;'>Name: " .$imeprezime. "<br>" . "Email: " .$from. "<br>". "Phone: " .$phone. "<br>". "Subject: " .$subject. "</div><br>". "<div>" .$message . "</div>";
     //$headers = "From: $imeprezime <$to>"."\r\n"."Reply-to: $from"."\r\n"."X-Mailer: PHP/".phpversion();
 
 
@@ -24,7 +25,7 @@
         'to'        => $to,
         'subject'   => $subject,
         //'html'      => 'html body',
-        'text'      => $message,
+        'html'      => $message,
         'from'      => 'info@credo.agency',
       );
 
