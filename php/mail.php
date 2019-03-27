@@ -78,27 +78,36 @@
     $user = 'agency';
     $pass = 'kuwait2019';
 
-    $params = array(
-        'api_user'  => 'credo'.$user,
-        'api_key'   => 'credo'.$pass,
-        'to'        => $to,
-        'subject'   => $subject,
+    // $params = array(
+    //     'api_user'  => 'credo'.$user,
+    //     'api_key'   => 'credo'.$pass,
+    //     'to'        => $to,
+    //     'subject'   => $subject,
+    //     //'html'      => 'html body',
+    //     // 'text'      => $message,
+    //     'from'      => $from,
+    //   // "personalizations" => [
+    //   //   'full_name'    => $fullname,
+    //   //   'template_id'=> 'd-31a12f86963d407f8f312692607f7a9b',
+    //   // ],
+    //     'full_name'    => $fullname,
+    //     'template_id'=> 'd-31a12f86963d407f8f312692607f7a9b',
+    //   );
+      $params = (object)[
+        {'api_user'  => 'credo'.$user},
+        {'api_key'   => 'credo'.$pass},
+        {'to'        => $to},
+        {'subject'   => $subject},
         //'html'      => 'html body',
         // 'text'      => $message,
-        'sub': {
-          '-name-' => $fullname,
-        },
-        'from'      => $from,
-        "filters": {
-          "templates": {
-            "settings": {
-              "enable": 1,
-              "template_id": "d-31a12f86963d407f8f312692607f7a9b"
-            }
-          }
-        }
-      );
-
+        {'from'      => $from},
+        'personalizations' => [
+          {'full_name'    => $fullname},
+          {'template_id'=> 'd-31a12f86963d407f8f312692607f7a9b'},
+        ],
+        // 'full_name'    => $fullname,
+        // 'template_id'=> 'd-31a12f86963d407f8f312692607f7a9b',
+      ];
     $request =  $url.'api/mail.send.json';
 
     // Generate curl request
