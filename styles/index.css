@@ -10,6 +10,10 @@
   font-size: 1.125rem;
   line-height: 1.35rem;
 }
+.font-21 {
+  font-size: 1.3rem;
+  line-height: 1.56rem;
+}
 .font-24 {
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -48,7 +52,8 @@
   white-space: pre-wrap;
 }
 .home--container {
-  height: 100vh;
+  max-height: 100vh;
+  height: auto;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -106,9 +111,14 @@
 .home--container3-project-hover:hover {
   opacity: 1;
 }
+@media screen and (max-width: 1366px) {
+  .home--container {
+    max-height: initial;
+  }
+}
 @media screen and (max-width: 1240px) {
   .home--container {
-    height: calc(100vh - 8.75rem);
+    height: auto;
   }
   .home--container2-side-r-right1 {
     width: 90%;
@@ -142,6 +152,11 @@
   .home--container3-project {
     width: 100%;
     height: 66vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home--container-txt {
+    margin-bottom: 0.8rem;
   }
 }
 @media screen and (max-width: 360px) {
