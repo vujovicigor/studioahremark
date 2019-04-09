@@ -284,7 +284,7 @@ a:active{
             justify-content: flex-end;
 }
 .owl-item, .owl-stage{
-    height: 100vh;
+    height: auto;
 }
 .black {
     color: @black;
@@ -602,7 +602,11 @@ a:active{
         }
     }
 }
-
+@media screen and (max-width: 480px){
+    .owl-dots{
+        bottom: 1.138rem !important;
+    }
+}
 @media screen and (max-width: 360px){
     .owl-dots{
         bottom: 5px !important;
