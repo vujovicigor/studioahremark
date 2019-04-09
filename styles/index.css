@@ -52,7 +52,6 @@
   white-space: pre-wrap;
 }
 .home--container {
-  max-height: 100vh;
   height: auto;
   width: 100%;
   overflow: hidden;
@@ -110,11 +109,6 @@
 }
 .home--container3-project-hover:hover {
   opacity: 1;
-}
-@media screen and (max-width: 1366px) {
-  .home--container {
-    max-height: initial;
-  }
 }
 @media screen and (max-width: 1240px) {
   .home--container {
