@@ -718,7 +718,7 @@ a:active {
 }
 @media screen and (max-width: 1240px) {
   .profiles--blok1 {
-    height: 86vw;
+    height: 66vw;
   }
 }
 @media screen and (max-width: 1120px) {
@@ -951,7 +951,7 @@ a:active {
   }
 }
 .home--container {
-  height: auto;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -1010,11 +1010,13 @@ a:active {
   opacity: 1;
 }
 @media screen and (max-width: 1240px) {
-  .home--container {
-    height: auto;
-  }
   .home--container2-side-r-right1 {
     width: 90%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .home--container {
+    height: 66vw;
   }
 }
 @media screen and (max-width: 959px) {
