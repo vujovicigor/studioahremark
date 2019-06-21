@@ -10,7 +10,7 @@
                 {% set urlImg = _BASE ~ 'img/' ~ fetch("Image", { parent_id: item.id })[0].Image ~ '' %}
                 {# <div class="home--container" style="background-image: url('img/{{ fetch("Image", { parent_id: item.id })[0].Image }}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
                 </div> #}
-                <img class="home--container" src="{{ urlImg }}" style="width: 100%; height: auto;"/>
+                <img class="home--container" src="{{ urlImg }}" style="width: 100%;"/>
 
             {% endfor %}
         </div>

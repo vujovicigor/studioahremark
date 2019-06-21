@@ -2,7 +2,7 @@
 
 .home{
     &--container{
-        height: auto;
+        height: 100vh;
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -69,9 +69,9 @@
 }
 @media screen and (max-width: 1240px){
     .home{
-        &--container {
-            height: auto;
-        }
+        // &--container {
+        //     height: auto;
+        // }
         &--container2 {
             &-side{
                 &-r{
@@ -83,6 +83,11 @@
         }
     }
 
+}
+@media screen and (max-width: 1023px){
+    .home--container {
+        height: 66vw;
+    }
 }
 @media screen and (max-width: 959px){
     .home{

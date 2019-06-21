@@ -10,6 +10,10 @@
   font-size: 1.125rem;
   line-height: 1.35rem;
 }
+.font-21 {
+  font-size: 1.3rem;
+  line-height: 1.56rem;
+}
 .font-24 {
   font-size: 1.5rem;
   line-height: 1.8rem;
@@ -206,7 +210,7 @@
 }
 @media screen and (max-width: 1240px) {
   .profiles--blok1 {
-    height: 86vw;
+    height: 66vw;
   }
 }
 @media screen and (max-width: 1120px) {
